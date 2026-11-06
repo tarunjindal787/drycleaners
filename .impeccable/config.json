@@ -1,0 +1,53 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "primary font: inter",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-06T04:27:29.329Z",
+        "reason": "user's own master-prompt brief explicitly pins Inter/Manrope/DM Sans as the body typeface pairing with Playfair Display"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-06T04:27:42.883Z",
+        "reason": "false positives across hero/process/feature-panel/reviews/faq sections and the accordion: content lives in nested .section-inner / .hero-content / .accordion-trigger wrappers that carry the real padding (confirmed 1.25-8rem insets in rendered screenshots); detector reads the padding-less outer <section>/<div>"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-06T04:27:43.357Z",
+        "reason": "user's own master-prompt brief pins this exact hex (#F8F6F1 Warm Ivory / #F0ECE3 Soft Cream) as the primary background in its supplied palette"
+      },
+      {
+        "rule": "pulsing-dot",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-06T04:27:43.775Z",
+        "reason": "this is a literal scroll-down affordance (a dot dropping inside a mouse/scroll outline), a standard honest wayfinding cue, not a decorative liveness indicator implying live/changing data"
+      },
+      {
+        "rule": "overused-font",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-06T04:28:44.050Z",
+        "reason": "user's own master-prompt brief explicitly pins Inter/Manrope/DM Sans as the body typeface pairing with Playfair Display (replaces the earlier case-mismatched entry for this rule)"
+      }
+    ]
+  }
+}

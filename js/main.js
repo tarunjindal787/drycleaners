@@ -7,17 +7,15 @@
   var header = document.getElementById("siteHeader");
   var fixedCall = document.getElementById("fixedCall");
   var hero = document.querySelector(".hero");
+  var footer = document.querySelector(".site-footer");
 
   function onScroll() {
     var scrolled = window.scrollY > 60;
     header.classList.toggle("is-scrolled", scrolled);
 
-    if (hero) {
-      var heroBottom = hero.getBoundingClientRect().bottom;
-      fixedCall.classList.toggle("is-visible", heroBottom < 0);
-    } else {
-      fixedCall.classList.toggle("is-visible", scrolled);
-    }
+    var pastHero = hero ? hero.getBoundingClientRect().bottom < 0 : scrolled;
+    var overFooter = footer ? footer.getBoundingClientRect().top < window.innerHeight : false;
+    fixedCall.classList.toggle("is-visible", pastHero && !overFooter);
   }
   document.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
@@ -25,17 +23,20 @@
   /* ---------- Mobile nav ---------- */
   var navToggle = document.getElementById("navToggle");
   var mainNav = document.getElementById("mainNav");
+  var navBackdrop = document.getElementById("navBackdrop");
 
   function closeNav() {
     navToggle.setAttribute("aria-expanded", "false");
     navToggle.setAttribute("aria-label", "Open menu");
     mainNav.classList.remove("is-open");
+    navBackdrop.classList.remove("is-visible");
     document.body.style.overflow = "";
   }
   function openNav() {
     navToggle.setAttribute("aria-expanded", "true");
     navToggle.setAttribute("aria-label", "Close menu");
     mainNav.classList.add("is-open");
+    navBackdrop.classList.add("is-visible");
     document.body.style.overflow = "hidden";
   }
   navToggle.addEventListener("click", function () {
@@ -45,6 +46,7 @@
   mainNav.querySelectorAll("a").forEach(function (link) {
     link.addEventListener("click", closeNav);
   });
+  navBackdrop.addEventListener("click", closeNav);
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") closeNav();
   });
@@ -151,6 +153,36 @@
     }
     touchStartX = null;
   }, { passive: true });
+
+  /* ---------- Quick-copy contact details ---------- */
+  document.querySelectorAll(".copy-btn").forEach(function (btn) {
+    var label = btn.querySelector(".copy-btn-label");
+    var defaultLabel = label.textContent;
+    btn.addEventListener("click", function () {
+      var value = btn.dataset.copy;
+      var done = function () {
+        label.textContent = "Copied";
+        btn.classList.add("is-copied");
+        setTimeout(function () {
+          label.textContent = defaultLabel;
+          btn.classList.remove("is-copied");
+        }, 1800);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(value).then(done, done);
+      } else {
+        var temp = document.createElement("textarea");
+        temp.value = value;
+        temp.style.position = "fixed";
+        temp.style.opacity = "0";
+        document.body.appendChild(temp);
+        temp.select();
+        try { document.execCommand("copy"); } catch (err) { /* no-op */ }
+        document.body.removeChild(temp);
+        done();
+      }
+    });
+  });
 
   /* ---------- Footer year ---------- */
   var yearEl = document.getElementById("year");

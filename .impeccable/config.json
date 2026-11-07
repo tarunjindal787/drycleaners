@@ -47,6 +47,39 @@
         ],
         "createdAt": "2026-11-06T04:28:44.050Z",
         "reason": "user's own master-prompt brief explicitly pins Inter/Manrope/DM Sans as the body typeface pairing with Playfair Display (replaces the earlier case-mismatched entry for this rule)"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "plus jakarta sans",
+        "createdAt": "2026-11-07T06:33:02.616Z",
+        "reason": "user confirmed full redesign replacing the prior documented system (incl. type pairing); DESIGN.md is rewritten at finish per process"
+      },
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "css/style.css"
+        ],
+        "createdAt": "2026-11-07T06:35:10.596Z",
+        "reason": "user confirmed: brief explicitly requests gradient text highlights on hero headline key words"
+      },
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-07T06:39:57.529Z",
+        "reason": "user confirmed: brief explicitly requests gradient text highlights on hero headline key words"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-07T12:04:07.985Z",
+        "reason": "confident false positive: the tool's only remaining flags are hero-eyebrow/h1/hero-sub text, which sit on the hero's absolutely-positioned dark scrim overlay, not literally on ivory as the static checker assumes (it can't trace z-stacked siblings). Verified strong real contrast via rendered screenshot. All other contrast issues in this file were real and already fixed (section-kicker, nav hover, bento-cta, contact hover, focus ring all moved from amber-600 to amber-700)."
       }
     ]
   }

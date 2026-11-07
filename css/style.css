@@ -60,7 +60,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   /* Rhythm */
   --section-y: clamp(4rem, 8vw, 7.5rem);
   --section-x: clamp(1.25rem, 5vw, 4rem);
-  --max-w: 1320px;
+  --max-w: 1500px;
 
   --ease: cubic-bezier(0.19, 1, 0.22, 1);
 }
@@ -508,6 +508,7 @@ body {
    ============================================================ */
 .contact { padding: var(--section-y) 0; background: var(--cream); }
 .contact-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.contact-grid > * { min-width: 0; }
 .contact-intro { margin-top: 1.1rem; color: var(--ink-soft); font-size: 1.02rem; }
 
 .contact-list { margin-top: 2rem; display: flex; flex-direction: column; gap: 1.1rem; }
@@ -619,10 +620,11 @@ body {
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1080px) {
-  .bento-grid { grid-template-columns: repeat(2, 1fr); }
+  .bento-grid { grid-template-columns: repeat(2, 1fr); grid-auto-flow: dense; }
   .bento-card--xl { grid-column: span 2; grid-row: span 1; }
   .bento-card--tall { grid-column: span 1; grid-row: span 1; }
   .bento-card--wide { grid-column: span 2; }
+  .bento-grid > :last-child { grid-column: 1 / -1; }
   .why-grid { grid-template-columns: repeat(2, 1fr); }
   .process-timeline { grid-template-columns: repeat(2, 1fr); row-gap: 2.6rem; }
   .process-timeline::before { display: none; }
@@ -674,4 +676,5 @@ body {
   .hero h1 { font-size: clamp(2.1rem, 9vw, 2.6rem); }
   .trust-card { padding: 1.4rem 1.2rem; }
   .trust-score { font-size: 1.6rem; }
+  .btn { white-space: normal; text-align: center; }
 }

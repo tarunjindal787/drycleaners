@@ -80,6 +80,18 @@
         ],
         "createdAt": "2026-11-07T12:04:07.985Z",
         "reason": "confident false positive: the tool's only remaining flags are hero-eyebrow/h1/hero-sub text, which sit on the hero's absolutely-positioned dark scrim overlay, not literally on ivory as the static checker assumes (it can't trace z-stacked siblings). Verified strong real contrast via rendered screenshot. All other contrast issues in this file were real and already fixed (section-kicker, nav hover, bento-cta, contact hover, focus ring all moved from amber-600 to amber-700)."
+      },
+      {
+        "rule": "design-system-font",
+        "value": "dm serif display",
+        "createdAt": "2026-11-07T14:03:36.954Z",
+        "reason": "user confirmed full redesign replacing the prior documented system including type pairing; DESIGN.md is rewritten at finish per process"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "manrope",
+        "createdAt": "2026-11-07T14:03:37.355Z",
+        "reason": "user confirmed full redesign replacing the prior documented system including type pairing; DESIGN.md is rewritten at finish per process"
       }
     ]
   }

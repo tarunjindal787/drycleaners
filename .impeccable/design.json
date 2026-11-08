@@ -1,46 +1,45 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-07T00:00:00Z",
+  "generatedAt": "2026-11-08T00:00:00Z",
   "title": "Design System: St Marys Village Dry Cleaners",
   "extensions": {
     "colorMeta": {
-      "amber-300": { "role": "primary", "displayName": "Pale Amber", "canonical": "#F3C57A", "tonalRamp": ["#3C2A10", "#5C3F18", "#855A23", "#AD7730", "#D89640", "#E7AE56", "#F3C57A", "#FBE4BC"] },
-      "amber-400": { "role": "primary", "displayName": "Warm Amber", "canonical": "#E7AE56", "tonalRamp": ["#352610", "#55391A", "#7A5225", "#A06E31", "#C68B40", "#E7AE56", "#F0C480", "#F8DEB3"] },
-      "amber-500": { "role": "primary", "displayName": "Brass Amber", "canonical": "#D89640", "tonalRamp": ["#2E2110", "#4A351B", "#6C4D27", "#8F6732", "#B37E3A", "#D89640", "#E6B46E", "#F2D4A6"] },
-      "amber-600": { "role": "primary", "displayName": "Deep Brass", "canonical": "#BD7C2C", "tonalRamp": ["#271B0D", "#3F2C16", "#5C4020", "#7C572A", "#9E6F33", "#BD7C2C", "#D39C56", "#E8C491" ] },
-      "amber-700": { "role": "primary", "displayName": "Burnished Amber", "canonical": "#8F5E22", "tonalRamp": ["#1E140A", "#312011", "#482F1A", "#614022", "#7A512A", "#8F5E22", "#B07B3C", "#CFA36E"] },
-      "ivory": { "role": "neutral", "displayName": "Showroom Ivory", "canonical": "#FBF8F2", "tonalRamp": ["#3E382A", "#5D5542", "#7F765E", "#A39979", "#C6BC9C", "#E4DCC7", "#FBF8F2", "#FEFDFB"] },
-      "cream": { "role": "neutral", "displayName": "Cream Variant", "canonical": "#F4EDE1", "tonalRamp": ["#39331F", "#58502F", "#7A7043", "#9E9359", "#C1B477", "#DED0A7", "#F4EDE1", "#FBF8F2"] },
-      "paper": { "role": "neutral", "displayName": "Card Paper", "canonical": "#FFFFFF", "tonalRamp": ["#333333", "#4D4D4D", "#737373", "#999999", "#BFBFBF", "#DFDFDF", "#F2F2F2", "#FFFFFF"] },
-      "ink": { "role": "neutral", "displayName": "Counter Ink", "canonical": "#241E17", "tonalRamp": ["#0E0B08", "#18140F", "#241E17", "#352C21", "#4F4232", "#726051", "#9F8F7D", "#D4C8BB"] },
-      "ink-soft": { "role": "neutral", "displayName": "Soft Ink", "canonical": "#5B5147", "tonalRamp": ["#1E1A16", "#302A24", "#473E35", "#5B5147", "#776B5E", "#998B7B", "#BFB4A4", "#E3DCD1"] },
-      "ink-faint": { "role": "neutral", "displayName": "Faint Ink", "canonical": "#8C8176", "tonalRamp": ["#2A2621", "#423C34", "#5F574C", "#716658", "#8C8176", "#A89E92", "#C6BEB4", "#E6E1DA"] },
-      "charcoal-950": { "role": "neutral", "displayName": "Before-Counter Charcoal", "canonical": "#0B0A08", "tonalRamp": ["#050403", "#0B0A08", "#141210", "#201D19", "#332F29", "#514A41", "#7C7368", "#B4AB9F"] },
-      "charcoal-900": { "role": "neutral", "displayName": "Charcoal 900", "canonical": "#17140F", "tonalRamp": ["#0A0806", "#17140F", "#221E17", "#332C23", "#4C4236", "#6E6252", "#9B8C78", "#CFC3B2"] },
-      "charcoal-800": { "role": "neutral", "displayName": "Charcoal 800", "canonical": "#221C14", "tonalRamp": ["#0E0B08", "#221C14", "#30271C", "#443729", "#5F4E3B", "#826B52", "#AE9579", "#DCC9B3"] },
-      "text-on-dark": { "role": "neutral", "displayName": "Text on Dark", "canonical": "#F6EFE2", "tonalRamp": ["#3A3326", "#58503D", "#7B7158", "#9F9476", "#C2B899", "#E0D8C4", "#F6EFE2", "#FCFAF5"] },
-      "text-on-dark-muted": { "role": "neutral", "displayName": "Muted Text on Dark", "canonical": "#C9BCA8", "tonalRamp": ["#2E281F", "#4A4131", "#6B5F49", "#8F8065", "#A9997F", "#C9BCA8", "#DFD6C8", "#F1ECE4"] }
+      "forest-deep": { "role": "primary", "displayName": "Forest Deep", "canonical": "#164D3A", "tonalRamp": ["#081F17", "#0E3527", "#133F2F", "#164D3A", "#1E674C", "#24765A", "#5FA084", "#A9CBBB"] },
+      "forest-dark": { "role": "primary", "displayName": "Forest Dark", "canonical": "#0E3527", "tonalRamp": ["#040F0B", "#0A2619", "#0E3527", "#154833", "#1D5C43", "#24765A", "#5FA084", "#A9CBBB"] },
+      "emerald": { "role": "primary", "displayName": "Emerald", "canonical": "#24765A", "tonalRamp": ["#0C261D", "#123A2C", "#194F3B", "#1F6349", "#24765A", "#3C967A", "#74B49F", "#B7D9CB"] },
+      "coral": { "role": "secondary", "displayName": "Coral", "canonical": "#EF795D", "tonalRamp": ["#4A1F13", "#73301D", "#9C4127", "#C45532", "#EF795D", "#F3997F", "#F7BAA6", "#FBDCD0"] },
+      "coral-ink": { "role": "secondary", "displayName": "Coral Ink (text-safe)", "canonical": "#B9502F", "tonalRamp": ["#2E1409", "#4A200E", "#6A2E15", "#8E3D1E", "#B9502F", "#D06F4C", "#E29E86", "#F1CBBE"] },
+      "butter": { "role": "secondary", "displayName": "Butter", "canonical": "#F4DB92", "tonalRamp": ["#4A3D10", "#6E5B18", "#9C8121", "#C6A72E", "#F4DB92", "#F7E4AC", "#FAEEC9", "#FCF6E2"] },
+      "cream": { "role": "neutral", "displayName": "Cream (text-on-dark)", "canonical": "#FFF8EE", "tonalRamp": ["#3E3626", "#5E533C", "#80735A", "#A5987A", "#C9BE9D", "#E4DCC6", "#FFF8EE", "#FFFCF9"] },
+      "ivory": { "role": "neutral", "displayName": "Ivory", "canonical": "#F8F3EA", "tonalRamp": ["#39342A", "#574F3F", "#7A6F58", "#9D9177", "#C0B59A", "#DDD4C1", "#F8F3EA", "#FDFBF8"] },
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#FFFFFF", "tonalRamp": ["#333333", "#4D4D4D", "#737373", "#999999", "#BFBFBF", "#DFDFDF", "#F2F2F2", "#FFFFFF"] },
+      "sage": { "role": "neutral", "displayName": "Sage", "canonical": "#DCE9D9", "tonalRamp": ["#293A28", "#3E5A3C", "#577A53", "#73986D", "#9BBB93", "#C1D8BB", "#DCE9D9", "#F1F7EF"] },
+      "peach": { "role": "neutral", "displayName": "Peach", "canonical": "#F6C7AD", "tonalRamp": ["#4A2B15", "#713F1F", "#98562C", "#BE7340", "#F6C7AD", "#F8D4C0", "#FAE2D4", "#FCF0E8"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#252823", "tonalRamp": ["#0E100D", "#171A15", "#252823", "#393E34", "#53594C", "#737A6A", "#9EA494", "#CBCEC4"] },
+      "ink-soft": { "role": "neutral", "displayName": "Ink Soft", "canonical": "#585B52", "tonalRamp": ["#1E201C", "#30322C", "#454740", "#585B52", "#767A6F", "#999C90", "#C0C2B7", "#E4E5DF"] },
+      "ink-faint": { "role": "neutral", "displayName": "Ink Faint", "canonical": "#8B8D82", "tonalRamp": ["#2A2B26", "#434439", "#5F6153", "#727464", "#8B8D82", "#A8A99F", "#C6C7BF", "#E6E6E1"] },
+      "text-on-dark": { "role": "neutral", "displayName": "Text on Dark", "canonical": "#FFF8EE", "tonalRamp": ["#3E3626", "#5E533C", "#80735A", "#A5987A", "#C9BE9D", "#E4DCC6", "#FFF8EE", "#FFFCF9"] },
+      "text-on-dark-muted": { "role": "neutral", "displayName": "Muted Text on Dark", "canonical": "#CFE0D6", "tonalRamp": ["#293A30", "#415749", "#5B7262", "#788E7D", "#9CAB9F", "#BED0C2", "#CFE0D6", "#EAF3EE"] }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "Hero h1 only; carries the system's one gradient-text word (\"Best\")." },
+      "display": { "displayName": "Display", "purpose": "Hero h1 only; carries the butter-colored emphasis word." },
       "headline": { "displayName": "Headline", "purpose": "Every section's .section-title." },
-      "title": { "displayName": "Title", "purpose": "Component headings: bento-card h3, why-card h3, process-step h3, accordion trigger." },
-      "body": { "displayName": "Body", "purpose": "Running copy throughout." },
-      "label": { "displayName": "Label", "purpose": "Uppercase small labels: bento-tag, contact-label, footer headers, brand-sub." }
+      "title": { "displayName": "Title", "purpose": "Component headings: service-tile h3, process-step h3, why-list h3, accordion trigger, reviews-facts h3." },
+      "body": { "displayName": "Body", "purpose": "Running copy throughout (Manrope)." },
+      "label": { "displayName": "Label", "purpose": "Uppercase small labels: contact-label, footer headers, brand-sub." }
     },
     "shadows": [
-      { "name": "shadow-sm", "value": "0 2px 8px -2px rgba(43,31,15,0.12)", "purpose": "Resting elevation for bento/why/contact/gallery cards and the scrolled header." },
-      { "name": "shadow-md", "value": "0 12px 28px -10px rgba(43,31,15,0.18)", "purpose": "Hover elevation for bento/gallery cards; resting elevation for the reviews card and header-call pill." },
-      { "name": "shadow-lg", "value": "0 24px 60px -18px rgba(43,31,15,0.28)", "purpose": "The floating trust-card and the contact map frame; bento-card hover." },
-      { "name": "shadow-dark", "value": "0 20px 50px -14px rgba(0,0,0,0.55)", "purpose": "The fixed call affordance and the lightbox image — elements that must float over any background." },
-      { "name": "amber-ring-glow", "value": "0 0 0 1px var(--amber-400), 0 20px 46px -16px var(--amber-glow)", "purpose": "Why-card hover state, a box-shadow-built ring plus diffuse amber glow, never a border." }
+      { "name": "shadow-sm", "value": "0 2px 8px -2px rgba(22,40,32,0.12)", "purpose": "Resting elevation for service tiles, contact-list rows, hours-matrix, gallery items, scrolled header." },
+      { "name": "shadow-md", "value": "0 14px 30px -12px rgba(22,40,32,0.2)", "purpose": "Hover elevation for gallery items; resting elevation for header-cta and map-badge." },
+      { "name": "shadow-lg", "value": "0 26px 60px -18px rgba(22,40,32,0.28)", "purpose": "The floating trust-card, featured service tile, story/why media frames, contact-map frame." },
+      { "name": "shadow-dark", "value": "0 20px 50px -14px rgba(0,0,0,0.5)", "purpose": "The fixed call affordance and the why-media frame — elements that must float over any background." }
     ],
     "motion": [
       { "name": "ease", "value": "cubic-bezier(0.19, 1, 0.22, 1)", "purpose": "Default easing for nearly all transitions." },
       { "name": "reveal-on-scroll", "value": "opacity 0->1, translateY(26px)->0, 0.8s ease, staggered via --delay * 90ms", "purpose": "Section content fade/rise on first scroll into view." },
-      { "name": "shimmer-sweep", "value": "translateX(-130% -> 130%) over 0.75s, gradient: linear-gradient(115deg, transparent 30%, rgba(255,255,255,0.55) 48%, transparent 66%)", "purpose": "Primary-button hover/focus sheen (.btn-shimmer)." },
-      { "name": "pulse-ring", "value": "scale(1) -> scale(1.18), 2.4s ease-in-out infinite (header icon); fixed-call-pulse: opacity 0.55->0 + scale(1)->1.5, 2.6s ease-out infinite", "purpose": "Keeps the Call Now affordances alive without being a loud animation; disabled under prefers-reduced-motion." },
-      { "name": "accordion-expand", "value": "grid-template-rows 0fr -> 1fr, 0.4s ease", "purpose": "FAQ accordion panel open/close." }
+      { "name": "pulse-ring", "value": "opacity 0.5->0 + scale(1)->1.5, 2.6s ease-out infinite", "purpose": "Keeps the fixed Call affordance alive without being a loud animation; disabled under prefers-reduced-motion." },
+      { "name": "accordion-expand", "value": "grid-template-rows 0fr -> 1fr, 0.4s ease", "purpose": "FAQ accordion panel open/close." },
+      { "name": "scroll-cue-drop", "value": "opacity 0->1->0, translateY(0)->14px, 1.8s ease-in-out infinite", "purpose": "Hero scroll-cue dot." }
     ],
     "breakpoints": [
       { "name": "lg", "value": "1080px" },
@@ -54,49 +53,65 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Amber-gradient filled CTA with a shimmer sweep; used for Call Now / Get in Touch actions.",
+      "description": "Cream-filled CTA for use on dark backgrounds (hero, why, final-cta).",
       "html": "<a class=\"ds-btn ds-btn-primary\" href=\"#\">Get in Touch</a>",
-      "css": ".ds-btn { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 0.5em; padding: 1em 1.9em; border-radius: 10px; font-weight: 600; font-size: 0.98rem; min-height: 48px; overflow: hidden; isolation: isolate; transition: transform 0.3s cubic-bezier(0.19,1,0.22,1), box-shadow 0.3s cubic-bezier(0.19,1,0.22,1); } .ds-btn:hover { transform: translateY(-2px); } .ds-btn-primary { background: linear-gradient(135deg, #E7AE56, #BD7C2C); color: #0B0A08; box-shadow: 0 12px 28px -10px rgba(43,31,15,0.18); } .ds-btn-primary:hover, .ds-btn-primary:focus-visible { box-shadow: 0 18px 38px -12px rgba(216,150,64,0.45); } .ds-btn-primary::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(115deg, transparent 30%, rgba(255,255,255,0.55) 48%, transparent 66%); transform: translateX(-130%); transition: transform 0.75s cubic-bezier(0.19,1,0.22,1); } .ds-btn-primary:hover::before, .ds-btn-primary:focus-visible::before { transform: translateX(130%); } .ds-btn-primary > * { position: relative; z-index: 2; }"
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5em; padding: 1em 1.9em; border-radius: 10px; font-weight: 600; font-size: 0.98rem; min-height: 48px; transition: transform 0.3s cubic-bezier(0.19,1,0.22,1), box-shadow 0.3s cubic-bezier(0.19,1,0.22,1), background-color 0.3s ease; } .ds-btn:hover { transform: translateY(-2px); } .ds-btn-primary { background: #FFF8EE; color: #0E3527; box-shadow: 0 14px 30px -12px rgba(22,40,32,0.2); } .ds-btn-primary:hover { background: #FFFFFF; box-shadow: 0 26px 60px -18px rgba(22,40,32,0.28); }"
     },
     {
-      "name": "Glass Button",
+      "name": "Primary Dark Button",
       "kind": "button",
-      "refersTo": "button-glass",
-      "description": "Translucent blurred-glass CTA for secondary actions over the dark hero.",
-      "html": "<a class=\"ds-btn-glass\" href=\"#\"><span>Explore Our Services</span></a>",
-      "css": ".ds-btn-glass { display: inline-flex; align-items: center; gap: 0.5em; padding: 1em 1.9em; border-radius: 10px; font-weight: 600; font-size: 0.98rem; min-height: 48px; background: rgba(255,255,255,0.08); color: #F6EFE2; border: 1px solid rgba(255,255,255,0.3); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); transition: background 0.3s ease, border-color 0.3s ease; } .ds-btn-glass:hover, .ds-btn-glass:focus-visible { background: rgba(255,255,255,0.16); border-color: rgba(255,255,255,0.5); }"
+      "refersTo": "button-primary-dark",
+      "description": "Forest-deep filled CTA for use on light backgrounds (services, contact).",
+      "html": "<a class=\"ds-btn ds-btn-primary-dark\" href=\"#\">Get in Touch</a>",
+      "css": ".ds-btn-primary-dark { display: inline-flex; align-items: center; justify-content: center; gap: 0.5em; padding: 1em 1.9em; border-radius: 10px; font-weight: 600; font-size: 0.98rem; min-height: 48px; background: #164D3A; color: #FFF8EE; box-shadow: 0 2px 8px -2px rgba(22,40,32,0.12); transition: transform 0.3s cubic-bezier(0.19,1,0.22,1), background 0.3s ease, box-shadow 0.3s ease; } .ds-btn-primary-dark:hover { transform: translateY(-2px); background: #0E3527; box-shadow: 0 14px 30px -12px rgba(22,40,32,0.2); }"
     },
     {
-      "name": "Bento Card",
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Coral-bordered outline CTA for light backgrounds; text uses coral-ink, never raw coral, for contrast.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\">Explore Our Services</a>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: 0.5em; padding: 1em 1.9em; border-radius: 10px; font-weight: 600; font-size: 0.98rem; min-height: 48px; background: transparent; color: #B9502F; border: 1.5px solid #EF795D; transition: background 0.3s ease, color 0.3s ease; } .ds-btn-outline:hover, .ds-btn-outline:focus-visible { background: #EF795D; color: #FFF8EE; }"
+    },
+    {
+      "name": "Featured Service Tile",
       "kind": "card",
       "refersTo": null,
-      "description": "Asymmetric-span service card: image-top with zoom-on-hover, optional floating category tag, fade-in CTA row. No border, box-shadow-only elevation.",
-      "html": "<article class=\"ds-bento-card\"><div class=\"ds-bento-media\"><img src=\"image.jpg\" alt=\"\"><span class=\"ds-bento-tag\">Most Popular</span></div><div class=\"ds-bento-copy\"><h3>Professional Dry Cleaning</h3><p>Everyday wear, delicates and formalwear cleaned to a crisp, pressed finish.</p></div></article>",
-      "css": ".ds-bento-card { position: relative; display: flex; flex-direction: column; background: #FFFFFF; border-radius: 24px; overflow: hidden; box-shadow: 0 2px 8px -2px rgba(43,31,15,0.12); transition: transform 0.4s cubic-bezier(0.19,1,0.22,1), box-shadow 0.4s cubic-bezier(0.19,1,0.22,1); } .ds-bento-card:hover { transform: translateY(-6px); box-shadow: 0 24px 60px -18px rgba(43,31,15,0.28); } .ds-bento-media { position: relative; overflow: hidden; min-height: 180px; } .ds-bento-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.19,1,0.22,1); } .ds-bento-card:hover .ds-bento-media img { transform: scale(1.07); } .ds-bento-tag { position: absolute; top: 0.9rem; left: 0.9rem; background: rgba(251,248,242,0.92); backdrop-filter: blur(6px); color: #8F5E22; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; padding: 0.4em 0.8em; border-radius: 999px; } .ds-bento-copy { padding: 1.4rem 1.5rem 1.6rem; } .ds-bento-copy h3 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.22rem; color: #241E17; } .ds-bento-copy p { margin-top: 0.55rem; font-size: 0.93rem; color: #5B5147; line-height: 1.55; }"
+      "description": "Full-bleed photo tile with a bottom gradient scrim and cream text overlaid directly on the image — the system's one editorial magazine-spread technique. Tag badge sits on the photo itself, never above the heading.",
+      "html": "<article class=\"ds-service-featured\"><img src=\"image.jpg\" alt=\"\"><span class=\"ds-service-tag\">Most Popular</span><div class=\"ds-service-featured-copy\"><h3>Professional Dry Cleaning</h3><p>Everyday wear, delicates and formalwear cleaned to a crisp, pressed finish.</p></div></article>",
+      "css": ".ds-service-featured { position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 26px 60px -18px rgba(22,40,32,0.28); min-height: 360px; display: flex; align-items: flex-end; } .ds-service-featured img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; } .ds-service-featured::after { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(0deg, rgba(14,53,39,0.92) 0%, rgba(14,53,39,0.5) 45%, transparent 75%); } .ds-service-tag { position: absolute; top: 1.2rem; left: 1.2rem; z-index: 2; background: #F4DB92; color: #0E3527; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; padding: 0.4em 0.9em; border-radius: 999px; } .ds-service-featured-copy { position: relative; z-index: 2; padding: 2rem; max-width: 560px; } .ds-service-featured-copy h3 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 2rem; color: #FFF8EE; } .ds-service-featured-copy p { margin-top: 0.8rem; font-size: 1.02rem; color: #CFE0D6; }"
     },
     {
-      "name": "Why Card",
-      "kind": "card",
-      "refersTo": null,
-      "description": "Icon-beside-heading card (not stacked) with an amber ring-glow hover built from box-shadow only, never a border.",
-      "html": "<article class=\"ds-why-card\"><div class=\"ds-why-head\"><span class=\"ds-why-icon\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M3 10.5 12 3l9 7.5M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linejoin=\"round\"/></svg></span><h3>Genuinely Local</h3></div><p>An independently run shop, not a drop-box for a depot across town.</p></article>",
-      "css": ".ds-why-card { padding: 2rem 1.6rem; background: #FFFFFF; border-radius: 24px; box-shadow: 0 2px 8px -2px rgba(43,31,15,0.12); transition: transform 0.35s cubic-bezier(0.19,1,0.22,1), box-shadow 0.35s cubic-bezier(0.19,1,0.22,1); } .ds-why-card:hover, .ds-why-card:focus-within { transform: translateY(-6px); box-shadow: 0 0 0 1px #E7AE56, 0 20px 46px -16px rgba(216,150,64,0.45); } .ds-why-head { display: flex; align-items: center; gap: 0.9rem; } .ds-why-icon { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, rgba(216,150,64,0.18), rgba(216,150,64,0.06)); color: #BD7C2C; } .ds-why-card h3 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.08rem; color: #241E17; } .ds-why-card p { margin-top: 0.9rem; font-size: 0.92rem; color: #5B5147; line-height: 1.55; }"
-    },
-    {
-      "name": "Fixed Call Affordance",
-      "kind": "custom",
-      "refersTo": "fixed-call",
-      "description": "Pill-shaped, bottom-right fixed tel: link with an ambient pulse ring, the only persistent never-relocated UI element.",
-      "html": "<a class=\"ds-fixed-call\" href=\"tel:0296733934\"><span class=\"ds-fixed-call-pulse\" aria-hidden=\"true\"></span><svg aria-hidden=\"true\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3.9 3 3.3 3.4 2.9 4 2.9h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8z\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linejoin=\"round\"/></svg><span>Call Now</span></a>",
-      "css": ".ds-fixed-call { position: fixed; right: 2rem; bottom: 2rem; display: flex; align-items: center; gap: 0.55em; padding: 0.95em 1.4em; border-radius: 999px; background: linear-gradient(135deg, #E7AE56, #BD7C2C); color: #0B0A08; font-weight: 700; font-size: 0.92rem; min-height: 48px; min-width: 48px; box-shadow: 0 20px 50px -14px rgba(0,0,0,0.55); transition: transform 0.4s cubic-bezier(0.19,1,0.22,1), box-shadow 0.3s cubic-bezier(0.19,1,0.22,1); } .ds-fixed-call:hover, .ds-fixed-call:focus-visible { box-shadow: 0 22px 54px -12px rgba(216,150,64,0.45); transform: translateY(-3px); } .ds-fixed-call-pulse { position: absolute; inset: 0; border-radius: 999px; background: #E7AE56; animation: ds-call-pulse 2.6s ease-out infinite; z-index: -1; } @keyframes ds-call-pulse { 0% { opacity: 0.55; transform: scale(1); } 100% { opacity: 0; transform: scale(1.5); } }"
-    },
-    {
-      "name": "Trust Card",
+      "name": "Why List Item",
       "kind": "custom",
       "refersTo": null,
-      "description": "Floating glass card carrying the 5.0-star/TrueLocal social proof, overlapping the hero/services seam. The negative margin lives on the card itself so the following section's background never clips it.",
-      "html": "<div class=\"ds-trust-card\"><span class=\"ds-trust-score\">5.0</span><span class=\"ds-trust-text\">from 8 reviews on TrueLocal</span></div>",
-      "css": ".ds-trust-card { background: rgba(255,255,255,0.78); backdrop-filter: blur(20px) saturate(1.3); -webkit-backdrop-filter: blur(20px) saturate(1.3); border: 1px solid rgba(255,255,255,0.6); border-radius: 24px; box-shadow: 0 24px 60px -18px rgba(43,31,15,0.28); padding: 1.8rem clamp(1.5rem, 4vw, 3rem); display: flex; align-items: center; gap: 1.5rem; max-width: 980px; margin: clamp(-100px, -9vw, -70px) auto 0; position: relative; } .ds-trust-score { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 2rem; color: #8F5E22; } .ds-trust-text { font-size: 1rem; color: #241E17; }"
+      "description": "Plain marked list item for Why Choose Us (dark forest-deep section): a small coral dot, not an icon-in-a-circle or a bordered card — deliberately avoiding the generic 4-card grid pattern.",
+      "html": "<li class=\"ds-why-item\"><span class=\"ds-why-mark\"></span><div><h3>Genuinely Local</h3><p>An independently run shop, not a drop-box for a depot across town.</p></div></li>",
+      "css": ".ds-why-item { display: flex; gap: 1.1rem; } .ds-why-mark { flex-shrink: 0; width: 8px; height: 8px; border-radius: 50%; background: #EF795D; margin-top: 0.5rem; } .ds-why-item h3 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 1.15rem; color: #FFF8EE; } .ds-why-item p { margin-top: 0.4rem; font-size: 0.95rem; color: #CFE0D6; line-height: 1.55; }"
+    },
+    {
+      "name": "Reviews Pull Stat",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Large pulled rating stat paired with a plain top-rule-divided facts list, instead of a card grid, because no individually-attributed review text could be sourced.",
+      "html": "<div class=\"ds-reviews-pull\"><span class=\"ds-reviews-score\">5.0</span><span class=\"ds-reviews-count\">from 8 reviews on TrueLocal</span></div><ul class=\"ds-reviews-facts\"><li><h3>Same-day turnaround</h3><p>Most garments are ready within the same day, with SMS notification.</p></li></ul>",
+      "css": ".ds-reviews-score { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 4.5rem; color: #164D3A; line-height: 1; } .ds-reviews-count { font-size: 0.95rem; color: #585B52; font-weight: 600; } .ds-reviews-facts li { padding-top: 1.3rem; border-top: 1px solid rgba(37,40,35,0.12); } .ds-reviews-facts h3 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 1.15rem; color: #252823; } .ds-reviews-facts p { margin-top: 0.4rem; font-size: 0.95rem; color: #585B52; line-height: 1.55; }"
+    },
+    {
+      "name": "Process Step",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Numbered timeline step with an outlined/transparent-fill serif numeral and a dashed connecting line — reserved for this real, in-order 01-04 sequence only.",
+      "html": "<div class=\"ds-process-step\"><span class=\"ds-step-num\">01</span><h3>Drop Off</h3><p>Bring your garments in; drive-up access is right outside the shop.</p></div>",
+      "css": ".ds-step-num { display: block; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 3rem; line-height: 1; color: transparent; -webkit-text-stroke: 1.5px #164D3A; } .ds-process-step h3 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 1.22rem; margin-top: 1.1rem; color: #252823; } .ds-process-step p { margin-top: 0.5rem; font-size: 0.93rem; color: #585B52; max-width: 26ch; }"
+    },
+    {
+      "name": "Contact List Row",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Paper row with box-shadow-only elevation (no border) and a 48x48px-minimum copy-to-clipboard button.",
+      "html": "<li class=\"ds-contact-row\"><span class=\"ds-contact-icon\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3.9 3 3.3 3.4 2.9 4 2.9h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8z\" stroke=\"currentColor\" stroke-width=\"1.6\"/></svg></span><div class=\"ds-contact-body\"><span class=\"ds-contact-label\">Phone</span><a href=\"tel:0296733934\">02 9673 3934</a></div><button class=\"ds-copy-btn\" type=\"button\">Copy</button></li>",
+      "css": ".ds-contact-row { display: flex; align-items: flex-start; gap: 1rem; background: #FFFFFF; padding: 1.1rem 1.2rem; border-radius: 16px; box-shadow: 0 2px 8px -2px rgba(22,40,32,0.12); list-style: none; } .ds-contact-icon { flex-shrink: 0; width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; background: #DCE9D9; color: #164D3A; } .ds-contact-label { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #8B8D82; } .ds-contact-body a { font-weight: 600; color: #252823; } .ds-copy-btn { flex-shrink: 0; padding: 0.5em 1em; border-radius: 999px; font-size: 0.78rem; font-weight: 600; color: #8B8D82; border: 1px solid rgba(37,40,35,0.18); min-height: 48px; min-width: 48px; background: none; }"
     },
     {
       "name": "Accordion Item",
@@ -104,38 +119,40 @@
       "refersTo": null,
       "description": "Borderless FAQ row with a hairline divider, a rotating +/x icon built from CSS pseudo-elements (never a glyph), and a grid-rows expand animation.",
       "html": "<div class=\"ds-accordion-item\"><h3><button class=\"ds-accordion-trigger\" aria-expanded=\"false\"><span>How can I contact you?</span><span class=\"ds-faq-icon\"></span></button></h3><div class=\"ds-accordion-panel\"><p>Call or email us, or drop by in person.</p></div></div>",
-      "css": ".ds-accordion-item { border-bottom: 1px solid rgba(36,30,23,0.12); } .ds-accordion-trigger { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem; background: none; border: none; cursor: pointer; padding: 1.5rem 0.2rem; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; color: #241E17; min-height: 48px; } .ds-faq-icon { position: relative; width: 22px; height: 22px; flex-shrink: 0; } .ds-faq-icon::before, .ds-faq-icon::after { content: ''; position: absolute; top: 50%; left: 50%; background: #BD7C2C; transition: transform 0.35s cubic-bezier(0.19,1,0.22,1); } .ds-faq-icon::before { width: 14px; height: 2px; transform: translate(-50%, -50%); } .ds-faq-icon::after { width: 2px; height: 14px; transform: translate(-50%, -50%); } .ds-accordion-trigger[aria-expanded='true'] .ds-faq-icon::after { transform: translate(-50%, -50%) rotate(90deg); opacity: 0; } .ds-accordion-panel { display: grid; grid-template-rows: 0fr; overflow: hidden; transition: grid-template-rows 0.4s cubic-bezier(0.19,1,0.22,1); } .ds-accordion-item.is-open .ds-accordion-panel { grid-template-rows: 1fr; } .ds-accordion-panel > p { overflow: hidden; min-height: 0; color: #5B5147; line-height: 1.65; }"
+      "css": ".ds-accordion-item { border-bottom: 1px solid rgba(37,40,35,0.14); } .ds-accordion-trigger { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem; background: none; border: none; cursor: pointer; padding: 1.5rem 0.2rem; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 1.15rem; color: #252823; min-height: 48px; } .ds-faq-icon { position: relative; width: 22px; height: 22px; flex-shrink: 0; } .ds-faq-icon::before, .ds-faq-icon::after { content: ''; position: absolute; top: 50%; left: 50%; background: #164D3A; transition: transform 0.35s cubic-bezier(0.19,1,0.22,1); } .ds-faq-icon::before { width: 14px; height: 2px; transform: translate(-50%, -50%); } .ds-faq-icon::after { width: 2px; height: 14px; transform: translate(-50%, -50%); } .ds-accordion-trigger[aria-expanded='true'] .ds-faq-icon::after { transform: translate(-50%, -50%) rotate(90deg); opacity: 0; } .ds-accordion-panel { display: grid; grid-template-rows: 0fr; overflow: hidden; transition: grid-template-rows 0.4s cubic-bezier(0.19,1,0.22,1); } .ds-accordion-item.is-open .ds-accordion-panel { grid-template-rows: 1fr; } .ds-accordion-panel > p { overflow: hidden; min-height: 0; color: #585B52; line-height: 1.65; }"
     }
   ],
   "narrative": {
-    "northStar": "The Lit Counter",
-    "overview": "The shop's own showroom instruments — a steady amber worklight over a dark counter, panes of glass over display cases, cleanly bordered display cards for each garment category — are the interface's own vocabulary. A visitor opens on a cinematic, duotone-treated hero (dark charcoal ground, warm amber key light, deep vignette) under a glassmorphism nav, then the page resolves into a bright warm-ivory register of elevated, rounded cards: an asymmetric bento grid of services, a numeral-driven process timeline, a glowing why-us grid, a masonry gallery with lightbox, and a rich dark footer that closes the arc back to charcoal. This is a premium-local, craft-driven world, not a chain or a laundromat app — but unlike a flat, hairline-only system, depth here is real: glass, blur, gradient, and warm-tinted shadow all carry weight. Confirmed visual rejections carried through finish review: no kicker/eyebrow label above any headline, no card that pairs a border with a box-shadow at rest (\"ghost card\"), no Unicode star/rating glyphs (SVG only), and no touch target under 48x48px. Gradient fill is reserved for exactly one word in the entire system (the hero's \"Best\"); it is not a general emphasis device.",
+    "northStar": "The Linen Press",
+    "overview": "This system reads as an editorial fabric-care spread, not a generic local-service grid: large image-led tiles stand in for icon-plus-heading cards, and a deliberate multi-hue section rhythm (forest green, ivory, sage, peach, cream, near-black) paces the page like a magazine rather than a flat single-background scroll. A visitor opens on a dark forest-green hero with a duotone-treated garment photograph, then moves through alternating light and dark registers — each section change is a page turn, not a repeated card pattern. Real photography, a real four-step drop-off process, and the sourced TrueLocal rating carry the trust work; nothing is invented to fill a gap. This replaces \"The Lit Counter\" (amber/charcoal, glassmorphism nav, bento-grid cards) in full. The two systems are deliberately incompatible by design: this world uses flat image-led tiles instead of bento-span cards, a plain-marked list instead of an icon-circle grid for Why Choose Us and Reviews, and a different serif voice (DM Serif Display, never bold — it has no bold cut) in place of Playfair Display, specifically so the page reads as a genuine new identity rather than a palette reskin. Confirmed visual rejections carried through finish review: no kicker/eyebrow label above any heading anywhere on the page (a \"Most Popular\" tag briefly drifted into that position above the featured service tile during build and was relocated onto the photo itself before ship); no card pairs a resting border with a box-shadow (\"ghost card\"); no generic 4-card icon grid for Why Choose Us or Reviews (the user's brief explicitly banned the pattern); no invented testimonial text (TrueLocal blocks scraping individual reviews, so only the sourced aggregate rating is shown).",
     "keyCharacteristics": [
-      "A dark-charcoal-to-amber cinematic hero resolving into a bright warm-ivory register below it — a tonal arc, not a flat palette",
-      "Sticky glassmorphism nav and a floating glass trust-card are native to this world; glassmorphism is not banned here, it is the showroom's \"pane of glass over the display case\"",
-      "Warm-tinted shadow tokens (--shadow-sm/md/lg/dark) do real elevation work — never neutral gray",
-      "A genuinely asymmetric bento-grid services section (xl/tall/wide/standard spans), not uniform icon tiles",
-      "Exactly one sanctioned gradient-text use (hero's \"Best\"); everywhere else type is solid-color"
+      "A 12-section alternating light/dark/light background rhythm (forest-deep -> ivory -> sage -> forest-deep -> peach -> cream -> ivory -> sage -> ivory -> forest-deep -> ink) that paces the page, not a flat repeated surface",
+      "One large full-bleed \"featured\" service tile with cream text overlaid directly on a photo under a gradient scrim — a distinct editorial technique, never repeated on the other six supporting tiles",
+      "Shadow-only elevation everywhere; no card ever pairs a resting border with a box-shadow",
+      "Two sections (Why Choose Us, Reviews) deliberately use a plain marked/divided list instead of a card grid, by brief and by necessity (no individually-attributed review text exists)",
+      "DM Serif Display (weight 400 only, never bold) paired with Manrope — a different serif voice from the superseded system, chosen to make the replacement unmistakable"
     ],
     "rules": [
-      { "name": "The One Gradient Rule", "body": "A warm amber gradient text-fill is used in exactly one place in the whole system — the word \"Best\" in the hero h1. It is a brief-sanctioned emphasis device, not a general pattern; no other heading or word takes a gradient fill.", "section": "colors" },
-      { "name": "The Lit Glass Rule", "body": "Glassmorphism (translucent fill + backdrop-filter: blur) is native to this world and appears deliberately in three places — the sticky nav, the floating trust-card, and the glass hero CTA — standing in for \"panes of glass over the display case.\" It is not decoration to scatter onto arbitrary surfaces; it marks a surface that floats over or compresses against other content.", "section": "colors" },
-      { "name": "The Serif-Weight Rule", "body": "Every Playfair Display use in the system is weight 700, never italic and never a lighter weight; the serif carries authority through weight, not style variation.", "section": "typography" },
-      { "name": "The Shadow-Only Elevation Rule", "body": "A card declares elevation via box-shadow alone at rest and on hover. No card pairs a border with a box-shadow for the same edge; where a ring effect is wanted (why-card hover), it is built as a box-shadow spread, never an actual border property. Glass surfaces (nav, trust-card) are the one exception, since their border is doing material-edge work for the glass itself, not card elevation.", "section": "elevation" }
+      { "name": "The Section Rhythm Rule", "body": "Section background color is a deliberate pacing device, not a flat repeat: hero/why/final-cta/footer are dark (forest-deep, forest-deep-to-forest-dark, or ink), services/reviews/faq are ivory, process/contact are sage, storytelling is peach alone, gallery is cream. No two adjacent sections in the stack share the same background.", "section": "colors" },
+      { "name": "The Coral-Ink Split Rule", "body": "Raw coral (#EF795D) is reserved for stars, markers, borders, and large decorative elements. Any coral used as readable text or a link on a light background uses coral-ink (#B9502F) instead, to clear contrast — the two are never interchangeable.", "section": "colors" },
+      { "name": "The No-Bold-Serif Rule", "body": "DM Serif Display has no bold cut in the loaded weight set; every display/headline/title use in the system is weight 400. Emphasis within a serif heading is carried by color (the butter hero word) or italic, never by faking a bold weight.", "section": "typography" },
+      { "name": "The Shadow-Only Elevation Rule", "body": "A card or raised surface declares elevation via box-shadow alone, at rest and on hover. No surface pairs a border with a box-shadow for the same edge. Verified directly in the build: .contact-list li, .hours-matrix, and .service-tile-media all carry box-shadow with no accompanying border property.", "section": "elevation" }
     ],
     "dos": [
-      "Do reserve the amber gradient text-fill for the hero's \"Best\" and nowhere else (The One Gradient Rule).",
-      "Do elevate cards with box-shadow alone, never pairing a card border with a card shadow; build ring/glow hover effects as a box-shadow spread, not a border (The Shadow-Only Elevation Rule).",
-      "Do keep glassmorphism to the three surfaces that are meant to float or compress over other content (nav, trust-card, hero glass CTA) — not decoration on arbitrary panels.",
-      "Do author every icon and rating glyph as inline SVG, never a Unicode symbol or icon font.",
+      "Do alternate section background across the full page stack so no two adjacent sections share a color (The Section Rhythm Rule).",
+      "Do elevate every card/raised surface with box-shadow alone, never a border-plus-shadow pair (The Shadow-Only Elevation Rule).",
+      "Do use coral-ink, not raw coral, for any text or link on a light background; reserve raw coral for stars, dots, and borders (The Coral-Ink Split Rule).",
+      "Do position any service-tile tag badge on the photo itself, never in the text column above a heading.",
+      "Do keep DM Serif Display at weight 400 everywhere; it has no bold cut (The No-Bold-Serif Rule).",
       "Do keep every interactive control (buttons, copy buttons, nav toggle, fixed call) at a 48x48px minimum touch target.",
-      "Do put the floating-overlap offset on the floating element itself (e.g. the trust-card), never on its wrapper, so the following section's background can never clip it.",
-      "Do reserve the outlined/muted serif numeral treatment for the Process section's real 01-04 sequence; do not add decorative numbering elsewhere."
+      "Do use a plain marked/divided list instead of a card grid for Why Choose Us and Reviews; do not default to a 4-card icon grid."
     ],
     "donts": [
+      "Don't place a kicker/eyebrow label above any heading anywhere on the page — this was caught and fixed in this build's own finish review and must not recur.",
       "Don't invent review content, star counts, pricing, or years-in-business figures in any new copy; Reviews shows only the sourced TrueLocal aggregate, linked out.",
-      "Don't add a hard-offset/neobrutalist drop shadow anywhere; all shadows in this system are soft, warm-tinted, and diffuse.",
-      "Don't apply the bento asymmetric-span treatment to a grid where the content isn't genuinely unequal in weight; uniform content gets a uniform grid (why-us, contact-list)."
+      "Don't add a booking/scheduling form to the Contact section; the business is walk-in/drive-up only (see PRODUCT.md) and this is a brand-truth constraint, not a stylistic choice.",
+      "Don't achieve service-tile visual variety via grid-column/grid-row spanning; use fixed tiles with varied image aspect-ratios instead, to avoid the empty-cell bug class found earlier in this project.",
+      "Don't carry over any token, color, or component from the superseded \"Lit Counter\" system (amber palette, Playfair Display, glassmorphism bento cards); this is a full replacement, not a merge."
     ]
   }
 }

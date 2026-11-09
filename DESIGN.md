@@ -95,13 +95,13 @@ This system reads as an editorial fabric-care spread, not a generic local-servic
 
 This replaces "The Lit Counter" (amber/charcoal, glassmorphism nav, bento-grid cards) in full. The two systems are deliberately incompatible by design: this world uses flat image-led tiles instead of bento-span cards, a plain-marked list instead of an icon-circle grid for Why Choose Us and Reviews, and a different serif voice (DM Serif Display, never bold — it has no bold cut) in place of Playfair Display, specifically so the page reads as a genuine new identity rather than a palette reskin.
 
-Confirmed visual rejections carried through finish review: no kicker/eyebrow label above any heading anywhere on the page (a "Most Popular" tag briefly drifted into that position above the featured service tile during build and was relocated onto the photo itself before ship); no card pairs a resting border with a box-shadow ("ghost card"); no generic 4-card icon grid for Why Choose Us or Reviews (the user's brief explicitly banned the pattern); no invented testimonial text (TrueLocal blocks scraping individual reviews, so only the sourced aggregate rating is shown).
+Confirmed visual rejections carried through finish review: no kicker/eyebrow label above any heading anywhere on the page (a "Most Popular" tag briefly drifted into that position above the featured service tile during build and was relocated onto the photo itself before ship); no card pairs a resting border with a box-shadow ("ghost card"); no invented testimonial text (TrueLocal blocks scraping individual reviews, so only the sourced aggregate rating is shown). Why Choose Us was later rebuilt into four icon-led benefit blocks at the user's explicit request — divided by hairline rules rather than boxed cards, so it still avoids the generic bordered-card-grid look even though it now uses an icon grid's information shape.
 
 **Key Characteristics:**
 - A 12-section alternating light/dark/light background rhythm (forest-deep → ivory → sage → forest-deep → peach → cream → ivory → sage → ivory → forest-deep → ink) that paces the page, not a flat repeated surface
 - One large full-bleed "featured" service tile with cream text overlaid directly on a photo under a gradient scrim — a distinct editorial technique, never repeated on the other six supporting tiles
 - Shadow-only elevation everywhere; no card ever pairs a resting border with a box-shadow
-- Two sections (Why Choose Us, Reviews) deliberately use a plain marked/divided list instead of a card grid, by brief and by necessity (no individually-attributed review text exists)
+- Reviews deliberately uses a plain marked/divided list instead of a card grid, by necessity (no individually-attributed review text exists); Why Choose Us uses hairline-divided icon blocks, by explicit user request
 - DM Serif Display (weight 400 only, never bold) paired with Manrope — a different serif voice from the superseded system, chosen to make the replacement unmistakable
 
 ## Colors
@@ -193,14 +193,14 @@ Generously rounded throughout: `--r-sm` (10px) on buttons and the contact-icon b
 ### Service Tiles (signature component)
 One large full-bleed "featured" tile (Professional Dry Cleaning): a photo with a bottom gradient scrim and cream text overlaid directly on the image — a magazine-spread technique distinct from every other tile on the page. Six supporting tiles follow in a 3-column grid, each a plain photo-top card (no overlay text) with the heading and copy below the image; tag badges ("Specialty," "Long-Term Storage," "Most Popular") are positioned absolutely on the photo itself in every tile, including the featured one — never in the text column above a heading.
 
-### Why Choose Us List (signature component)
-A dark forest-deep section pairing one large real photograph with a plain marked list: a small coral dot (not an icon-in-a-circle, not a bordered card) precedes each item's heading and copy. Deliberately not a 4-card icon grid, per the user's own brief.
+### Why Choose Us Blocks (signature component)
+A dark forest-deep section of four icon-led benefit blocks in a 2-column grid (single column below 1080px), divided by hairline top-rules rather than boxed cards — deliberately a divided list wearing an icon grid's information shape, not a bordered/shadowed card pattern. Each block pairs a small butter-colored line icon with an editorial heading and copy; the trust block alone adds a small butter "5.0 Rated" pill beside its star icon — a tasteful highlight, never an oversized badge. Superseded the prior photo-plus-marked-list version at the user's explicit, detailed request for icon benefit blocks; the hairline-divider treatment is what keeps it from reading as a generic four-card template.
 
 ### Reviews Pull (signature component)
-An ivory section pairing a large pulled rating stat ("5.0" in DM Serif Display at 4.5rem) with a plain top-rule-divided list of three verified facts. Not a card grid, for the same reason as Why Choose Us, and because no individually-attributed review text could be sourced — only the TrueLocal aggregate rating is shown.
+An ivory section pairing a large pulled rating stat ("5.0" in DM Serif Display at 4.5rem) with a plain top-rule-divided list of three verified facts. Not a card grid, because no individually-attributed review text could be sourced — only the TrueLocal aggregate rating is shown.
 
 ### Process Timeline (signature component)
-A four-step horizontal timeline with a dashed forest-deep connecting line. Step numerals use an outlined/transparent-fill serif treatment (`-webkit-text-stroke`, no fill) — reserved for this section because the 01–04 sequence is real, in-order information (drop off → discuss → collect → pick up), not decoration.
+A four-step horizontal timeline (vertical on mobile, ≤760px) with a dashed forest-deep connecting line threading through each step's small line icon. Step numerals use an outlined/transparent-fill serif treatment (`-webkit-text-stroke`, no fill) — reserved for this section because the 01–04 sequence is real, in-order information (drop off → discuss → collect → pick up), not decoration. On mobile the connecting line turns vertical and runs beside a narrow number+icon column, with heading and copy to its right.
 
 ### Gallery / Lightbox
 A CSS multi-column masonry grid of rounded, shadow-sm image tiles with a hover zoom and reveal expand-icon, opening into a full-screen dark lightbox with keyboard (arrow/Escape), swipe, and focus-return support. Visually restyled to this palette; behaviorally unchanged from the prior system.
@@ -220,7 +220,7 @@ Borderless, hairline-divided rows; trigger carries a rotating `+`/`×` icon buil
 - **Do** position any service-tile tag badge on the photo itself, never in the text column above a heading.
 - **Do** keep DM Serif Display at weight 400 everywhere; it has no bold cut (The No-Bold-Serif Rule).
 - **Do** keep every interactive control (buttons, copy buttons, nav toggle, fixed call) at a 48×48px minimum touch target.
-- **Do** use a plain marked/divided list instead of a card grid for Why Choose Us and Reviews; do not default to a 4-card icon grid.
+- **Do** use a plain top-rule-divided list for Reviews; for Why Choose Us, hairline-divided icon blocks are the confirmed pattern (user-requested), not a card grid — avoid introducing bordered/shadowed cards there.
 
 ### Don't:
 - **Don't** place a kicker/eyebrow label above any heading anywhere on the page — this was caught and fixed in this build's own finish review and must not recur.

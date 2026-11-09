@@ -79,6 +79,92 @@
     revealEls.forEach(function (el) { io.observe(el); });
   }
 
+  /* ---------- Hero cinematic scene sync ---------- */
+  (function () {
+    var video = document.getElementById("heroVideo");
+    var headlineEl = document.getElementById("heroHeadline");
+    var subEl = document.getElementById("heroSub");
+    var sceneCurrentEl = document.getElementById("sceneCurrent");
+    var sceneFillEl = document.getElementById("sceneFill");
+    if (!video || !headlineEl || !subEl) return;
+
+    /* Editable scene config: each "start" is the real timestamp (seconds) where
+       that beat begins in assets/hero/hero-video.mp4, mapped by eye against the
+       actual footage (closet wide shot -> fabric/collar close-up -> steam
+       pressing -> hand-finishing/boxing -> back to the closet for a seamless
+       loop). Adjust "start" values here if the source video is ever re-cut. */
+    var scenes = [
+      { start: 0.0, headline: "Ready To Make An Impression.", sub: "Discover a better standard of garment care." },
+      { start: 2.0, headline: "Every Thread. A Story.", sub: "Exceptional care begins with attention to every detail." },
+      { start: 4.3, headline: "Perfection, Pressed In.", sub: "A refined finish that makes every detail count." },
+      { start: 6.1, headline: "Care, Without Compromise.", sub: "Every garment receives the attention it deserves." },
+      { start: 8.3, headline: "Precision In Every Detail.", sub: "Thoughtful care. Expert handling. Beautiful results." }
+    ];
+
+    function buildWords(text) {
+      return text.split(" ").map(function (word, i, arr) {
+        var isLast = i === arr.length - 1;
+        return '<span class="word' + (isLast ? " word--accent" : "") + '" style="--i:' + i + '">' + word + "</span>";
+      }).join(" ");
+    }
+
+    var pending = 0;
+    var exitTimer = null;
+
+    function applyScene(i) {
+      headlineEl.innerHTML = buildWords(scenes[i].headline);
+      subEl.textContent = scenes[i].sub;
+      void headlineEl.offsetWidth; /* force reflow so the entrance transition replays */
+      headlineEl.classList.add("is-active");
+      subEl.classList.add("is-active");
+      if (sceneCurrentEl) sceneCurrentEl.textContent = String(i + 1).length < 2 ? "0" + (i + 1) : String(i + 1);
+    }
+
+    function setScene(i) {
+      if (i === pending) return;
+      pending = i;
+      if (exitTimer) clearTimeout(exitTimer);
+      headlineEl.classList.remove("is-active");
+      subEl.classList.remove("is-active");
+      exitTimer = setTimeout(function () {
+        applyScene(i);
+        exitTimer = null;
+      }, 380);
+    }
+
+    function sceneIndexForTime(t) {
+      var idx = 0;
+      for (var i = 0; i < scenes.length; i++) {
+        if (t >= scenes[i].start) idx = i;
+      }
+      return idx;
+    }
+
+    video.addEventListener("timeupdate", function () {
+      var duration = video.duration;
+      if (!duration || isNaN(duration)) return;
+      var idx = sceneIndexForTime(video.currentTime);
+      setScene(idx);
+      if (sceneFillEl) {
+        var sceneStart = scenes[idx].start;
+        var sceneEnd = idx + 1 < scenes.length ? scenes[idx + 1].start : duration;
+        var progress = (video.currentTime - sceneStart) / (sceneEnd - sceneStart);
+        sceneFillEl.style.width = Math.min(100, Math.max(0, progress * 100)) + "%";
+      }
+    });
+
+    /* Fallback: if the video can't load or autoplay is blocked, drop to a
+       static poster-backed hero with the first scene's text already shown. */
+    function showStaticFallback() {
+      hero.classList.add("hero--static");
+    }
+    video.addEventListener("error", showStaticFallback);
+    var playAttempt = video.play();
+    if (playAttempt && typeof playAttempt.catch === "function") {
+      playAttempt.catch(showStaticFallback);
+    }
+  })();
+
   /* ---------- Hero mouse parallax ---------- */
   if (!reduceMotion) {
     var heroContent = document.getElementById("heroContent");

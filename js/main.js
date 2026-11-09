@@ -88,6 +88,12 @@
     var sceneFillEl = document.getElementById("sceneFill");
     if (!video || !headlineEl || !subEl) return;
 
+    /* Slow playback so the ~10s source clip stretches to ~15.4s, giving each
+       scene's text enough time to be read comfortably. Scene "start" values
+       below are native-media timestamps (video.currentTime), which playbackRate
+       does not change, so they stay correct at any speed. */
+    video.playbackRate = 0.65;
+
     /* Editable scene config: each "start" is the real timestamp (seconds) where
        that beat begins in assets/hero/hero-video.mp4, mapped by eye against the
        actual footage (closet wide shot -> fabric/collar close-up -> steam

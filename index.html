@@ -68,19 +68,22 @@
 <main id="main">
 
   <!-- ============ HERO ============ -->
-  <section class="hero" id="home">
+  <section class="hero hero--cinematic" id="home">
     <div class="hero-media">
-      <img src="assets/hero/hero-steam-press.jpg" alt="Hands finishing a freshly steamed white garment, illustrating the hands-on care behind every piece St Marys Village Dry Cleaners handles." loading="eager" fetchpriority="high">
+      <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/hero/hero-video-poster.jpg" aria-hidden="true">
+        <source src="assets/hero/hero-video.mp4" type="video/mp4">
+      </video>
       <div class="hero-scrim" aria-hidden="true"></div>
     </div>
 
     <div class="hero-content">
-      <h1>Your Clothes Deserve <em>Better Care</em>.</h1>
-      <p class="hero-sub">Independently run at The Village Centre. Shirts to wedding gowns, with drive-up access right outside the door.</p>
+      <h1 id="heroHeadline">Care That Begins With <em>Excellence</em>.</h1>
+      <p class="hero-sub" id="heroSub">A better standard of care for the wardrobe you love.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Get in Touch</a>
-        <a href="#services" class="btn btn-glass">Explore Our Services</a>
+        <a href="#services" class="btn btn-primary">Explore Our Services</a>
+        <a href="#contact" class="btn btn-glass">Get in Touch</a>
       </div>
+      <p class="hero-trust">Professional Care &bull; Precision Finishing &bull; Effortless Convenience</p>
     </div>
 
     <button class="scroll-cue" id="scrollCue" aria-label="Scroll to learn more">

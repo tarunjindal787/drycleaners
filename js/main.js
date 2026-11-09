@@ -3,6 +3,64 @@
 
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* ---------- Hero video scene sync ---------- */
+  (function () {
+    var video = document.getElementById("heroVideo");
+    var headlineEl = document.getElementById("heroHeadline");
+    var subEl = document.getElementById("heroSub");
+    if (!video || !headlineEl || !subEl) return;
+
+    var scenes = [
+      { headline: "Care That Begins With <em>Excellence</em>.", sub: "A better standard of care for the wardrobe you love." },
+      { headline: "Every Fabric Deserves <em>Attention</em>.", sub: "Gentle handling and precision for every delicate detail." },
+      { headline: "Precision In Every <em>Press</em>.", sub: "Professional finishing that brings every garment back to life." },
+      { headline: "Freshness, Beautifully <em>Finished</em>.", sub: "Thoughtful garment care, ready for collection." },
+      { headline: "Look Sharp. Feel <em>Exceptional</em>.", sub: "Premium garment care that fits effortlessly into your routine." }
+    ];
+
+    var currentScene = 0;
+    var pendingScene = 0;
+    var transitionTimer = null;
+    function applyScene(i) {
+      headlineEl.innerHTML = scenes[i].headline;
+      subEl.textContent = scenes[i].sub;
+    }
+    applyScene(0); // scene 1 shows immediately, no fade, no wait on video/JS timing
+
+    if (reduceMotion) return; // static headline only; video still autoplays/loops natively
+
+    function setScene(i) {
+      if (i === pendingScene) return;
+      pendingScene = i;
+      if (transitionTimer) clearTimeout(transitionTimer); // cancel any in-flight transition and retarget, so a scene request can never be silently dropped near the loop boundary
+      headlineEl.classList.add("is-changing");
+      subEl.classList.add("is-changing");
+      transitionTimer = setTimeout(function () {
+        applyScene(i);
+        currentScene = i;
+        headlineEl.classList.remove("is-changing");
+        subEl.classList.remove("is-changing");
+        headlineEl.classList.add("is-entering");
+        subEl.classList.add("is-entering");
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            headlineEl.classList.remove("is-entering");
+            subEl.classList.remove("is-entering");
+          });
+        });
+        transitionTimer = null;
+      }, 380);
+    }
+
+    video.addEventListener("timeupdate", function () {
+      var duration = video.duration;
+      if (!duration || isNaN(duration)) return;
+      var sceneLen = duration / scenes.length;
+      var idx = Math.min(scenes.length - 1, Math.floor(video.currentTime / sceneLen));
+      setScene(idx);
+    });
+  })();
+
   /* ---------- Header scroll state ---------- */
   var header = document.getElementById("siteHeader");
   var fixedCall = document.getElementById("fixedCall");

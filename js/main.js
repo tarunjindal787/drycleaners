@@ -3,64 +3,6 @@
 
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------- Hero video scene sync ---------- */
-  (function () {
-    var video = document.getElementById("heroVideo");
-    var headlineEl = document.getElementById("heroHeadline");
-    var subEl = document.getElementById("heroSub");
-    if (!video || !headlineEl || !subEl) return;
-
-    var scenes = [
-      { headline: "Care That Begins With <em>Excellence</em>.", sub: "A better standard of care for the wardrobe you love." },
-      { headline: "Every Fabric Deserves <em>Attention</em>.", sub: "Gentle handling and precision for every delicate detail." },
-      { headline: "Precision In Every <em>Press</em>.", sub: "Professional finishing that brings every garment back to life." },
-      { headline: "Freshness, Beautifully <em>Finished</em>.", sub: "Thoughtful garment care, ready for collection." },
-      { headline: "Look Sharp. Feel <em>Exceptional</em>.", sub: "Premium garment care that fits effortlessly into your routine." }
-    ];
-
-    var currentScene = 0;
-    var pendingScene = 0;
-    var transitionTimer = null;
-    function applyScene(i) {
-      headlineEl.innerHTML = scenes[i].headline;
-      subEl.textContent = scenes[i].sub;
-    }
-    applyScene(0); // scene 1 shows immediately, no fade, no wait on video/JS timing
-
-    if (reduceMotion) return; // static headline only; video still autoplays/loops natively
-
-    function setScene(i) {
-      if (i === pendingScene) return;
-      pendingScene = i;
-      if (transitionTimer) clearTimeout(transitionTimer); // cancel any in-flight transition and retarget, so a scene request can never be silently dropped near the loop boundary
-      headlineEl.classList.add("is-changing");
-      subEl.classList.add("is-changing");
-      transitionTimer = setTimeout(function () {
-        applyScene(i);
-        currentScene = i;
-        headlineEl.classList.remove("is-changing");
-        subEl.classList.remove("is-changing");
-        headlineEl.classList.add("is-entering");
-        subEl.classList.add("is-entering");
-        requestAnimationFrame(function () {
-          requestAnimationFrame(function () {
-            headlineEl.classList.remove("is-entering");
-            subEl.classList.remove("is-entering");
-          });
-        });
-        transitionTimer = null;
-      }, 380);
-    }
-
-    video.addEventListener("timeupdate", function () {
-      var duration = video.duration;
-      if (!duration || isNaN(duration)) return;
-      var sceneLen = duration / scenes.length;
-      var idx = Math.min(scenes.length - 1, Math.floor(video.currentTime / sceneLen));
-      setScene(idx);
-    });
-  })();
-
   /* ---------- Header scroll state ---------- */
   var header = document.getElementById("siteHeader");
   var fixedCall = document.getElementById("fixedCall");
@@ -113,7 +55,7 @@
   var scrollCue = document.getElementById("scrollCue");
   if (scrollCue) {
     scrollCue.addEventListener("click", function () {
-      var target = document.getElementById("about");
+      var target = document.getElementById("services");
       if (target) target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
     });
   }
@@ -137,17 +79,42 @@
     revealEls.forEach(function (el) { io.observe(el); });
   }
 
-  /* ---------- FAQ accordion ---------- */
-  document.querySelectorAll(".accordion-item").forEach(function (item) {
-    var trigger = item.querySelector(".accordion-trigger");
-    var panel = item.querySelector(".accordion-panel");
-    panel.setAttribute("role", "region");
-    trigger.addEventListener("click", function () {
-      var isOpen = item.classList.contains("is-open");
-      item.classList.toggle("is-open", !isOpen);
-      trigger.setAttribute("aria-expanded", String(!isOpen));
+  /* ---------- Hero mouse parallax ---------- */
+  if (!reduceMotion) {
+    var heroContent = document.getElementById("heroContent");
+    if (heroContent && hero) {
+      var rafId = null;
+      hero.addEventListener("mousemove", function (e) {
+        if (rafId) return;
+        rafId = requestAnimationFrame(function () {
+          var rect = hero.getBoundingClientRect();
+          var relX = (e.clientX - rect.left) / rect.width - 0.5;
+          var relY = (e.clientY - rect.top) / rect.height - 0.5;
+          heroContent.style.transform = "translate(" + (relX * -14) + "px, " + (relY * -10) + "px)";
+          rafId = null;
+        });
+      });
+      hero.addEventListener("mouseleave", function () {
+        heroContent.style.transform = "translate(0, 0)";
+      });
+    }
+  }
+
+  /* ---------- Subtle 3D tilt on service / gallery tiles ---------- */
+  if (!reduceMotion) {
+    var tiltEls = document.querySelectorAll(".service-tile");
+    tiltEls.forEach(function (el) {
+      el.addEventListener("mousemove", function (e) {
+        var rect = el.getBoundingClientRect();
+        var px = (e.clientX - rect.left) / rect.width - 0.5;
+        var py = (e.clientY - rect.top) / rect.height - 0.5;
+        el.style.transform = "perspective(900px) rotateX(" + (py * -4) + "deg) rotateY(" + (px * 4) + "deg)";
+      });
+      el.addEventListener("mouseleave", function () {
+        el.style.transform = "";
+      });
     });
-  });
+  }
 
   /* ---------- Gallery lightbox ---------- */
   var galleryItems = Array.prototype.slice.call(document.querySelectorAll(".gallery-item"));
@@ -211,36 +178,6 @@
     }
     touchStartX = null;
   }, { passive: true });
-
-  /* ---------- Quick-copy contact details ---------- */
-  document.querySelectorAll(".copy-btn").forEach(function (btn) {
-    var label = btn.querySelector(".copy-btn-label");
-    var defaultLabel = label.textContent;
-    btn.addEventListener("click", function () {
-      var value = btn.dataset.copy;
-      var done = function () {
-        label.textContent = "Copied";
-        btn.classList.add("is-copied");
-        setTimeout(function () {
-          label.textContent = defaultLabel;
-          btn.classList.remove("is-copied");
-        }, 1800);
-      };
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(value).then(done, done);
-      } else {
-        var temp = document.createElement("textarea");
-        temp.value = value;
-        temp.style.position = "fixed";
-        temp.style.opacity = "0";
-        document.body.appendChild(temp);
-        temp.select();
-        try { document.execCommand("copy"); } catch (err) { /* no-op */ }
-        document.body.removeChild(temp);
-        done();
-      }
-    });
-  });
 
   /* ---------- Footer year ---------- */
   var yearEl = document.getElementById("year");

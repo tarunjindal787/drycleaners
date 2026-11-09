@@ -108,7 +108,7 @@ A restrained, low-saturation palette: ivory and white carry nearly every light s
 
 ### Accent
 - **Champagne** (`#C7AD85`): header-cta fill, service-tag text, nav-link hover underline/color, step-icon color, stat-num color, reviews-link color, text selection highlight, scrollbar thumb.
-- **Champagne Deep** (`#7D6342`): eyebrow text color, focus-ring color, header-cta hover fill, contact-directions link color — the text-safe, slightly darker partner to champagne for anything read as a link/label on a light ground.
+- **Champagne Deep** (`#7D6342`): focus-ring color, header-cta hover fill, contact-directions link color — the text-safe, slightly darker partner to champagne for anything read as a link on a light ground.
 
 ### Neutral
 - **Ivory** (`#F5F2EA`): page body background, `.btn-primary` text, light-register section backgrounds (process is white, services/gallery/footer-adjacent are ivory).
@@ -132,7 +132,7 @@ A restrained, low-saturation palette: ivory and white carry nearly every light s
 - **Title** (500, 1.05rem–1.5rem): service-tile `h3`, process-step `h3` (uppercase), footer-name.
 - **Stat** (600, `clamp(1.9rem, 3.6vw, 2.9rem)`): Why Choose Us `.stat-num` only.
 - **Body** (400, 1rem, line-height 1.6): running copy (Inter).
-- **Label** (600–700, 0.7rem–0.86rem, letter-spacing 0.02em–0.24em, uppercase): eyebrows, service-tag, brand-name/brand-sub, stat-label, footer column headers.
+- **Label** (600–700, 0.7rem–0.86rem, letter-spacing 0.02em–0.14em, uppercase): service-tag, brand-name/brand-sub, stat-label, footer column headers.
 
 ## Layout
 
@@ -202,7 +202,4 @@ A 50/50 split screen: a dark, photo-backed `.contact-intro-panel` (charcoal scri
 - **Don't** achieve service-tile or gallery-tile visual variety via `grid-column`/`grid-row` spanning; use fixed row-groups with varied `flex` ratios instead, to avoid the empty-cell bug class found earlier in this project.
 - **Don't** add a booking/scheduling form to Contact; the business is walk-in/drive-up only (see PRODUCT.md), a brand-truth constraint, not a stylistic choice.
 - **Don't** invent review content, star counts, pricing, or years-in-business figures; the Why Choose Us stat row and footer show only the sourced TrueLocal aggregate (5.0, 8 reviews), linked out.
-
-## Not Canonized
-
-The shipped build carries four `.eyebrow` kicker labels (above "What We Care For," "From Drop-Off to Collection," "Garment Care, Up Close," and "Visit Us") styled in champagne-deep uppercase. Kickers/eyebrows are a device the craft floor bans outright, and the predecessor system ("Linen Press") explicitly rejected the same device in its own finish review ("no kicker/eyebrow label above any heading anywhere on the page"). This build reintroduced it. It is recorded here only as a defect this build currently carries — it is **not** promoted to a DESIGN.md rule, pattern, or component, and future surfaces should not inherit it; it should be removed from the markup, not re-legitimized by documentation.
+- **Don't** place a kicker/eyebrow label above any heading anywhere on the page. The build briefly reintroduced four of these (above "What We Care For," "From Drop-Off to Collection," "Garment Care, Up Close," and the contact card) and they were removed on review — this is a craft-floor ban, not a default, and no brief earns it back. Where a component had no heading at all (the contact card), it got a real `<h3>` instead of a label.

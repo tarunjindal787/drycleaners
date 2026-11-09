@@ -77,13 +77,6 @@ body {
 
 .section-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--section-x); }
 
-.eyebrow {
-  display: block; font-family: var(--font-body); font-weight: 600;
-  font-size: 0.7rem; letter-spacing: 0.24em; text-transform: uppercase;
-  color: var(--champagne-deep); margin-bottom: 1rem;
-}
-.why .eyebrow, .process .eyebrow, .gallery-section .eyebrow { color: var(--champagne-deep); }
-
 .section-title {
   font-family: var(--font-display); font-weight: 500;
   font-size: clamp(2rem, 3.8vw, 3.2rem); line-height: 1.08; letter-spacing: -0.01em;
@@ -396,6 +389,7 @@ body {
 
 .contact-card-panel { flex: 1; display: flex; align-items: center; justify-content: center; padding: var(--section-y) var(--section-x); background: var(--ivory); }
 .contact-card { width: 100%; max-width: 440px; }
+.contact-card-title { font-family: var(--font-display); font-weight: 500; font-size: 1.4rem; color: var(--charcoal); }
 .contact-address { margin-top: 0.8rem; font-size: 1.05rem; color: var(--charcoal); line-height: 1.5; max-width: 32ch; }
 .contact-directions { display: inline-block; margin-top: 0.6rem; font-size: 0.88rem; font-weight: 600; color: var(--champagne-deep); border-bottom: 1px solid rgba(125,99,66,0.4); padding-bottom: 0.1em; }
 

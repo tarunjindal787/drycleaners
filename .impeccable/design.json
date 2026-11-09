@@ -20,7 +20,7 @@
       "title": { "displayName": "Title", "purpose": "Component headings: service-tile h3, process-step h3, footer-name." },
       "stat": { "displayName": "Stat", "purpose": "Why Choose Us .stat-num only, weight 600." },
       "body": { "displayName": "Body", "purpose": "Running copy throughout (Inter)." },
-      "label": { "displayName": "Label", "purpose": "Eyebrows, service-tag, brand-name/brand-sub, stat-label, footer column headers." }
+      "label": { "displayName": "Label", "purpose": "service-tag, brand-name/brand-sub, stat-label, footer column headers." }
     },
     "shadows": [
       { "name": "shadow-sm", "value": "0 1px 3px rgba(23,25,24,0.06), 0 3px 12px -6px rgba(23,25,24,0.1)", "purpose": "Scrolled header only." },
@@ -73,7 +73,7 @@
       "refersTo": null,
       "description": "Ultra-minimal step: small line icon, outlined/transparent-fill serif numeral, and one uppercase word — no paragraph copy.",
       "html": "<li class=\"ds-process-step\"><span class=\"ds-step-icon\"><svg><!-- line icon --></svg></span><span class=\"ds-step-num\">01</span><h3>Drop Off</h3></li>",
-      "css": ".ds-step-icon { color: #9C7C52; } .ds-step-num { font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(1.8rem, 3vw, 2.3rem); color: transparent; -webkit-text-stroke: 1.2px #DCD7CD; } .ds-process-step h3 { font-family: 'Playfair Display', serif; font-weight: 500; font-size: 1.05rem; letter-spacing: 0.01em; text-transform: uppercase; color: #171918; }"
+      "css": ".ds-step-icon { color: #7D6342; } .ds-step-num { font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(1.8rem, 3vw, 2.3rem); color: transparent; -webkit-text-stroke: 1.2px #DCD7CD; } .ds-process-step h3 { font-family: 'Playfair Display', serif; font-weight: 500; font-size: 1.05rem; letter-spacing: 0.01em; text-transform: uppercase; color: #171918; }"
     },
     {
       "name": "Why Choose Us Stat",
@@ -119,10 +119,8 @@
       "Don't carry over any token, color, or component from the superseded \"Linen Press\" system; this is a full replacement, not a merge.",
       "Don't achieve service-tile or gallery-tile visual variety via grid-column/grid-row spanning; use fixed row-groups with varied flex ratios instead.",
       "Don't add a booking/scheduling form to Contact; the business is walk-in/drive-up only (see PRODUCT.md).",
-      "Don't invent review content, star counts, pricing, or years-in-business figures; show only the sourced TrueLocal aggregate, linked out."
-    ],
-    "notCanonized": [
-      "Four .eyebrow kicker labels (above 'What We Care For', 'From Drop-Off to Collection', 'Garment Care, Up Close', and 'Visit Us') are present in the shipped markup. Kickers/eyebrows are a banned device, and the predecessor system explicitly rejected the same device in its own finish review. This is recorded as a defect the build currently carries, not as a DESIGN.md rule or component -- it should be removed from the markup, not re-legitimized by documentation."
+      "Don't invent review content, star counts, pricing, or years-in-business figures; show only the sourced TrueLocal aggregate, linked out.",
+      "Don't place a kicker/eyebrow label above any heading. Four were briefly reintroduced in this build and removed on review; this is a craft-floor ban, not a default. Give a headingless component (like the contact card) a real heading instead."
     ]
   }
 }

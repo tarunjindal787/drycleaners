@@ -214,15 +214,15 @@ body {
     linear-gradient(180deg, rgba(23,25,24,0.55) 0%, rgba(23,25,24,0.4) 40%, rgba(23,25,24,0.75) 100%);
 }
 
-.hero-content { position: relative; z-index: 2; max-width: var(--max-w); margin: 0 auto; padding: 0 var(--section-x); width: 100%; text-align: center; will-change: transform; }
+.hero-content { position: relative; z-index: 2; max-width: var(--max-w); margin: 0 auto; padding: 0 var(--section-x); width: 100%; text-align: center; will-change: transform; margin-top: clamp(2rem, 7vh, 5.5rem); }
 .hero h1 {
   font-family: var(--font-display); font-weight: 700; color: var(--ivory);
-  font-size: clamp(2.8rem, 6.4vw, 6.2rem); line-height: 1.04; letter-spacing: -0.01em;
+  font-size: clamp(1.3rem, 5.4vw, 5rem); line-height: 1.1; letter-spacing: -0.005em;
   text-transform: uppercase;
   text-shadow: 0 4px 40px rgba(0,0,0,0.3);
-  max-width: 20ch; margin: 0 auto; min-height: 2.3em;
-  display: flex; flex-wrap: wrap; justify-content: center; align-content: center;
-  gap: 0 0.32em;
+  max-width: 96vw; margin: 0 auto; min-height: 1.3em;
+  display: flex; flex-wrap: nowrap; justify-content: center; align-items: baseline;
+  gap: 0 0.3em;
 }
 .hero h1 .word {
   display: inline-block; opacity: 0; transform: translateY(26px); filter: blur(10px);
@@ -233,8 +233,9 @@ body {
 .hero h1 .word--accent { color: var(--champagne); }
 
 .hero-sub {
-  margin: 1.5rem auto 0; max-width: 34ch; min-height: 3.1em;
-  color: var(--text-on-dark-muted); font-size: 1.08rem; letter-spacing: 0.01em; line-height: 1.5;
+  margin: 1.4rem auto 0; max-width: 96vw; min-height: 1.6em;
+  color: var(--text-on-dark-muted); font-size: clamp(0.72rem, 1.85vw, 1.08rem); letter-spacing: 0.01em; line-height: 1.5;
+  white-space: nowrap;
   opacity: 0; transform: translateY(14px); filter: blur(6px);
   transition: opacity 0.6s var(--ease) 0.15s, transform 0.6s var(--ease) 0.15s, filter 0.6s var(--ease) 0.15s;
 }
@@ -256,15 +257,6 @@ body {
 .hero-scene-track { width: 58px; height: 1px; background: rgba(245,242,234,0.22); position: relative; overflow: hidden; }
 .hero-scene-fill { position: absolute; inset: 0; width: 0%; background: var(--champagne); transition: width 0.25s linear; }
 @media (max-width: 640px) { .hero-scene { display: none; } }
-
-.scroll-cue {
-  position: absolute; left: 50%; bottom: 2.5rem; transform: translateX(-50%); z-index: 2;
-  width: 28px; height: 44px; border: 1px solid rgba(245,242,234,0.35); border-radius: var(--r-pill);
-  display: flex; justify-content: center; padding-top: 8px;
-}
-.scroll-cue span { width: 3px; height: 8px; border-radius: var(--r-pill); background: var(--champagne); animation: cue-drop 1.8s ease-in-out infinite; }
-@keyframes cue-drop { 0% { opacity: 0; transform: translateY(0); } 40% { opacity: 1; } 100% { opacity: 0; transform: translateY(14px); } }
-@media (prefers-reduced-motion: reduce) { .scroll-cue span { animation: none; opacity: 0.7; } }
 
 /* ============================================================
    SERVICES — EDITORIAL MOSAIC
@@ -454,7 +446,13 @@ body {
 .footer-contact p, .footer-hours p { font-size: 0.9rem; line-height: 1.6; margin-bottom: 0.6rem; }
 .footer-hours p span { color: var(--ivory); font-weight: 600; margin-right: 0.4em; }
 
-.footer-bottom { padding: 1.6rem var(--section-x); text-align: center; font-size: 0.8rem; }
+.footer-bottom {
+  padding: 1.6rem var(--section-x); font-size: 0.8rem;
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.4rem 1.2rem;
+}
+.footer-credit { opacity: 0.7; }
+.footer-credit a { font-weight: 600; transition: color 0.25s var(--ease); }
+.footer-credit a:hover { color: var(--champagne); }
 
 /* ============================================================
    RESPONSIVE
@@ -501,7 +499,6 @@ body {
 }
 
 @media (max-width: 600px) {
-  .hero h1 { font-size: clamp(2.6rem, 11vw, 3.4rem); }
   .process-step { flex: 1 1 100%; }
   .stat { flex: 1 1 100%; border-top: 1px solid rgba(245,242,234,0.14); }
   .why .stat:first-child { border-top: 0; }

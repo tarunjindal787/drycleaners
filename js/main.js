@@ -51,15 +51,6 @@
     if (e.key === "Escape") closeNav();
   });
 
-  /* ---------- Scroll cue ---------- */
-  var scrollCue = document.getElementById("scrollCue");
-  if (scrollCue) {
-    scrollCue.addEventListener("click", function () {
-      var target = document.getElementById("services");
-      if (target) target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
-    });
-  }
-
   /* ---------- Scroll reveal ---------- */
   var revealEls = document.querySelectorAll(".reveal");
   if (reduceMotion || !("IntersectionObserver" in window)) {

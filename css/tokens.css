@@ -1,0 +1,145 @@
+/* ============================================================
+   St Marys Village Dry Cleaners — Design System
+   "The Atelier": a cinematic forest-green garment-care identity
+   Shared across every page. Loaded first, before layout.css.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+}
+body, h1, h2, h3, h4, p, ul, ol, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+:root {
+  /* Atelier palette */
+  --forest: #183B32;
+  --forest-deep: #102820;
+  --cream: #F5F0E6;
+  --beige: #D9CCB8;
+  --charcoal: #252A26;
+  --gold: #B99A69;
+  --gold-ink: #8C7447;
+  --white: #FFFFFF;
+  --text-on-dark: #F5F0E6;
+  --text-on-dark-muted: rgba(245, 240, 230, 0.68);
+
+  --shadow-sm: 0 2px 10px -4px rgba(16, 40, 32, 0.14);
+  --shadow-md: 0 18px 38px -16px rgba(16, 40, 32, 0.24);
+  --shadow-lg: 0 32px 70px -22px rgba(16, 40, 32, 0.32);
+  --shadow-dark: 0 20px 50px -14px rgba(0, 0, 0, 0.5);
+
+  --font-display: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-body: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --r-sm: 4px;
+  --r-md: 10px;
+  --r-pill: 999px;
+
+  --section-y: clamp(3.5rem, 7vw, 7rem);
+  --section-x: clamp(1.25rem, 5vw, 4rem);
+  --max-w: 1480px;
+
+  --ease: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--charcoal);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection { background: var(--gold); color: var(--forest-deep); }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: var(--r-pill); border: 2px solid var(--cream); }
+:focus-visible { outline: 2px solid var(--gold-ink); outline-offset: 3px; border-radius: 2px; }
+
+.skip-link {
+  position: absolute; left: 1rem; top: -60px; z-index: 300;
+  background: var(--forest-deep); color: var(--cream);
+  padding: 0.8em 1.4em; border-radius: var(--r-sm); font-weight: 600;
+  transition: top 0.25s var(--ease);
+}
+.skip-link:focus { top: 1rem; }
+
+.section-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--section-x); }
+
+.eyebrow-label { display: none; } /* reserved: never used above headings, see DESIGN.md craft-floor note */
+
+.section-title {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: clamp(2.1rem, 4vw, 3.4rem); line-height: 1.1; letter-spacing: -0.005em;
+  color: var(--forest-deep);
+}
+.section-title--on-dark { color: var(--cream); }
+.section-lede {
+  margin-top: 1rem; max-width: 60ch; color: var(--charcoal); opacity: 0.78; font-size: 1.05rem;
+}
+.section-lede--on-dark { color: var(--text-on-dark-muted); opacity: 1; }
+
+/* ---------- Reveal / stagger ---------- */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.85s var(--ease), transform 0.85s var(--ease); transition-delay: calc(var(--delay, 0) * 90ms); }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5em;
+  padding: 1em 2em; border-radius: var(--r-pill);
+  font-weight: 600; font-size: 0.92rem; letter-spacing: 0.02em;
+  min-height: 48px; white-space: nowrap;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), background-color 0.35s var(--ease), border-color 0.35s var(--ease), color 0.35s var(--ease);
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+
+.btn-primary { background: var(--forest-deep); color: var(--cream); box-shadow: var(--shadow-md); }
+.btn-primary:hover { background: var(--forest); box-shadow: var(--shadow-lg); }
+
+.btn-gold { background: var(--gold); color: var(--forest-deep); box-shadow: var(--shadow-sm); }
+.btn-gold:hover { background: var(--gold-ink); color: var(--cream); }
+
+.btn-outline-light { background: transparent; color: var(--text-on-dark); border: 1px solid rgba(245,240,230,0.4); }
+.btn-outline-light:hover { background: rgba(245,240,230,0.1); border-color: rgba(245,240,230,0.7); }
+
+.btn-outline-dark { background: transparent; color: var(--forest-deep); border: 1px solid rgba(37,42,38,0.28); }
+.btn-outline-dark:hover { background: var(--forest-deep); color: var(--cream); border-color: var(--forest-deep); }
+
+/* ---------- Generic inner-page layout (used by every non-home page) ---------- */
+.page-hero {
+  position: relative; padding: clamp(8rem, 18vh, 11rem) 0 clamp(3rem, 7vw, 5rem);
+  background: var(--forest-deep); color: var(--text-on-dark); overflow: hidden;
+}
+.page-hero-bg { position: absolute; inset: 0; z-index: 0; }
+.page-hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.32; }
+.page-hero-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(160deg, rgba(16,40,32,0.78), rgba(16,40,32,0.94)); }
+.page-hero .section-inner { position: relative; z-index: 1; }
+.page-hero-crumb { font-size: 0.82rem; color: var(--text-on-dark-muted); }
+.page-hero-crumb a:hover { color: var(--gold); }
+.page-hero h1 {
+  margin-top: 0.9rem; font-family: var(--font-display); font-weight: 500; color: var(--cream);
+  font-size: clamp(2.6rem, 5.5vw, 4.6rem); line-height: 1.06; letter-spacing: -0.005em; max-width: 16ch;
+}
+.page-hero p { margin-top: 1.1rem; max-width: 56ch; font-size: 1.08rem; color: var(--text-on-dark-muted); }
+
+.page-section { padding: var(--section-y) 0; }
+.page-section--alt { background: var(--white); }
+.page-section--dark { background: var(--forest-deep); color: var(--text-on-dark); }
+.page-section--dark .section-title { color: var(--cream); }
+
+.prose { max-width: 72ch; }
+.prose p + p, .prose p + h2, .prose p + h3, .prose h2 + p, .prose h3 + p { margin-top: 1.1rem; }
+.prose h2 { font-family: var(--font-display); font-weight: 500; font-size: 1.7rem; color: var(--forest-deep); margin-top: 2.2rem; }
+.prose h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.3rem; color: var(--forest-deep); margin-top: 1.6rem; }
+.prose a { color: var(--gold-ink); font-weight: 600; }
+.prose a:hover { color: var(--forest); }
+.prose ul { padding-left: 1.3rem; list-style: disc; }
+.prose ul li + li { margin-top: 0.4rem; }

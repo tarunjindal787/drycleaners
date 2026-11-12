@@ -1,0 +1,153 @@
+/* ============================================================
+   Bespoke per-service-page sections (Part 3). Loaded only on
+   about/, services/, and the 5 service detail pages, after
+   tokens.css + layout.css + page.css.
+   ============================================================ */
+
+/* ---------- Full-bleed cinematic intro (About, service heroes) ---------- */
+.cine-hero { position: relative; min-height: 86svh; display: flex; align-items: flex-end; overflow: hidden; background: var(--charcoal); }
+.cine-hero-media { position: absolute; inset: 0; z-index: 0; }
+.cine-hero-media img { width: 100%; height: 100%; object-fit: cover; }
+.cine-hero-scrim { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(16,40,32,0.92) 0%, rgba(16,40,32,0.5) 45%, rgba(16,40,32,0.18) 100%); }
+.cine-hero-content { position: relative; z-index: 1; padding: 0 0 clamp(2.5rem, 6vw, 4.5rem); width: 100%; }
+.cine-hero-crumb { font-size: 0.82rem; color: var(--text-on-dark-muted); margin-bottom: 1rem; }
+.cine-hero-crumb a:hover { color: var(--gold); }
+.cine-hero h1 { font-family: var(--font-display); font-weight: 500; color: var(--cream); font-size: clamp(2.6rem, 6vw, 5rem); line-height: 1.04; max-width: 18ch; }
+.cine-hero p { margin-top: 1.1rem; max-width: 56ch; font-size: 1.1rem; color: var(--text-on-dark-muted); }
+
+/* ---------- About: approach pillars ---------- */
+.pillars-section { padding: var(--section-y) 0; background: var(--white); }
+.pillars-row { margin-top: 2.6rem; display: flex; gap: clamp(1.5rem, 4vw, 3rem); }
+.pillar { flex: 1; }
+.pillar-num { font-family: var(--font-display); font-size: 2.2rem; line-height: 1; color: transparent; -webkit-text-stroke: 1.2px var(--beige); }
+.pillar h3 { margin-top: 0.8rem; font-family: var(--font-display); font-weight: 500; font-size: 1.25rem; color: var(--forest-deep); }
+.pillar p { margin-top: 0.6rem; color: var(--charcoal); opacity: 0.82; max-width: 32ch; }
+@media (max-width: 760px) { .pillars-row { flex-direction: column; gap: 2.2rem; } }
+
+/* ---------- About: craftsmanship filmstrip ---------- */
+.filmstrip-section { padding: var(--section-y) 0; background: var(--cream); overflow: hidden; }
+.filmstrip { margin-top: 2.4rem; display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x proximity; padding-bottom: 0.5rem; }
+.filmstrip-item { flex: 0 0 auto; width: min(68vw, 320px); aspect-ratio: 4/5; border-radius: var(--r-sm); overflow: hidden; scroll-snap-align: start; box-shadow: var(--shadow-sm); }
+.filmstrip-item img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ---------- Services overview: alternating editorial rows ---------- */
+.service-rows-section { padding: var(--section-y) 0; background: var(--cream); }
+.service-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center;
+  padding: clamp(2.5rem, 5vw, 4rem) 0; border-top: 1px solid var(--beige);
+}
+.service-row:first-child { border-top: 0; padding-top: 0; }
+.service-row--reverse .service-row-media { order: 2; }
+.service-row-media { position: relative; border-radius: var(--r-md); overflow: hidden; box-shadow: var(--shadow-md); aspect-ratio: 4/3; }
+.service-row-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
+.service-row:hover .service-row-media img { transform: scale(1.04); }
+.service-row-num { font-family: var(--font-display); font-size: 1rem; color: var(--gold-ink); letter-spacing: 0.1em; }
+.service-row h2 { margin-top: 0.6rem; font-family: var(--font-display); font-weight: 500; font-size: clamp(1.6rem, 2.6vw, 2.2rem); color: var(--forest-deep); }
+.service-row p { margin-top: 0.8rem; color: var(--charcoal); opacity: 0.82; max-width: 48ch; }
+.service-row-tags { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.service-row-tag { font-size: 0.78rem; padding: 0.35em 0.8em; border-radius: var(--r-pill); background: var(--beige); color: var(--forest-deep); font-weight: 600; }
+.service-row-link { margin-top: 1.4rem; display: inline-flex; align-items: center; gap: 0.5em; font-weight: 700; color: var(--gold-ink); min-height: 48px; }
+.service-row-link:hover { color: var(--forest); }
+@media (max-width: 860px) { .service-row, .service-row--reverse .service-row-media { grid-template-columns: 1fr; order: 0; } .service-row { grid-template-columns: 1fr; } }
+
+/* ---------- Service detail v2: garment viewer with hotspots (reused per-page) ---------- */
+.garment-viewer { position: relative; border-radius: var(--r-md); overflow: hidden; box-shadow: var(--shadow-lg); aspect-ratio: 4/4.6; transition: transform 0.4s var(--ease); }
+.garment-viewer img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
+.garment-viewer:hover img { transform: scale(1.03); }
+.gv-hotspot { position: absolute; left: var(--x); top: var(--y); transform: translate(-50%, -50%); width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; z-index: 2; }
+.gv-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--cream); position: relative; transition: transform 0.25s var(--ease), background-color 0.25s var(--ease); }
+.gv-dot::before { content: ""; position: absolute; inset: -7px; border-radius: 50%; border: 1px solid rgba(245,240,230,0.7); animation: gv-pulse 2.4s ease-out infinite; }
+@keyframes gv-pulse { 0% { transform: scale(0.7); opacity: 0.9; } 100% { transform: scale(1.7); opacity: 0; } }
+.gv-hotspot:hover .gv-dot, .gv-hotspot:focus-visible .gv-dot { transform: scale(1.3); background: var(--accent, var(--gold)); }
+@media (prefers-reduced-motion: reduce) { .gv-dot::before { animation: none; } }
+.gv-note {
+  position: absolute; left: 1rem; right: 1rem; bottom: 1rem; z-index: 3;
+  background: rgba(16,40,32,0.88); backdrop-filter: blur(6px); color: var(--cream);
+  padding: 0.9rem 1.1rem; border-radius: var(--r-sm); font-size: 0.92rem; line-height: 1.4;
+  opacity: 0; transform: translateY(8px); transition: opacity 0.3s var(--ease), transform 0.3s var(--ease); pointer-events: none;
+}
+.gv-note.is-visible { opacity: 1; transform: translateY(0); }
+
+/* ---------- Fabric detail swatches ---------- */
+.fabric-swatches { padding: var(--section-y) 0; background: var(--white); }
+.swatch-row { margin-top: 2.4rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.swatch { border-radius: var(--r-sm); overflow: hidden; box-shadow: var(--shadow-sm); }
+.swatch-img { aspect-ratio: 1/1; overflow: hidden; }
+.swatch-img img { width: 100%; height: 100%; object-fit: cover; }
+.swatch-body { padding: 1.1rem 1.2rem; background: var(--cream); }
+.swatch-body h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.05rem; color: var(--forest-deep); }
+.swatch-body p { margin-top: 0.4rem; font-size: 0.86rem; color: var(--charcoal); opacity: 0.78; }
+@media (max-width: 760px) { .swatch-row { grid-template-columns: 1fr; } }
+
+/* ---------- Mini process (3-step, service-page scoped) ---------- */
+.mini-process { padding: var(--section-y) 0; background: var(--cream); }
+.mini-process-row { margin-top: 2.4rem; display: flex; gap: clamp(1.5rem, 4vw, 3rem); }
+.mini-process-step { flex: 1; }
+.mini-process-step .step-num { font-family: var(--font-display); font-size: 2rem; color: transparent; -webkit-text-stroke: 1.2px var(--beige); }
+.mini-process-step h3 { margin-top: 0.6rem; font-family: var(--font-display); font-weight: 500; font-size: 1.15rem; color: var(--forest-deep); }
+.mini-process-step p { margin-top: 0.5rem; font-size: 0.92rem; color: var(--charcoal); opacity: 0.8; }
+@media (max-width: 760px) { .mini-process-row { flex-direction: column; gap: 1.8rem; } }
+
+/* ============================================================
+   Wedding Care — cream-dominant palette, delicate fades
+   ============================================================ */
+.page-wedding .cine-hero-scrim { background: linear-gradient(0deg, rgba(217,204,184,0.5) 0%, rgba(245,240,230,0.2) 60%, rgba(245,240,230,0.05) 100%); }
+.page-wedding .cine-hero h1, .page-wedding .cine-hero-crumb, .page-wedding .cine-hero p { color: var(--forest-deep); text-shadow: 0 2px 20px rgba(245,240,230,0.6); }
+.page-wedding .cine-hero-crumb { color: var(--charcoal); opacity: 0.75; }
+.page-wedding { --accent: var(--gold); }
+.wedding-break { position: relative; min-height: 70vh; overflow: hidden; }
+.wedding-break img {
+  width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;
+  opacity: 0; transition: opacity 1.4s var(--ease), transform 1.4s var(--ease); transform: scale(1.04);
+}
+.wedding-break.is-visible img { opacity: 1; transform: scale(1); }
+.wedding-break-caption {
+  position: relative; z-index: 1; height: 70vh; display: flex; align-items: flex-end; padding: 2.5rem var(--section-x);
+}
+.wedding-break-caption span { font-family: var(--font-display); font-style: italic; font-size: clamp(1.3rem, 2.4vw, 1.9rem); color: var(--cream); text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+
+/* ============================================================
+   Alterations — stitched line motif + measuring tape
+   ============================================================ */
+.page-alterations { --accent: var(--gold); }
+.stitch-divider { padding: 2.5rem 0; background: var(--white); overflow: hidden; }
+.stitch-divider svg { display: block; width: 100%; height: 40px; }
+.stitch-path { stroke: var(--beige); stroke-width: 2; stroke-dasharray: 8 8; fill: none; stroke-dashoffset: 1000; transition: stroke-dashoffset 1.8s var(--ease); }
+.stitch-divider.is-visible .stitch-path { stroke-dashoffset: 0; }
+.tape-measure { padding: 1.5rem 0; background: var(--forest-deep); overflow: hidden; }
+.tape-strip { display: flex; align-items: flex-end; gap: 0; white-space: nowrap; width: max-content; will-change: transform; }
+.tape-strip span { display: inline-block; width: 42px; text-align: center; color: var(--text-on-dark-muted); font-size: 0.72rem; border-left: 1px solid rgba(245,240,230,0.25); padding-bottom: 0.3rem; transition: color 0.2s var(--ease); }
+.tape-strip span.is-marker { color: var(--gold); font-weight: 700; }
+@media (prefers-reduced-motion: reduce) { .stitch-path { transition: none; stroke-dashoffset: 0; } }
+
+/* ============================================================
+   Leather & Suede — dark, material-focused, cognac accent
+   ============================================================ */
+.page-leather { --accent: #A8612E; }
+.page-leather .cine-hero-scrim { background: linear-gradient(0deg, rgba(16,16,13,0.94) 0%, rgba(16,16,13,0.55) 45%, rgba(16,16,13,0.15) 100%); }
+.leather-detail-section { padding: var(--section-y) 0; background: #14130f; color: var(--cream); }
+.leather-detail-section .section-title { color: var(--cream); }
+.leather-detail-section .section-lede { color: rgba(245,240,230,0.7); opacity: 1; }
+.leather-grid { margin-top: 2.4rem; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(2rem, 5vw, 3.5rem); align-items: start; }
+.leather-grid .service-detail-list li { color: var(--cream); }
+.leather-grid .service-detail-list li svg { color: var(--accent); }
+@media (max-width: 980px) { .leather-grid { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   Corporate — category switcher
+   ============================================================ */
+.page-corporate { --accent: var(--gold); }
+.corp-categories { padding: var(--section-y) 0; background: var(--white); }
+.corp-switcher { margin-top: 2.4rem; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 3.5rem); align-items: center; }
+.corp-tabs { display: flex; flex-direction: column; gap: 0.6rem; }
+.corp-tab {
+  text-align: left; padding: 1.3rem 1.4rem; border-radius: var(--r-sm); border: 1px solid var(--beige);
+  transition: border-color 0.3s var(--ease), background-color 0.3s var(--ease);
+}
+.corp-tab h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.15rem; color: var(--forest-deep); }
+.corp-tab p { margin-top: 0.4rem; font-size: 0.9rem; color: var(--charcoal); opacity: 0; max-height: 0; overflow: hidden; transition: opacity 0.3s var(--ease), max-height 0.3s var(--ease); }
+.corp-tab.is-active { border-color: var(--gold); background: var(--cream); }
+.corp-tab.is-active p { opacity: 0.82; max-height: 6em; margin-bottom: 0.2rem; }
+.corp-media { border-radius: var(--r-md); overflow: hidden; box-shadow: var(--shadow-lg); aspect-ratio: 4/3.4; }
+.corp-media img { width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 860px) { .corp-switcher { grid-template-columns: 1fr; } }

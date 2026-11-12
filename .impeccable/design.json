@@ -1,43 +1,45 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-09T00:00:00Z",
+  "generatedAt": "2026-11-12T00:00:00Z",
   "title": "Design System: St Marys Village Dry Cleaners",
   "extensions": {
     "colorMeta": {
-      "charcoal": { "role": "primary", "displayName": "Charcoal", "canonical": "#171918", "tonalRamp": ["#000000", "#0B0C0B", "#171918", "#2B2D2B", "#44443F", "#6A6A63", "#9A9A91", "#CFCFC8"] },
-      "charcoal-soft": { "role": "primary", "displayName": "Charcoal Soft", "canonical": "#44443F", "tonalRamp": ["#15150F", "#262622", "#363632", "#44443F", "#5E5E56", "#7D7D73", "#A3A398", "#CECEC5"] },
-      "champagne": { "role": "accent", "displayName": "Champagne", "canonical": "#C7AD85", "tonalRamp": ["#3A3022", "#574735", "#78624A", "#9C8061", "#C7AD85", "#D6C1A0", "#E6D8C0", "#F3EBE0"] },
-      "champagne-deep": { "role": "accent", "displayName": "Champagne Deep (text-safe)", "canonical": "#7D6342", "tonalRamp": ["#231C13", "#362B1D", "#4D3D29", "#654F35", "#7D6342", "#9A7F5E", "#BCA185", "#DDD1BC"] },
-      "ivory": { "role": "neutral", "displayName": "Ivory", "canonical": "#F5F2EA", "tonalRamp": ["#39362C", "#575342", "#7A745D", "#9D9579", "#C0B89C", "#DDD8C9", "#F5F2EA", "#FCFBF8"] },
+      "forest": { "role": "primary", "displayName": "Forest", "canonical": "#183B32", "tonalRamp": ["#040B09", "#0A1912", "#102820", "#183B32", "#245146", "#3A7265", "#5C988A", "#8FC2B4"] },
+      "forest-deep": { "role": "primary", "displayName": "Forest Deep", "canonical": "#102820", "tonalRamp": ["#020604", "#06130E", "#0B1F17", "#102820", "#1A3E32", "#2A5A48", "#427D67", "#6BA78C"] },
+      "charcoal": { "role": "neutral", "displayName": "Charcoal", "canonical": "#252A26", "tonalRamp": ["#0C0E0D", "#161815", "#1E211E", "#252A26", "#3A4139", "#565F55", "#798377", "#A6AEA2"] },
+      "gold": { "role": "accent", "displayName": "Gold", "canonical": "#B99A69", "tonalRamp": ["#352A1B", "#4F4027", "#6D5934", "#8E7445", "#B99A69", "#CBB48B", "#DECEAC", "#EFE6D3"] },
+      "gold-ink": { "role": "accent", "displayName": "Gold Ink (text-safe)", "canonical": "#8C7447", "tonalRamp": ["#241D12", "#38301F", "#4D412A", "#665736", "#8C7447", "#A8926A", "#C6B491", "#E2D6BE"] },
+      "cream": { "role": "neutral", "displayName": "Cream", "canonical": "#F5F0E6", "tonalRamp": ["#3A3527", "#584F3C", "#7A6F56", "#9D9277", "#C1B79B", "#DDD5C3", "#F5F0E6", "#FCFAF6"] },
       "white": { "role": "neutral", "displayName": "White", "canonical": "#FFFFFF", "tonalRamp": ["#333333", "#4D4D4D", "#737373", "#999999", "#BFBFBF", "#DFDFDF", "#F2F2F2", "#FFFFFF"] },
-      "stone": { "role": "neutral", "displayName": "Stone", "canonical": "#DCD7CD", "tonalRamp": ["#2A2823", "#413D35", "#5B564A", "#787262", "#9A9484", "#BDB7A8", "#DCD7CD", "#F1EFEA"] },
-      "text-on-dark": { "role": "neutral", "displayName": "Text on Dark", "canonical": "#F5F2EA", "tonalRamp": ["#39362C", "#575342", "#7A745D", "#9D9579", "#C0B89C", "#DDD8C9", "#F5F2EA", "#FCFBF8"] },
-      "text-on-dark-muted": { "role": "neutral", "displayName": "Muted Text on Dark", "canonical": "rgba(245,242,234,0.66)", "tonalRamp": ["#39362C", "#575342", "#7A745D", "#9D9579", "#C0B89C", "#DDD8C9", "#F5F2EA", "#FCFBF8"] }
+      "beige": { "role": "neutral", "displayName": "Beige", "canonical": "#D9CCB8", "tonalRamp": ["#2E281E", "#463E2E", "#615641", "#7F7257", "#A3967A", "#C3B79F", "#D9CCB8", "#ECE5D8"] },
+      "text-on-dark": { "role": "neutral", "displayName": "Text on Dark", "canonical": "#F5F0E6", "tonalRamp": ["#3A3527", "#584F3C", "#7A6F56", "#9D9277", "#C1B79B", "#DDD5C3", "#F5F0E6", "#FCFAF6"] },
+      "text-on-dark-muted": { "role": "neutral", "displayName": "Muted Text on Dark", "canonical": "rgba(245,240,230,0.68)", "tonalRamp": ["#3A3527", "#584F3C", "#7A6F56", "#9D9277", "#C1B79B", "#DDD5C3", "#F5F0E6", "#FCFAF6"] }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "Hero h1 only; weight 700, with a weight-500 champagne emphasis line." },
-      "headline": { "displayName": "Headline", "purpose": "Every section's .section-title; contact-intro h2 is a heavier uppercase variant." },
-      "title": { "displayName": "Title", "purpose": "Component headings: service-tile h3, process-step h3, footer-name." },
-      "stat": { "displayName": "Stat", "purpose": "Why Choose Us .stat-num only, weight 600." },
-      "body": { "displayName": "Body", "purpose": "Running copy throughout (Inter)." },
-      "label": { "displayName": "Label", "purpose": "service-tag, brand-name/brand-sub, stat-label, footer column headers." }
+      "display": { "displayName": "Hero Display", "purpose": "Homepage hero h1 only; weight 700, word-by-word entrance, single gold emphasis word, no scene-rotation." },
+      "pageHeroH1": { "displayName": "Page-Hero H1", "purpose": "Every inner page's .page-hero h1; weight 500." },
+      "sectionTitle": { "displayName": "Section Title", "purpose": "Every .section-title sitewide; weight 500, swaps to cream via .section-title--on-dark." },
+      "stat": { "displayName": "Stat", "purpose": "Homepage .stat-num only (Why/trust row), weight 600." },
+      "body": { "displayName": "Body", "purpose": "Running copy throughout (Manrope), including .prose on legal/about pages." },
+      "label": { "displayName": "Label", "purpose": "Brand-name/brand-sub, stat-label, footer column headers, header-cta." }
     },
     "shadows": [
-      { "name": "shadow-sm", "value": "0 1px 3px rgba(23,25,24,0.06), 0 3px 12px -6px rgba(23,25,24,0.1)", "purpose": "Scrolled header only." },
-      { "name": "shadow-md", "value": "0 20px 44px -24px rgba(23,25,24,0.22)", "purpose": ".btn-primary resting elevation." },
-      { "name": "shadow-lg", "value": "0 34px 80px -30px rgba(23,25,24,0.3)", "purpose": ".btn-primary hover elevation." },
+      { "name": "shadow-sm", "value": "0 2px 10px -4px rgba(16,40,32,0.14)", "purpose": "Scrolled header; service-hub-card/related-card/why-full-card/gallery-full item resting elevation." },
+      { "name": "shadow-md", "value": "0 18px 38px -16px rgba(16,40,32,0.24)", "purpose": ".btn-primary resting elevation; service-hub-card hover elevation." },
+      { "name": "shadow-lg", "value": "0 32px 70px -22px rgba(16,40,32,0.32)", "purpose": ".btn-primary hover; mega-menu; garment-stage; explorer-image; fabric-layer; service-detail-media; about-media." },
       { "name": "shadow-dark", "value": "0 20px 50px -14px rgba(0,0,0,0.5)", "purpose": "Fixed-call affordance and the lightbox image." }
     ],
     "motion": [
       { "name": "ease", "value": "cubic-bezier(0.19, 1, 0.22, 1)", "purpose": "Default easing for nearly all transitions." },
-      { "name": "reveal-on-scroll", "value": "opacity 0->1, translateY(22px)->0, 0.9s ease, staggered via --delay * 90ms", "purpose": "Section content fade/rise on first scroll into view; collapses instantly under prefers-reduced-motion." },
+      { "name": "reveal-on-scroll", "value": "opacity 0->1, translateY(24px)->0, 0.85s ease, staggered via --delay * 90ms", "purpose": "Section content fade/rise on first scroll into view (.reveal/.is-visible); collapses instantly under prefers-reduced-motion." },
+      { "name": "hero-word-in", "value": "opacity 0->1, translateY(26px)->0, blur(10px)->0, 0.9s ease, staggered per-word", "purpose": "Homepage hero h1 word-by-word entrance; no scene rotation afterward." },
       { "name": "hero-parallax", "value": "translate(relX*-14px, relY*-10px) on hero mousemove, via requestAnimationFrame", "purpose": "Subtle hero-content drift; disabled under prefers-reduced-motion." },
-      { "name": "tile-tilt", "value": "perspective(900px) rotateX(relY*-4deg) rotateY(relX*4deg) on .service-tile mousemove", "purpose": "Lightweight 3D tilt on service tiles; disabled under prefers-reduced-motion." },
-      { "name": "call-pulse", "value": "opacity 0.4->0 + scale(1)->1.5, 2.6s ease-out infinite", "purpose": "Keeps the fixed Call affordance alive; disabled under prefers-reduced-motion." },
-      { "name": "scroll-cue-drop", "value": "opacity 0->1->0, translateY(0)->14px, 1.8s ease-in-out infinite", "purpose": "Hero scroll-cue dot; disabled under prefers-reduced-motion." }
+      { "name": "garment-tilt", "value": "perspective(1000px) rotateX(relY*-5deg) rotateY(relX*5deg) on #garmentStage mousemove", "purpose": "CSS-3D tilt on garment-showcase photo, standing in for a literal 3D model (none exists in this project); disabled under prefers-reduced-motion." },
+      { "name": "fabric-parallax", "value": "translateY((scrollProgress-0.5) * 120 * layerSpeed) on scroll, via requestAnimationFrame", "purpose": "Independent-speed scroll parallax for the three .fabric-layer images; disabled under prefers-reduced-motion." },
+      { "name": "call-pulse", "value": "opacity 0.4->0 + scale(1)->1.5, 2.6s ease-out infinite", "purpose": "Keeps the fixed Call affordance alive; disabled under prefers-reduced-motion." }
     ],
     "breakpoints": [
-      { "name": "lg", "value": "1080px" },
+      { "name": "lg", "value": "980px" },
       { "name": "md", "value": "860px" },
       { "name": "sm", "value": "600px" }
     ]
@@ -47,80 +49,99 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "btn-primary",
-      "description": "Charcoal-filled pill CTA used on both light and dark backgrounds.",
-      "html": "<a class=\"ds-btn ds-btn-primary\" href=\"#\">Call Now</a>",
-      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5em; padding: 1.05em 2.1em; border-radius: 999px; font-weight: 600; font-size: 0.92rem; min-height: 48px; transition: transform 0.35s cubic-bezier(0.19,1,0.22,1), box-shadow 0.35s cubic-bezier(0.19,1,0.22,1); } .ds-btn:hover { transform: translateY(-2px); } .ds-btn-primary { background: #171918; color: #F5F2EA; box-shadow: 0 20px 44px -24px rgba(23,25,24,0.22); } .ds-btn-primary:hover { background: #050605; box-shadow: 0 34px 80px -30px rgba(23,25,24,0.3); }"
+      "description": "Forest-deep-filled pill CTA used on both light and dark backgrounds.",
+      "html": "<a class=\"btn btn-primary\" href=\"tel:0296733934\">Call Now</a>",
+      "css": ".btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5em; padding: 1em 2em; border-radius: 999px; font-weight: 600; font-size: 0.92rem; min-height: 48px; transition: transform 0.35s cubic-bezier(0.19,1,0.22,1), box-shadow 0.35s, background-color 0.35s, border-color 0.35s, color 0.35s; } .btn:hover { transform: translateY(-2px); } .btn-primary { background: #102820; color: #F5F0E6; box-shadow: 0 18px 38px -16px rgba(16,40,32,0.24); } .btn-primary:hover { background: #183B32; box-shadow: 0 32px 70px -22px rgba(16,40,32,0.32); }"
     },
     {
-      "name": "Outline Light Button",
+      "name": "Gold Button",
       "kind": "button",
-      "refersTo": "btn-outline-light",
-      "description": "Transparent, translucent-ivory-bordered CTA for dark backgrounds (hero, contact-intro-panel).",
-      "html": "<a class=\"ds-btn-outline-light\" href=\"#\">Explore Services</a>",
-      "css": ".ds-btn-outline-light { display: inline-flex; align-items: center; justify-content: center; padding: 1.05em 2.1em; border-radius: 999px; min-height: 48px; background: transparent; color: #F5F2EA; border: 1px solid rgba(245,242,234,0.4); transition: background-color 0.35s, border-color 0.35s; } .ds-btn-outline-light:hover { background: rgba(245,242,234,0.1); border-color: rgba(245,242,234,0.7); }"
+      "refersTo": "btn-gold",
+      "description": "Gold-filled pill CTA — the system's single boldest conversion action (hero, contact, final CTA).",
+      "html": "<a class=\"btn btn-gold\" href=\"tel:0296733934\">Call Now</a>",
+      "css": ".btn-gold { background: #B99A69; color: #102820; box-shadow: 0 2px 10px -4px rgba(16,40,32,0.14); } .btn-gold:hover { background: #8C7447; color: #F5F0E6; }"
     },
     {
-      "name": "Service Mosaic Tile",
+      "name": "Mega Menu Preview",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Sanctioned hover-to-reveal pattern: a single aria-hidden preview pane holds five opacity:0 images that swap to is-shown on link hover/focus. Not a hidden-content defect — an interactive preview affordance.",
+      "html": "<div class=\"mega-menu-preview\" aria-hidden=\"true\"><img src=\"dry-cleaning.jpg\" data-key=\"dry-cleaning\" class=\"is-shown\" alt=\"Professional Dry Cleaning\"><span class=\"mega-menu-preview-caption\">Professional Dry Cleaning</span></div>",
+      "css": ".mega-menu-preview { position: relative; border-radius: 4px; overflow: hidden; min-height: 180px; } .mega-menu-preview img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.4s cubic-bezier(0.19,1,0.22,1); } .mega-menu-preview img.is-shown { opacity: 1; }"
+    },
+    {
+      "name": "Garment Showcase Stage",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Real photography with CSS 3D tilt (perspective/rotateX/rotateY via mousemove) and click/hover hotspots — the honest implementation of an 'interactive 3D' request given no 3D model asset exists in this project.",
+      "html": "<div class=\"garment-stage\" id=\"garmentStage\"><img src=\"hero-steam-press.jpg\" alt=\"...\"><button type=\"button\" class=\"garment-hotspot\" style=\"--x:34%; --y:28%\" data-note=\"Collar and cuffs hand-pressed.\"><span class=\"garment-hotspot-dot\"></span></button><div class=\"garment-note\" id=\"garmentNote\"></div></div>",
+      "css": ".garment-stage { position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 32px 70px -22px rgba(16,40,32,0.32); aspect-ratio: 4/5; } .garment-hotspot-dot { width: 13px; height: 13px; border-radius: 50%; background: #F5F0E6; } .garment-hotspot:hover .garment-hotspot-dot { background: #B99A69; transform: scale(1.3); }"
+    },
+    {
+      "name": "Service Explorer Tabs",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Tabbed panel driving an image crossfade and text/CTA swap from data attributes on each tab button.",
+      "html": "<div class=\"explorer-tabs\" role=\"tablist\"><button class=\"explorer-tab is-active\" role=\"tab\" aria-selected=\"true\" data-image=\"dry-cleaning.jpg\" data-title=\"Professional Dry Cleaning\" data-desc=\"...\" data-href=\"services/dry-cleaning/\">Dry Cleaning</button></div>",
+      "css": ".explorer-tab { padding: 0.65em 1.1em; border-radius: 999px; border: 1px solid rgba(37,42,38,0.2); font-weight: 600; min-height: 44px; } .explorer-tab.is-active { background: #102820; color: #F5F0E6; border-color: #102820; }"
+    },
+    {
+      "name": "Why-Full Card",
       "kind": "card",
       "refersTo": null,
-      "description": "Nearly-square (--r-img: 2px) photo tile with a bottom gradient scrim, caption text overlaid directly on the photo, and a JS 3D-tilt hover effect. Part of a fixed-height flex row-group, never a CSS Grid span.",
-      "html": "<a href=\"#contact\" class=\"ds-service-tile\"><img src=\"image.jpg\" alt=\"\"><div class=\"ds-service-tile-scrim\"></div><div class=\"ds-service-tile-caption\"><span class=\"ds-service-tag\">Most Popular</span><h3>Professional Dry Cleaning</h3></div></a>",
-      "css": ".ds-service-tile { position: relative; flex: 1; overflow: hidden; border-radius: 2px; display: block; } .ds-service-tile img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s cubic-bezier(0.19,1,0.22,1); } .ds-service-tile:hover img { transform: scale(1.07); } .ds-service-tile-scrim { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(23,25,24,0.78) 0%, rgba(23,25,24,0.1) 55%, transparent 75%); } .ds-service-tile-caption { position: absolute; left: 0; right: 0; bottom: 0; padding: 1.6rem; color: #F5F2EA; } .ds-service-tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #C7AD85; }"
+      "description": "White card with heading + paragraph used on the dedicated Why Choose Us page — the expanded prose form of the homepage's compact stat row.",
+      "html": "<div class=\"why-full-card\"><h3>Local By Nature, Personal By Choice</h3><p>We're proud to be part of the St Marys community...</p></div>",
+      "css": ".why-full-card { padding: 2rem; background: #FFFFFF; border-radius: 10px; box-shadow: 0 2px 10px -4px rgba(16,40,32,0.14); } .why-full-card h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.3rem; color: #102820; }"
     },
     {
-      "name": "Process Step",
+      "name": "FAQ Accordion Item",
       "kind": "custom",
       "refersTo": null,
-      "description": "Ultra-minimal step: small line icon, outlined/transparent-fill serif numeral, and one uppercase word — no paragraph copy.",
-      "html": "<li class=\"ds-process-step\"><span class=\"ds-step-icon\"><svg><!-- line icon --></svg></span><span class=\"ds-step-num\">01</span><h3>Drop Off</h3></li>",
-      "css": ".ds-step-icon { color: #7D6342; } .ds-step-num { font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(1.8rem, 3vw, 2.3rem); color: transparent; -webkit-text-stroke: 1.2px #DCD7CD; } .ds-process-step h3 { font-family: 'Playfair Display', serif; font-weight: 500; font-size: 1.05rem; letter-spacing: 0.01em; text-transform: uppercase; color: #171918; }"
-    },
-    {
-      "name": "Why Choose Us Stat",
-      "kind": "custom",
-      "refersTo": null,
-      "description": "Large Playfair Display numeral/value paired with a tiny uppercase muted label, divided by a hairline vertical rule — a minimal statistics row, not prose or an icon-card block.",
-      "html": "<div class=\"ds-stat\"><span class=\"ds-stat-num\">5.0</span><span class=\"ds-stat-label\">Customer Rating</span></div>",
-      "css": ".ds-stat { flex: 1; padding: 0 1.2rem; display: flex; flex-direction: column; align-items: center; gap: 0.6rem; border-left: 1px solid rgba(245,242,234,0.14); } .ds-stat-num { font-family: 'Playfair Display', serif; font-weight: 600; font-size: clamp(1.9rem, 3.6vw, 2.9rem); color: #C7AD85; line-height: 1; } .ds-stat-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,242,234,0.66); }"
+      "description": "Real <h3><button> trigger with a CSS grid-row (0fr->1fr) open/close transition and a plus/cross pseudo-element icon.",
+      "html": "<div class=\"accordion-item\"><h3><button class=\"accordion-trigger\" aria-expanded=\"false\"><span>How can I contact you?</span><span class=\"faq-icon\"></span></button></h3><div class=\"accordion-panel\"><p>Call ...</p></div></div>",
+      "css": ".accordion-panel { display: grid; grid-template-rows: 0fr; overflow: hidden; transition: grid-template-rows 0.4s cubic-bezier(0.19,1,0.22,1); } .accordion-item.is-open .accordion-panel { grid-template-rows: 1fr; }"
     },
     {
       "name": "Contact Split Panel",
       "kind": "custom",
       "refersTo": null,
-      "description": "50/50 split: a dark photo-backed CTA panel beside a light card panel with hours list and a nearly-square (--r-img) map frame. No booking form.",
-      "html": "<section class=\"ds-contact-split\"><div class=\"ds-contact-intro-panel\"><h2>Your Garments. Our Care.</h2><a class=\"ds-btn-primary\" href=\"tel:\">Call Now</a></div><div class=\"ds-contact-card-panel\"><p class=\"ds-contact-address\">...</p><div class=\"ds-hours-list\">...</div><div class=\"ds-contact-map-frame\"><iframe></iframe></div></div></section>",
-      "css": ".ds-contact-split { display: flex; min-height: 640px; } .ds-contact-intro-panel { flex: 1; background: #171918; display: flex; align-items: center; justify-content: center; } .ds-contact-card-panel { flex: 1; background: #F5F2EA; display: flex; align-items: center; justify-content: center; } .ds-contact-map-frame { border-radius: 2px; overflow: hidden; aspect-ratio: 16/10; background: #DCD7CD; }"
+      "description": "50/50 split: a dark photo-backed CTA panel beside a light card panel with hours list and a nearly-square map frame. No booking form.",
+      "html": "<div class=\"contact-split\"><div class=\"contact-intro-panel\"><h1>Your Garments.<br>Our Care.</h1><a class=\"btn btn-gold\" href=\"tel:\">Call Now</a></div><div class=\"contact-card-panel\"><div class=\"hours-list\">...</div><div class=\"contact-map-frame\"><iframe></iframe></div></div></div>",
+      "css": ".contact-split { display: flex; min-height: 620px; } .contact-intro-panel { flex: 1; background: #102820; } .contact-card-panel { flex: 1; background: #F5F0E6; } .contact-map-frame { border-radius: 4px; overflow: hidden; aspect-ratio: 16/10; background: #D9CCB8; }"
     }
   ],
   "narrative": {
-    "northStar": "Quiet Luxury",
-    "overview": "This system fully replaces \"The Linen Press\" (forest green/cream/peach/sage/coral/butter, DM Serif Display + Manrope, a 12-section alternating-hue editorial stack). Nothing from that palette, type pairing, or component set carries forward. The new world reads as a minimalist, visual-first boutique identity -- closer to an Apple/Aesop/luxury-fashion-editorial brochure than a warm multi-hue magazine spread: a restrained ivory/stone/charcoal/champagne palette, a single full-bleed hero video, and large photography doing almost all of the persuasion work, with short, quiet copy rather than paragraphs of trust-building prose. The page is a 7-section stack (hero, services, process, why-choose-us, gallery, contact, footer). The previous system's standalone Reviews section and FAQ accordion are both gone; their facts were folded into Why Choose Us's stat row and the Contact split screen.",
+    "northStar": "The Atelier",
+    "overview": "This system fully replaces 'Quiet Luxury' (ivory/white/stone/charcoal/champagne, Playfair Display + Inter, a single-page 7-section stack). Quiet Luxury had itself replaced 'The Linen Press' (forest green/cream/peach/sage/coral/butter, DM Serif Display + Manrope, a 12-section hue-rotation stack) -- Atelier's forest/cream/gold palette echoes Linen Press's forest green in spirit but is an unrelated, newer build: a true multi-page architecture (directory-per-route index.html files) sharing tokens.css + layout.css, with home.css/home.js homepage-only and page.css shared across every inner page. This reintroduces a standalone FAQ accordion and a dedicated Why Choose Us page, both absent from the superseded single-page system.",
     "keyCharacteristics": [
-      "A quiet three-register rhythm (ivory -> white -> charcoal -> ivory -> white) rather than the superseded system's six-hue page-turn pacing",
-      "A deliberate radius contrast: photography is nearly square (--r-img: 2px) while every button, pill, and the floating navbar are fully rounded (--r-pill: 999px) -- never mixed",
-      "Services and Gallery both use independent fixed-height flex row-groups (not CSS Grid spanning) to build an asymmetric editorial mosaic without empty-cell risk",
-      "Playfair Display used across its real weight range (400-700 plus italic) paired with Inter -- weight itself carries hierarchy, unlike the superseded system's bold-free serif",
-      "All JS-driven motion (hero mouse-parallax, 3D tile tilt, scroll-reveal, call-pulse, scroll-cue) is gated behind prefers-reduced-motion in both CSS and js/main.js"
+      "Two distinct visual registers sharing one chrome: the homepage layers scroll/pointer-driven motion over full-bleed photography, while every inner page is a flatter, calmer page-hero/page-section/prose stack -- motion is a homepage register, not sitewide",
+      "A single warm accent (gold/gold-ink) against a forest-deep dark register and a cream/white light register -- no second accent hue anywhere in the built CSS",
+      "A contextual radius split: --r-sm (4px) on smaller/flatter photography, --r-md (10px) on larger staged photography and cards, --r-pill (999px) on every button and chrome element -- never mixed",
+      "The homepage's garment-showcase 'interactive 3D' is honestly built from CSS 3D transforms on real photography via mousemove in js/home.js -- there is no GLB/GLTF asset or WebGL pipeline in this project",
+      "All JS-driven motion is gated behind prefers-reduced-motion in both CSS (tokens.css) and JS (home.js/common.js reduceMotion checks)"
     ],
     "rules": [
-      { "name": "The Single-Accent Rule", "body": "Champagne/champagne-deep are the system's only warm color; every other surface is ivory, white, stone, or charcoal. There is no second accent hue -- restraint is the point of a quiet-luxury palette, not an oversight.", "section": "colors" },
-      { "name": "The Radius Contrast Rule", "body": "Two radius vocabularies are used, deliberately never mixed: --r-img (2px, nearly square) on every photographic surface, and --r-pill (999px, fully rounded) on every button, the floating navbar, the header-cta, the fixed-call affordance, and the scroll-cue. No surface uses a mid-range radius.", "section": "shapes" },
-      { "name": "The Fixed-Row-Group Mosaic Rule", "body": "Asymmetric tile variety in Services and Gallery is built from a vertical stack of independent flex rows, each with its own explicit clamp() height, never a single CSS Grid with grid-column/grid-row spans -- avoiding the empty-cell/whitespace bug class that auto-sized Grid row-spanning caused earlier in this project's history.", "section": "layout" }
+      { "name": "The Single-Accent Rule", "body": "Gold/gold-ink are the system's only warm color; every other surface is cream, white, beige, charcoal, or forest. There is no second accent hue.", "section": "colors" },
+      { "name": "The Radius Split Rule", "body": "Three radius values used by context: --r-sm (4px) on smaller/flatter photographic surfaces, --r-md (10px) on larger staged photography and cards, --r-pill (999px) on every button and chrome element. No surface mixes a pill radius onto photography or a sub-pill radius onto a button.", "section": "shapes" },
+      { "name": "The Chrome/Content Split Rule", "body": "tokens.css + layout.css load on every page unconditionally; home.css/home.js load only on index.html; page.css loads only on inner pages -- never both home.css and page.css on the same page.", "section": "layout" }
     ],
     "dos": [
-      "Do use --r-img (2px) for every photographic surface and --r-pill for every control; never introduce a mid-range (8-16px) card radius (The Radius Contrast Rule).",
-      "Do build mosaic/asymmetric layouts from independently fixed-height flex row-groups, never CSS Grid with grid-column/grid-row spans (The Fixed-Row-Group Mosaic Rule).",
-      "Do gate every JS-driven motion effect behind prefers-reduced-motion, matching both the CSS media query and the js/main.js reduceMotion flag.",
-      "Do keep the nav to exactly Services / Our Care / Contact plus one Call Now pill.",
+      "Do keep homepage-only motion confined to css/home.css and js/home.js; inner pages stay in the calmer page-hero/page-section/prose register of css/page.css.",
+      "Do gate every JS-driven motion effect behind prefers-reduced-motion, matching both the CSS media query and the reduceMotion checks in js/home.js and js/common.js.",
+      "Do use --r-sm/--r-md for photographic surfaces by size/context and --r-pill only for controls and chrome (The Radius Split Rule).",
+      "Do keep all internal links and asset paths relative, never root-relative -- a dual-hosting deploy constraint from PRODUCT.md, not a style preference.",
+      "Do implement any 'interactive 3D' request as CSS 3D transforms/parallax on real photography, never as a fabricated WebGL/GLB claim.",
       "Do keep every interactive control at a 48x48px minimum touch target.",
       "Do use real line-art SVG icons, never a glyph/icon font."
     ],
     "donts": [
-      "Don't carry over any token, color, or component from the superseded \"Linen Press\" system; this is a full replacement, not a merge.",
-      "Don't achieve service-tile or gallery-tile visual variety via grid-column/grid-row spanning; use fixed row-groups with varied flex ratios instead.",
+      "Don't carry over any token, color, or component from the superseded 'Quiet Luxury' system (ivory/stone/charcoal/champagne, Playfair Display + Inter, the single-page 7-section stack, its fixed-row-group mosaic rule, its radius-contrast rule); this is a full replacement, not a merge.",
       "Don't add a booking/scheduling form to Contact; the business is walk-in/drive-up only (see PRODUCT.md).",
       "Don't invent review content, star counts, pricing, or years-in-business figures; show only the sourced TrueLocal aggregate, linked out.",
-      "Don't place a kicker/eyebrow label above any heading. Four were briefly reintroduced in this build and removed on review; this is a craft-floor ban, not a default. Give a headingless component (like the contact card) a real heading instead."
+      "Don't place a kicker/eyebrow label above any heading. A reserved .eyebrow-label { display: none; } rule exists in tokens.css as a dead, never-invoked class -- this is a craft-floor ban carried forward from the prior system's review, not a component to bring back."
+    ],
+    "notCanonized": [
+      "The .eyebrow-label dead CSS rule in css/tokens.css (display:none, with a comment pointing back to the ban) is inert and unused on every page scanned (home, about, services hub/detail, our-process, why-choose-us, gallery, contact, faq) -- a leftover guard rail, not a system component or available pattern for future pages."
     ]
   }
 }

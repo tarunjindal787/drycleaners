@@ -92,6 +92,16 @@
         "value": "manrope",
         "createdAt": "2026-11-07T14:03:37.355Z",
         "reason": "user confirmed full redesign replacing the prior documented system including type pairing; DESIGN.md is rewritten at finish per process"
+      },
+      {
+        "rule": "buried-raster",
+        "value": "*",
+        "files": [
+          "**/index.html",
+          "index.html"
+        ],
+        "createdAt": "2026-11-12T04:26:30.984Z",
+        "reason": "Agent: mega-menu service hover-preview images, parent marked aria-hidden; shown on hover/focus via JS, decorative alternate to the always-visible text links"
       }
     ]
   }

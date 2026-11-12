@@ -1,81 +1,87 @@
 ---
 name: St Marys Village Dry Cleaners
-description: A minimalist, visual-first boutique identity built from full-bleed photography, a fixed-row editorial mosaic, and a quiet dark/light/dark section rhythm.
+description: A cinematic, forest-green garment-care identity built as a true multi-page site — a shared chrome (mega-menu nav, drawer, fixed-call, footer) wrapping a homepage of layered scroll/parallax storytelling and inner pages of flatter, reusable editorial components.
 colors:
-  ivory: "#F5F2EA"
+  forest: "#183B32"
+  forest-deep: "#102820"
+  cream: "#F5F0E6"
+  beige: "#D9CCB8"
+  charcoal: "#252A26"
+  gold: "#B99A69"
+  gold-ink: "#8C7447"
   white: "#FFFFFF"
-  stone: "#DCD7CD"
-  charcoal: "#171918"
-  charcoal-soft: "#44443F"
-  champagne: "#C7AD85"
-  champagne-deep: "#7D6342"
-  text-on-dark: "#F5F2EA"
-  text-on-dark-muted: "rgba(245,242,234,0.66)"
+  text-on-dark: "#F5F0E6"
+  text-on-dark-muted: "rgba(245,240,230,0.68)"
 typography:
   display:
-    fontFamily: "Playfair Display, Georgia, serif"
-    fontSize: "clamp(3rem, 9vw, 7.2rem)"
+    fontFamily: "Cormorant Garamond, Playfair Display, Georgia, serif"
+    fontSize: "clamp(2.2rem, 7.6vw, 6.4rem)"
     fontWeight: 700
-    lineHeight: 0.98
-    letterSpacing: "-0.02em"
-  headline:
-    fontFamily: "Playfair Display, Georgia, serif"
-    fontSize: "clamp(2rem, 3.8vw, 3.2rem)"
-    fontWeight: 500
     lineHeight: 1.08
-    letterSpacing: "-0.01em"
-  title:
-    fontFamily: "Playfair Display, Georgia, serif"
-    fontSize: "1.05rem to 1.5rem"
+    letterSpacing: "-0.005em"
+  pageHeroH1:
+    fontFamily: "Cormorant Garamond, Playfair Display, Georgia, serif"
+    fontSize: "clamp(2.6rem, 5.5vw, 4.6rem)"
     fontWeight: 500
+    lineHeight: 1.06
+  sectionTitle:
+    fontFamily: "Cormorant Garamond, Playfair Display, Georgia, serif"
+    fontSize: "clamp(2.1rem, 4vw, 3.4rem)"
+    fontWeight: 500
+    lineHeight: 1.1
   stat:
-    fontFamily: "Playfair Display, Georgia, serif"
+    fontFamily: "Cormorant Garamond, Playfair Display, Georgia, serif"
     fontSize: "clamp(1.9rem, 3.6vw, 2.9rem)"
     fontWeight: 600
   body:
-    fontFamily: "Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+    fontFamily: "Manrope, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
     fontSize: "1rem"
     fontWeight: 400
     lineHeight: 1.6
   label:
-    fontFamily: "Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+    fontFamily: "Manrope, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
     fontSize: "0.7rem to 0.86rem"
     fontWeight: 600 to 700
-    letterSpacing: "0.02em to 0.24em"
+    letterSpacing: "0.02em to 0.14em"
 rounded:
-  img: "2px"
-  sm: "3px"
+  sm: "4px"
+  md: "10px"
   pill: "999px"
 spacing:
-  section-y: "clamp(4rem, 8vw, 8rem)"
+  section-y: "clamp(3.5rem, 7vw, 7rem)"
   section-x: "clamp(1.25rem, 5vw, 4rem)"
-  gap: "clamp(0.75rem, 1.6vw, 1.5rem)"
-  max-w: "1560px"
+  max-w: "1480px"
 components:
   btn-primary:
-    backgroundColor: "{colors.charcoal}"
-    textColor: "{colors.ivory}"
+    backgroundColor: "{colors.forest-deep}"
+    textColor: "{colors.cream}"
     rounded: "{rounded.pill}"
-    padding: "1.05em 2.1em"
+    padding: "1em 2em"
+    height: "min 48px"
+  btn-gold:
+    backgroundColor: "{colors.gold}"
+    textColor: "{colors.forest-deep}"
+    rounded: "{rounded.pill}"
+    padding: "1em 2em"
     height: "min 48px"
   btn-outline-light:
     backgroundColor: "transparent"
     textColor: "{colors.text-on-dark}"
     rounded: "{rounded.pill}"
-    border: "1px solid rgba(245,242,234,0.4)"
+    border: "1px solid rgba(245,240,230,0.4)"
   btn-outline-dark:
     backgroundColor: "transparent"
-    textColor: "{colors.charcoal}"
+    textColor: "{colors.forest-deep}"
     rounded: "{rounded.pill}"
-    border: "1px solid rgba(23,25,24,0.3)"
+    border: "1px solid rgba(37,42,38,0.28)"
   header-cta:
-    backgroundColor: "{colors.champagne}"
-    textColor: "{colors.charcoal}"
+    backgroundColor: "{colors.gold}"
+    textColor: "{colors.forest-deep}"
     rounded: "{rounded.pill}"
     padding: "0.6em 1.4em"
   fixed-call:
-    backgroundColor: "{colors.charcoal}"
-    textColor: "{colors.ivory}"
+    backgroundColor: "{colors.forest-deep}"
+    textColor: "{colors.cream}"
     rounded: "{rounded.pill}"
     padding: "0.95em 1.4em"
     height: "min 48px"
@@ -85,121 +91,137 @@ components:
 
 ## Overview
 
-**Creative North Star: "Quiet Luxury"**
+**Creative North Star: "The Atelier"**
 
-This system fully replaces "The Linen Press" (forest green/cream/peach/sage/coral/butter, DM Serif Display + Manrope, a 12-section alternating-hue editorial stack). Nothing from that palette, type pairing, or component set carries forward. The new world reads as a minimalist, visual-first boutique identity — closer to an Apple/Aesop/luxury-fashion-editorial brochure than a warm multi-hue magazine spread: a restrained ivory/stone/charcoal/champagne palette, a single full-bleed hero video, and large photography doing almost all of the persuasion work, with short, quiet copy rather than paragraphs of trust-building prose.
+This system fully replaces "Quiet Luxury" (ivory/white/stone/charcoal/champagne, Playfair Display + Inter, a single-page 7-section stack). Nothing from that palette, type pairing, or single-page structure carries forward. Quiet Luxury had itself replaced "The Linen Press" (forest green/cream/peach/sage/coral/butter, DM Serif Display + Manrope, a 12-section hue-rotation stack) — Atelier's forest/cream/gold palette echoes Linen Press's forest green in spirit, but the two are unrelated builds: Atelier is a true multi-page architecture (see PRODUCT.md's Stack section), not a revival of either superseded system's component set.
 
-The page is a 7-section stack (hero, services, process, why-choose-us, gallery, contact, footer). The previous system's standalone Reviews section and FAQ accordion are both gone in this redesign; the facts they carried were folded into Why Choose Us's stat row (customer rating, turnaround, drive-up access, locally run) and the Contact split screen (hours, map, direct TrueLocal link). These are not to be re-documented as current components — see Not Canonized below.
+The build is a directory-routed multi-page site: `index.html` (home) plus `/about/`, `/services/` (hub + five detail pages), `/our-process/`, `/why-choose-us/`, `/gallery/`, `/contact/`, `/faq/`, `/privacy/`, `/terms/`, each its own `index.html` sharing `css/tokens.css` + `css/layout.css` (+ `css/page.css` on inner pages, `css/home.css` only on the homepage) and `js/common.js` (+ `js/home.js` only on the homepage). This reintroduces a standalone FAQ accordion and a dedicated Why Choose Us page — both of which the superseded single-page system had folded away or dropped — because a multi-page site can afford dedicated routes a single scroll-stack could not.
 
 **Key Characteristics:**
-- A quiet three-register rhythm (ivory → white → charcoal → ivory → white) rather than the superseded system's six-hue page-turn pacing
-- A deliberate radius contrast: photography and image tiles are nearly square (`--r-img: 2px`), while every button, pill, and the floating navbar are fully rounded (`--r-pill: 999px`) — never the same radius vocabulary for images and controls
-- The services and gallery sections both use independent fixed-height flex row-groups (not CSS Grid spanning) to build an asymmetric editorial mosaic without risking empty-cell gaps
-- Playfair Display (used across its real weight range, 400–700, including an italic cut) paired with Inter — a different serif voice and weight behavior from the superseded system's bold-free DM Serif Display
-- All JS-driven motion (hero mouse-parallax, 3D tile tilt, scroll-reveal stagger, call-pulse, scroll-cue) is gated behind `prefers-reduced-motion`, both in CSS (`animation-duration`/`transition-duration` collapse) and in `js/main.js` (`reduceMotion` guards)
+- Two distinct visual registers sharing one chrome: the homepage layers scroll-driven and pointer-driven motion (hero word-reveal, mouse-parallax, 3D tilt, scroll-parallax fabric layers) over full-bleed photography, while every inner page is a flatter, calmer stack of `.page-hero` + reusable `.page-section`/`.prose`/grid components — motion is a homepage register, not a sitewide one.
+- A single warm accent (gold/gold-ink) against a forest-deep dark register and a cream/white light register — no second accent hue anywhere in the built CSS.
+- A deliberate radius split: photography and image tiles use `--r-sm` (4px) or `--r-md` (10px) depending on context, while every button, pill-shaped chrome element (header, header-cta, fixed-call, explorer-tabs, lightbox controls) uses `--r-pill` (999px) — images and controls never share a radius value.
+- The homepage's "garment showcase" and the brief's request for literal interactive 3D are both honestly built from CSS 3D transforms (`perspective`/`rotateX`/`rotateY` via mousemove in `js/home.js`) applied to real photography with click/hover hotspots — there is no GLB/GLTF asset or WebGL pipeline in this project (confirmed in PRODUCT.md), so no 3D-model claim is made anywhere in copy or markup.
+- All JS-driven motion (hero word/sub entrance, hero parallax, garment-stage tilt, fabric-layer scroll parallax, call-pulse, scroll-reveal stagger) is gated behind `prefers-reduced-motion`, both in CSS (`animation-duration`/`transition-duration` collapse in `tokens.css`) and in `js/home.js`/`js/common.js` (`reduceMotion` checks).
 
 ## Colors
 
-A restrained, low-saturation palette: ivory and white carry nearly every light surface, charcoal is the one dark register, and champagne is the system's single warm accent, used sparingly as a mark of attention rather than a filled surface.
+A cinematic, low-saturation palette: cream and white carry nearly every light surface, forest-deep is the one dark register (hero, page-hero, mega-menu, fixed-call, footer, final CTA), and gold is the system's single warm accent.
 
 ### Primary
-- **Charcoal** (`#171918`): hero/why/footer/contact-intro-panel background, `.btn-primary` fill, fixed-call fill, scrolled nav-toggle bars, skip-link background.
-- **Charcoal Soft** (`#44443F`): scrolled nav-link color, process-step body copy, hours-row label text.
+- **Forest** (`#183B32`): `.btn-primary`/`.fixed-call` hover fill, scrolled-header hover state, process-step icon hover color.
+- **Forest Deep** (`#102820`): hero/page-hero/mega-menu/footer/final-cta background, `.btn-primary` resting fill, skip-link background, scrolled-header fill (as `rgba(16,40,32,0.92)`), service-tile/gallery-item/related-card scrim base.
+- **Charcoal** (`#252A26`): body text color, hero-media fallback background, process/stat body copy.
 
 ### Accent
-- **Champagne** (`#C7AD85`): header-cta fill, service-tag text, nav-link hover underline/color, step-icon color, stat-num color, reviews-link color, text selection highlight, scrollbar thumb.
-- **Champagne Deep** (`#7D6342`): focus-ring color, header-cta hover fill, contact-directions link color — the text-safe, slightly darker partner to champagne for anything read as a link on a light ground.
+- **Gold** (`#B99A69`): `.btn-gold` fill, header-cta fill, nav-link hover/active underline+color, hero accent word, step-icon/stat-num color, reviews-link color, scrollbar thumb, text-selection highlight, fixed-call pulse ring.
+- **Gold Ink** (`#8C7447`): focus-ring color, `.btn-gold`/header-cta hover fill, prose link and explorer-link/contact-directions color — the text-safe darker partner to gold for anything read as a link on a light ground.
 
 ### Neutral
-- **Ivory** (`#F5F2EA`): page body background, `.btn-primary` text, light-register section backgrounds (process is white, services/gallery/footer-adjacent are ivory).
-- **White** (`#FFFFFF`): process section background, contact-card-panel light surfaces.
-- **Stone** (`#DCD7CD`): process connecting-line color, step-num outline stroke, hours-list divider, contact-map-frame placeholder fill.
-- **Text on Dark / Text on Dark Muted** (`#F5F2EA` / `rgba(245,242,234,0.66)`): body and muted-body text on the charcoal dark register (hero sub-copy, why stat labels, footer copy).
+- **Cream** (`#F5F0E6`): page body background, light-register sections (service-explorer, gallery preview, footer text), `.btn-primary`/`.btn-gold` text where on dark.
+- **White** (`#FFFFFF`): garment-showcase/process/service-detail/about/gallery-full/faq background register.
+- **Beige** (`#D9CCB8`): process connecting-line and step-num stroke, hours-list/process-full-item divider, contact-map-frame placeholder fill, fabric-layer tint accents.
+- **Text on Dark / Text on Dark Muted** (`#F5F0E6` / `rgba(245,240,230,0.68)`): body and muted-body text on the forest-deep dark register throughout (hero sub-copy, why/stat labels, footer copy, page-hero paragraph).
 
 ### Named Rules
-**The Single-Accent Rule.** Champagne/champagne-deep are the system's only warm color; every other surface is ivory, white, stone, or charcoal. There is no second accent hue (no coral, no butter) — restraint is the point of a quiet-luxury palette, not an oversight.
+**The Single-Accent Rule.** Gold/gold-ink are the system's only warm color; every other surface is cream, white, beige, charcoal, or forest. There is no second accent hue — carried forward in spirit (not in token value) from the superseded Quiet Luxury system's same restraint rule.
 
 ## Typography
 
-**Display Font:** Playfair Display (with Georgia, serif fallback), loaded at weights 400/500/600/700 plus italic 500 via Google Fonts.
-**Body Font:** Inter (with system sans-serif fallback), loaded at weights 400/500/600/700.
+**Display Font:** Cormorant Garamond (with Playfair Display, Georgia, serif fallback), loaded at weights 400/500/600/700 plus italic 500 via Google Fonts, every page.
+**Body Font:** Manrope (with system sans-serif fallback), loaded at weights 400/500/600/700, every page.
 
-**Character:** Unlike the superseded system's single-weight serif, Playfair Display is used across its full loaded weight range here — 700 for the hero display line and the contact-intro headline, 600 for stat numerals, 500 for section titles and component headings — so weight itself carries hierarchy, something the old DM Serif Display (no bold cut) could never do.
+**Character:** This is a different serif voice from the superseded Quiet Luxury system's Playfair Display, though both pairings use the full 400–700 weight range so weight itself still carries hierarchy (700 for hero/display, 500 for section titles and page-hero h1, 600 for stat numerals).
 
 ### Hierarchy
-- **Display** (700, `clamp(3rem, 9vw, 7.2rem)`, line-height 0.98, uppercase): hero `h1` only; the `<em>` second line is weight 500 in champagne, not italic.
-- **Headline** (500, `clamp(2rem, 3.8vw, 3.2rem)`, line-height 1.08): every section's `.section-title`; the contact-intro `h2` is a heavier (700, uppercase) variant of this role.
-- **Title** (500, 1.05rem–1.5rem): service-tile `h3`, process-step `h3` (uppercase), footer-name.
-- **Stat** (600, `clamp(1.9rem, 3.6vw, 2.9rem)`): Why Choose Us `.stat-num` only.
-- **Body** (400, 1rem, line-height 1.6): running copy (Inter).
-- **Label** (600–700, 0.7rem–0.86rem, letter-spacing 0.02em–0.14em, uppercase): service-tag, brand-name/brand-sub, stat-label, footer column headers.
+- **Display** (700, `clamp(2.2rem, 7.6vw, 6.4rem)`, line-height 1.08): homepage hero `h1` only, built from per-word `<span class="word">` entrance animations, with one `.word--accent` (gold) word — a single stable headline with no scene-rotation.
+- **Page-Hero H1** (500, `clamp(2.6rem, 5.5vw, 4.6rem)`, line-height 1.06): every inner page's `.page-hero h1`.
+- **Section Title** (500, `clamp(2.1rem, 4vw, 3.4rem)`, line-height 1.1): every `.section-title` sitewide; `.section-title--on-dark` swaps to cream on forest-deep backgrounds.
+- **Stat** (600, `clamp(1.9rem, 3.6vw, 2.9rem)`): homepage `.stat-num` only (Why/trust row).
+- **Body** (400, 1rem, line-height 1.6): running copy (Manrope), including `.prose` on legal/about pages.
+- **Label** (600–700, 0.7rem–0.86rem, letter-spacing 0.02em–0.14em, uppercase): brand-name/brand-sub, service-tag-equivalent captions, stat-label, footer column headers, header-cta.
 
 ## Layout
 
-A single-column, full-bleed section stack constrained by `.section-inner` (max-width 1560px, horizontal padding `clamp(1.25rem, 5vw, 4rem)`, section rhythm `clamp(4rem, 8vw, 8rem)` vertical). Services and Gallery each use a stack of independently fixed-height flex row-groups (`.mosaic-row--split/--triple/--full` for services at `clamp(360px,40vw,540px)` / `clamp(260px,28vw,360px)` / `clamp(300px,34vw,440px)`; `.mosaic-row--g1/--g2/--g3` for gallery) rather than CSS Grid with spanning cells. Process is a 4-column horizontal row with a hairline connecting line that is removed (not just hidden) below 860px as steps wrap to 2-then-1 columns. Why Choose Us is a 4-up stat row with hairline vertical dividers, collapsing to 2 then 1 column with the dividers rotating from left-border to top-border. Below 1080px the footer grid collapses to 2 columns and the contact split stacks vertically; below 860px the nav becomes a full-height slide-in drawer and all mosaic rows switch from fixed-height flex rows to stacked auto-height tiles.
+A shared `.section-inner` (max-width 1480px, horizontal padding `clamp(1.25rem, 5vw, 4rem)`) constrains every section; vertical section rhythm is `clamp(3.5rem, 7vw, 7rem)` via `--section-y`, used by both homepage sections and the generic `.page-section`. Inner pages use a consistent `.page-hero` (forest-deep background, dimmed/scrim'd photo, breadcrumb, h1, optional lede) followed by a stack of `.page-section`/`.page-section--alt`/`.page-section--dark` blocks or a page-specific component (services hub grid, service-detail split, process-full list, why-full-grid, gallery-full masonry column layout, contact split screen, FAQ accordion, about media+copy grid). The homepage alone adds scroll/pointer-driven sections (garment showcase, service explorer, fabric motion) not used anywhere else. Below 980px the header nav becomes a full-height right-side slide-in drawer (mega-menu collapses to a static expandable block, preview images hidden); below 860px two-column grids (garment-grid, explorer-layout, about-grid, why-full-grid) stack to one column and the homepage process/stat rows wrap to 2-then-1 columns with connecting lines/dividers removed or rotated.
 
 ### Named Rules
-**The Fixed-Row-Group Mosaic Rule.** Asymmetric tile variety in Services and Gallery is built from a vertical stack of independent flex rows, each with its own explicit `clamp()` height and `flex: 1` / `flex: 1.5` / `flex: 1.8` tiles inside it — never a single CSS Grid with `grid-column`/`grid-row` spans. This was a deliberate avoidance, carried forward from the superseded system, of the empty-cell/whitespace bug class that auto-sized Grid row-spanning caused earlier in this project's history.
+**The Chrome/Content Split Rule.** `css/tokens.css` (resets, palette, buttons, generic page-hero/section/prose) and `css/layout.css` (header, mega-menu, mobile drawer, fixed-call, footer) load on every page unconditionally; `css/home.css` loads only on `index.html` and `css/page.css` loads only on inner pages — never both on the same page. This mirrors the project's directory-per-route architecture (see PRODUCT.md) and keeps homepage-only motion CSS out of every inner page's payload.
 
 ## Elevation & Depth
 
-A quieter, softer shadow system than the superseded build's: every shadow is a diffuse, de-saturated blur (no hard offsets), and most image tiles (service tiles, gallery items) intentionally carry **no shadow at all** (`box-shadow: none` on `.gallery-item`) — in this world, flatness against the ivory background is the resting state, and shadow is reserved for controls and dark-surface elements that need to read as floating.
+A soft, diffuse shadow system — no hard offsets anywhere in the built CSS — reserved mostly for floating/interactive surfaces (mega-menu, buttons, fixed-call, lightbox image, service-hub/service-detail/why-full cards) rather than flat photography tiles, which mostly rely on gradient scrims instead of shadow for depth.
 
 ### Shadow Vocabulary
-- **`--shadow-sm`** (`0 1px 3px rgba(23,25,24,0.06), 0 3px 12px -6px rgba(23,25,24,0.1)`): scrolled header only.
-- **`--shadow-md`** (`0 20px 44px -24px rgba(23,25,24,0.22)`): `.btn-primary` resting elevation.
-- **`--shadow-lg`** (`0 34px 80px -30px rgba(23,25,24,0.3)`): `.btn-primary` hover elevation.
+- **`--shadow-sm`** (`0 2px 10px -4px rgba(16,40,32,0.14)`): scrolled header, service-hub-card/related-card/why-full-card/gallery-full-grid item resting elevation.
+- **`--shadow-md`** (`0 18px 38px -16px rgba(16,40,32,0.24)`): `.btn-primary` resting elevation, service-hub-card hover elevation.
+- **`--shadow-lg`** (`0 32px 70px -22px rgba(16,40,32,0.32)`): `.btn-primary` hover elevation, mega-menu, garment-stage, explorer-image, fabric-layer, service-detail-media, about-media.
 - **`--shadow-dark`** (`0 20px 50px -14px rgba(0,0,0,0.5)`): fixed-call affordance and the lightbox image.
 
 ## Shapes
 
-**The Radius Contrast Rule.** Two radius vocabularies are used, deliberately never mixed: `--r-img` (2px, nearly square) on every photographic surface — service tiles, gallery items, the contact-map frame, the lightbox figure — and `--r-pill` (999px, fully rounded) on every button, the floating navbar, the header-cta, the fixed-call affordance, and the scroll-cue. `--r-sm` (3px) is a minor third value used only for the skip-link and the lightbox image's inner radius. No surface in the system uses a mid-range radius (no 8px/12px/16px cards) — the contrast between near-square imagery and pill-shaped controls is the system's signature shape statement, not an inconsistency.
+**The Radius Split Rule.** Three radius values are used, by context rather than a strict binary: `--r-sm` (4px) on smaller/flatter photographic surfaces (gallery items, lightbox image, contact-map-frame, mega-menu-preview, skip-link), `--r-md` (10px) on larger "staged" photography and cards (garment-stage, explorer-image, service-detail-media, about-media, service-hub-card, mega-menu, why-full-card), and `--r-pill` (999px) on every button, the header/header-inner, header-cta, fixed-call, explorer-tab, gallery-expand and lightbox controls. No surface mixes a pill radius onto photography or a sub-pill radius onto a button.
 
 ## Components
 
 ### Buttons
 - **Shape:** fully pill-shaped (`--r-pill`), min-height 48px on every variant.
-- **Primary** (`.btn-primary`): charcoal fill, ivory text, `--shadow-md` resting / `--shadow-lg` hover; used on both light and dark backgrounds (hero, services, contact).
-- **Outline Light** (`.btn-outline-light`): transparent fill, translucent ivory border and text; dark backgrounds only (hero, contact-intro-panel).
-- **Outline Dark** (`.btn-outline-dark`): transparent fill, translucent charcoal border and text, inverts to solid charcoal fill on hover; light backgrounds.
+- **Primary** (`.btn-primary`): forest-deep fill, cream text, `--shadow-md` resting / `--shadow-lg` hover; used on both light and dark backgrounds (about, service-detail, process-full, footer-adjacent CTAs).
+- **Gold** (`.btn-gold`): gold fill, forest-deep text, `--shadow-sm`; hero/contact/final-cta primary conversion action — the single boldest-colored CTA in the system.
+- **Outline Light** (`.btn-outline-light`): transparent fill, translucent cream border and text; dark backgrounds only (hero, contact-intro-panel).
+- **Outline Dark** (`.btn-outline-dark`): transparent fill, translucent forest-deep border and text, inverts to solid forest-deep fill on hover; light backgrounds (about, service-detail, why-choose-us, gallery preview).
 
 ### Navigation
-- **Style:** a floating, pill-shaped header (`border-radius: var(--r-pill)` on `.header-inner`), transparent with ivory text over the hero, gaining a translucent ivory fill (`rgba(245,242,234,0.82)`), `backdrop-filter: blur(18px) saturate(1.3)`, and a hairline border on scroll.
-- **Content:** trimmed to exactly three links (Services / Our Care / Contact) plus a champagne-filled "Call Now" pill — intentionally minimal, not a full site-map nav.
-- **Mobile (≤860px):** hamburger toggle opens a right-side slide-in ivory drawer with large Playfair Display links and a pinned charcoal "Call" button at the bottom; a separate full-screen dark backdrop handles outside-click dismissal.
-- **Call affordance:** a fixed bottom-right charcoal pill (`.fixed-call`) with an ambient champagne pulse ring, appearing once the hero scrolls out of view and hiding again once the footer enters view.
+- **Style:** a fixed-position header, transparent over the homepage hero, gaining a translucent forest-deep fill (`rgba(16,40,32,0.92)`), `backdrop-filter: blur(16px) saturate(1.2)`, and a hairline border on scroll (`.is-scrolled`); every inner page loads it pre-solid via `.is-solid` since there is no hero to show through.
+- **Active-page underline:** `js/common.js` reads `body[data-section]` and matches it against every `[data-nav]` link, adding `.is-active`/`aria-current="page"` — the same hover-underline treatment (`.main-nav a::after`, gold, scaleX) used for hover doubles as the current-page indicator.
+- **Services mega menu:** a two-column dropdown (`.has-mega:hover`/`:focus-within`) listing five service links plus a bold "View All Services" link, beside a single `aria-hidden="true"` preview pane whose five `<img>`s sit at `opacity:0` and swap to `.is-shown` on link hover/focus (`js/common.js` `showMegaPreview`) — a sanctioned hover-to-reveal preview pattern, not a hidden-content defect.
+- **Mobile (≤980px):** hamburger toggle opens a right-side slide-in forest-deep drawer; the mega-menu collapses to a static `is-open` block (preview images hidden) and a gold "Call" pill is pinned at the drawer's bottom; a separate forest-deep backdrop handles outside-click dismissal.
+- **Call affordance:** a fixed bottom-right forest-deep pill (`.fixed-call`) with an ambient gold pulse ring, appearing once the hero/page-hero scrolls out of view and hiding again once the footer enters view (`js/common.js` `onScroll`).
 
-### Hero
-A full-viewport (`100svh`) video background (grayscale(0.15) + contrast(1.05) filtered, not a photo), a layered radial+linear scrim, and a single static large headline ("Care, *Redefined.*" — the emphasis word in champagne, weight 500 against the headline's weight 700) with one short sub-line. No multi-scene headline rotation. A subtle JS mouse-parallax moves the whole hero-content block (±14px/±10px) and a scroll-cue dot animates at the bottom — both suppressed under `prefers-reduced-motion`.
+### Hero (homepage only)
+A full-viewport (`100svh`) autoplaying/looping video background (grayscale(0.1) + contrast(1.05) filtered, playback rate 0.65x), a layered radial+linear scrim, and a single stable large headline built word-by-word (`.word` spans, staggered `hero-word-in` keyframes, blur-to-sharp) — not scene-synced or rotating text, regardless of what any earlier brief described. A subtle JS mouse-parallax moves the whole `#heroContent` block (±14px/±10px via `js/home.js`), gated behind `prefers-reduced-motion`.
 
-### Service Mosaic (signature component)
-Seven service tiles arranged across three independently fixed-height row-groups (one large split row with a 1.5-flex featured tile, one triple row, one full-width banner row) — see The Fixed-Row-Group Mosaic Rule. Each tile is a plain photo with a bottom gradient scrim and caption text (tag + heading) overlaid directly on the image; the two "Most Popular" and "Long-Term Storage" tag badges sit on the photo itself, consistent across tiles. A lightweight vanilla-JS 3D tilt (`perspective(900px)` + `rotateX`/`rotateY`, max ±4deg, via `mousemove`) is applied to every `.service-tile`, gated behind `prefers-reduced-motion`.
+### Garment Showcase (homepage, signature component)
+A real photograph (`#garmentStage`) with three button-based hotspots revealing a small note panel on hover/focus/click, plus a lightweight CSS 3D tilt (`perspective(1000px)` + `rotateX`/`rotateY`, via `mousemove` in `js/home.js`) standing in for the brief's "interactive 3D" request — there is no 3D model asset in this project (confirmed in PRODUCT.md), so this CSS-3D-on-photography technique is the honest implementation, not a placeholder to be later swapped for WebGL.
 
-### Process Row (signature component)
-An ultra-minimal 4-step horizontal row: a small line-icon, an outlined/transparent-fill serif numeral (`-webkit-text-stroke`, no fill), and a single uppercase one-word label (Drop Off / We Care / Ready / Collect) — no paragraph copy at all. A hairline connecting line threads behind the icons and is removed entirely (not just visually hidden) below 860px as steps wrap into a 2-column, then 1-column, grid.
+### Service Explorer (homepage, signature component)
+A tabbed two-pane layout: five `role="tab"` buttons drive both an image crossfade (`.explorer-image img.is-shown`) and a text/CTA swap (`js/home.js`), each tab's data carried in `data-image`/`data-title`/`data-desc`/`data-href` attributes rather than duplicated markup per tab.
 
-### Why Choose Us Stat Row (signature component)
-A dark charcoal section: four large Playfair Display numerals/short-values (5.0, 24HR, Drive-Up, St Marys) each paired with a tiny uppercase champagne-muted label, divided by hairline vertical rules (rotating to horizontal top-rules on narrow screens). This is a minimal statistics row, not a prose or icon-card block — it replaced an earlier icon-card-block pattern from the prior build. A single champagne text link below points out to the TrueLocal review listing; no review text is reproduced on-page.
+### Fabric Motion (homepage, signature component)
+A dark forest-deep band with three absolutely-positioned, varying-opacity photo layers (`.fabric-layer`) that translate vertically on scroll at independent speeds (`data-speed`, via `js/home.js` `updateFabricParallax`), gated behind `prefers-reduced-motion` and collapsed to a single simplified layer below 760px.
+
+### Process (two forms, shared vocabulary)
+Both the homepage's compact `.process-row` (4 steps, icon + outlined serif numeral + one-word label + hover-revealed caption, hairline connecting line removed below 860px) and the dedicated `/our-process/` page's `.process-full-list` (5 steps, full numbered row with heading + paragraph, hairline top/bottom borders) share the same outlined-numeral (`-webkit-text-stroke`, beige) and forest-deep heading vocabulary — the full page is a more detailed restatement, not a different design language.
+
+### Why Choose Us (two forms, shared vocabulary)
+The homepage's dark `.stat-row` (four Playfair-weight/Cormorant numerals + muted uppercase labels, hairline dividers, a single gold TrueLocal link) is a compact trust strip; the dedicated `/why-choose-us/` page's `.why-full-grid` (four white `.why-full-card` tiles with heading + paragraph, `--shadow-sm`, `--r-md`) is the expanded prose form of the same four claims (local/personal, drive-up convenience, service breadth, 5.0 rating) — no icon-card-block pattern is used in either form.
 
 ### Gallery / Lightbox
-The same fixed-row-group mosaic technique as Services (`--g1/--g2/--g3` rows) builds an asymmetric grid of flat, shadow-less image tiles with a hover zoom and a small expand-icon pill, opening into a full-screen dark lightbox with keyboard (arrow/Escape), touch-swipe, and focus-return support.
+The homepage preview uses two fixed-height `.mosaic-row` flex row-groups (`--g1`/`--g2`, varied `flex: 1`/`1.8` tiles) for an asymmetric mosaic without CSS Grid spanning; the dedicated `/gallery/` page instead uses a CSS multi-column masonry (`columns: 3 260px`, `break-inside: avoid`) — two different layout techniques for the same flat, gradient-scrim, hover-zoom `.gallery-item` tile. Both feed the same shared lightbox (`js/common.js`): keyboard (arrow/Escape), touch-swipe, and focus-return support, with a `0fr`→`1fr` grid-row accordion-style open for the FAQ sharing the same interaction codebase conceptually (same ease, same reveal pattern) though a separate component.
 
-### Contact Split (signature component)
-A 50/50 split screen: a dark, photo-backed `.contact-intro-panel` (charcoal scrim over a grayscale background image) carrying the headline and Call/Email CTAs, beside a light `.contact-card-panel` carrying the address, a dashed-divided hours list, and a sticky-less `--r-img` map frame with an embedded Google Maps iframe. No booking form anywhere in this section. This replaced the prior system's separate contact-list-plus-final-CTA section structure.
+### Contact Split
+A 50/50 split screen: a dark, photo-backed `.contact-intro-panel` (forest-deep scrim over a grayscale background image) carrying the headline and Call/Email CTAs, beside a light `.contact-card-panel` carrying the address, a dashed-divided hours list, and a `--r-sm` map frame with an embedded Google Maps iframe. No booking form anywhere in this section.
+
+### FAQ Accordion
+A reinstated standalone page (`/faq/`): each `.accordion-item` is a real `<h3><button></h3>` trigger (not a styled `<div>`) with a CSS grid-row (`0fr`→`1fr`) open/close transition and a plus/cross icon built from two pseudo-element bars — `js/common.js` toggles `.is-open` and `aria-expanded` on click.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** use `--r-img` (2px) for every photographic surface and `--r-pill` for every control; never introduce a mid-range (8–16px) card radius (The Radius Contrast Rule).
-- **Do** build mosaic/asymmetric layouts (Services, Gallery) from independently fixed-height flex row-groups, never CSS Grid with `grid-column`/`grid-row` spans (The Fixed-Row-Group Mosaic Rule).
-- **Do** gate every JS-driven motion effect (parallax, tilt, reveal, pulse, scroll-cue) behind `prefers-reduced-motion`, matching both the CSS media query and the `js/main.js` `reduceMotion` flag.
-- **Do** keep the nav to exactly Services / Our Care / Contact plus one Call Now pill; don't grow it into a full site map.
-- **Do** keep every interactive control (buttons, nav toggle, fixed call, lightbox controls) at a 48×48px minimum touch target.
-- **Do** use real line-art SVG icons (never a glyph/icon font) for process steps, contact affordances, and gallery/lightbox controls.
+- **Do** keep homepage-only motion (word-reveal, parallax, 3D tilt, fabric scroll-parallax) confined to `css/home.css`/`js/home.js`; inner pages stay in the calmer `.page-hero`/`.page-section`/`.prose` register of `css/page.css`.
+- **Do** gate every JS-driven motion effect behind `prefers-reduced-motion`, matching both the CSS media query in `tokens.css` and the `reduceMotion` checks in `js/home.js`/`js/common.js`.
+- **Do** use `--r-sm`/`--r-md` for photographic surfaces by size/context and `--r-pill` only for controls and chrome; never a pill radius on an image or a sub-pill radius on a button (The Radius Split Rule).
+- **Do** keep all internal links and asset paths relative (`services/`, `../css/tokens.css`), never root-relative — a brand-truth/deploy constraint from PRODUCT.md's dual GitHub Pages/Render hosting, not a style preference.
+- **Do** implement any "interactive 3D" request as CSS 3D transforms/parallax on real photography (as the garment showcase does), never as a fabricated WebGL/GLB claim — there is no 3D asset pipeline in this project.
+- **Do** keep every interactive control (buttons, nav toggle, fixed call, lightbox/accordion controls, explorer tabs) at a 48×48px minimum touch target.
+- **Do** use real line-art SVG icons (never a glyph/icon font) for process steps, contact affordances, and gallery/lightbox/accordion controls.
 
 ### Don't:
-- **Don't** carry over any token, color, or component from the superseded "Linen Press" system (forest green/cream/peach/sage/coral/butter, DM Serif Display, the 12-section hue-rotation rhythm, icon-led Why Choose Us blocks, the FAQ accordion, the standalone Reviews pull); this is a full replacement, not a merge.
-- **Don't** achieve service-tile or gallery-tile visual variety via `grid-column`/`grid-row` spanning; use fixed row-groups with varied `flex` ratios instead, to avoid the empty-cell bug class found earlier in this project.
+- **Don't** carry over any token, color, or component from the superseded "Quiet Luxury" system (ivory/stone/charcoal/champagne, Playfair Display + Inter, the single-page 7-section stack, its fixed-row-group mosaic rule, its radius-contrast rule); this is a full replacement, not a merge.
 - **Don't** add a booking/scheduling form to Contact; the business is walk-in/drive-up only (see PRODUCT.md), a brand-truth constraint, not a stylistic choice.
-- **Don't** invent review content, star counts, pricing, or years-in-business figures; the Why Choose Us stat row and footer show only the sourced TrueLocal aggregate (5.0, 8 reviews), linked out.
-- **Don't** place a kicker/eyebrow label above any heading anywhere on the page. The build briefly reintroduced four of these (above "What We Care For," "From Drop-Off to Collection," "Garment Care, Up Close," and the contact card) and they were removed on review — this is a craft-floor ban, not a default, and no brief earns it back. Where a component had no heading at all (the contact card), it got a real `<h3>` instead of a label.
+- **Don't** invent review content, star counts, pricing, or years-in-business figures; the homepage stat row, the Why Choose Us page, and the footer show only the sourced TrueLocal aggregate (5.0, 8 reviews), linked out.
+- **Don't** place a kicker/eyebrow label above any heading anywhere. A reserved `.eyebrow-label { display: none; }` rule exists in `tokens.css` as a dead, never-invoked class — it is not used on any page in this build and must not be activated; this is a craft-floor ban carried forward from the prior system's review, not a component to bring back.
+
+## Not Canonized
+
+- **The `.eyebrow-label` dead CSS rule.** `css/tokens.css` still carries a `display: none` eyebrow-label selector with a comment pointing back to this ban. It is inert and unused in every page scanned (home, about, services hub/detail, our-process, why-choose-us, gallery, contact, faq) — a leftover guard rail, not a system component. Left in place as a safety net; not documented as an available pattern and not something future pages should reference or extend.

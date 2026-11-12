@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Professional Dry Cleaning | St Marys Village Dry Cleaners</title>
-<meta name="description" content="Shirts, suits and delicates, brought back to crisp, fresh condition every time. Professional dry cleaning is the service most of our customers start with, and it’s the one we’ve refined the longest.">
+<meta name="description" content="Professional dry cleaning for shirts, suits and delicates at St Marys Village Dry Cleaners — same-day or 24-hour turnaround.">
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="../../css/tokens.css">
 <link rel="stylesheet" href="../../css/layout.css">
 <link rel="stylesheet" href="../../css/page.css">
+<link rel="stylesheet" href="../../css/service-pages.css">
 </head>
 <body data-section="services">
 
@@ -79,22 +80,34 @@
 
 <main id="main">
 
-  <section class="page-hero">
-    <div class="page-hero-bg"><img src="../../assets/services/dry-cleaning.jpg" alt=""></div>
-    <div class="section-inner">
-      <p class="page-hero-crumb"><a href="../../">Home</a> / <a href="../../services/">Services</a> / Professional Dry Cleaning</p>
+  <section class="cine-hero">
+    <div class="cine-hero-media"><img src="../../assets/services/dry-cleaning.jpg" alt=""></div>
+    <div class="cine-hero-scrim" aria-hidden="true"></div>
+    <div class="section-inner cine-hero-content">
+      <p class="cine-hero-crumb"><a href="../../">Home</a> / <a href="../../services/">Services</a> / Dry Cleaning</p>
       <h1>Professional Dry Cleaning</h1>
+      <p>Shirts, suits and delicates, brought back to crisp, fresh condition every time.</p>
     </div>
   </section>
 
   <section class="service-detail">
     <div class="section-inner service-detail-grid">
-      <div class="service-detail-media reveal" style="--delay:0">
-        <img src="../../assets/services/dry-cleaning.jpg" alt="Suits and garments hanging in sharp focus on a dry-cleaning rail.">
+      <div class="garment-viewer reveal" style="--delay:0">
+        <img src="../../assets/hero/hero-steam-press.jpg" alt="A freshly pressed shirt hanging, ready for collection.">
+        <button type="button" class="gv-hotspot" style="--x:32%; --y:25%" data-note="Collars and cuffs pressed by hand for a crisp, lasting edge.">
+          <span class="gv-dot" aria-hidden="true"></span><span class="sr-only">Collar detail</span>
+        </button>
+        <button type="button" class="gv-hotspot" style="--x:60%; --y:55%" data-note="Stains are identified and treated before the garment is cleaned.">
+          <span class="gv-dot" aria-hidden="true"></span><span class="sr-only">Stain treatment</span>
+        </button>
+        <button type="button" class="gv-hotspot" style="--x:48%; --y:82%" data-note="A final quality check before it's bagged and ready for you.">
+          <span class="gv-dot" aria-hidden="true"></span><span class="sr-only">Quality check</span>
+        </button>
+        <div class="gv-note" aria-live="polite"></div>
       </div>
       <div class="reveal" style="--delay:1">
-        <h2 class="section-title">Professional Dry Cleaning</h2>
-        <p class="section-lede">Shirts, suits and delicates, brought back to crisp, fresh condition every time. Professional dry cleaning is the service most of our customers start with, and it’s the one we’ve refined the longest.</p>
+        <h2 class="section-title">What's Included</h2>
+        <p class="section-lede">Professional dry cleaning is the service most of our customers start with, and it's the one we've refined the longest.</p>
         <ul class="service-detail-list">
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Shirts and everyday business wear</span></li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Suits and tailored pieces</span></li>
@@ -104,6 +117,58 @@
         <div class="service-detail-cta">
           <a href="tel:0296733934" class="btn btn-primary">Call Now</a>
           <a href="../../contact/" class="btn btn-outline-dark">Visit Our Store</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fabric-swatches">
+    <div class="section-inner">
+      <h2 class="section-title">Fabric Details</h2>
+      <p class="section-lede">Different fabrics ask for different handling — here's a sense of what we look out for.</p>
+      <div class="swatch-row">
+        <div class="swatch reveal" style="--delay:0">
+          <div class="swatch-img"><img src="../../assets/texture/wool-fabric.jpg" alt="Close-up texture of woven wool fabric." loading="lazy"></div>
+          <div class="swatch-body"><h3>Wool &amp; Blends</h3><p>Cleaned at the right temperature to protect shape and texture.</p></div>
+        </div>
+        <div class="swatch reveal" style="--delay:1">
+          <div class="swatch-img"><img src="../../assets/gallery/gallery-03.jpg" alt="Close-up of garments on wooden hangers." loading="lazy"></div>
+          <div class="swatch-body"><h3>Cotton &amp; Linen</h3><p>Pressed crisp without losing the fabric's natural feel.</p></div>
+        </div>
+        <div class="swatch reveal" style="--delay:2">
+          <div class="swatch-img"><img src="../../assets/gallery/gallery-02.jpg" alt="Garments in protective covers hanging along a dry-cleaning rail." loading="lazy"></div>
+          <div class="swatch-body"><h3>Delicates</h3><p>Handled individually, never bulk-processed with heavier garments.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mini-process">
+    <div class="section-inner">
+      <h2 class="section-title">How It Works</h2>
+      <div class="mini-process-row">
+        <div class="mini-process-step reveal" style="--delay:0"><span class="step-num">01</span><h3>Inspect &amp; Treat</h3><p>Every garment is checked over and any marks treated before cleaning begins.</p></div>
+        <div class="mini-process-step reveal" style="--delay:1"><span class="step-num">02</span><h3>Clean</h3><p>Professional dry cleaning suited to the fabric in front of us.</p></div>
+        <div class="mini-process-step reveal" style="--delay:2"><span class="step-num">03</span><h3>Press &amp; Finish</h3><p>Pressed, quality-checked, and ready for same-day or 24-hour collection.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="section-inner faq-inner">
+      <h2 class="section-title">Common Questions</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <h3><button class="accordion-trigger" aria-expanded="false"><span>How long does dry cleaning take?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+          <div class="accordion-panel"><p>Most garments are ready same-day or within 24 hours, with an SMS as soon as yours is ready.</p></div>
+        </div>
+        <div class="accordion-item">
+          <h3><button class="accordion-trigger" aria-expanded="false"><span>Can you remove old stains?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+          <div class="accordion-panel"><p>We’ll always take a look and treat what we can — bring it in and we’ll let you know honestly what to expect.</p></div>
+        </div>
+        <div class="accordion-item">
+          <h3><button class="accordion-trigger" aria-expanded="false"><span>Do you clean delicate fabrics?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+          <div class="accordion-panel"><p>Yes — delicate pieces are handled individually with appropriate care, not bulk-processed.</p></div>
         </div>
       </div>
     </div>
@@ -128,8 +193,7 @@
       <a href="../../services/corporate/" class="related-card">
         <img src="../../assets/services/corporate-workwear.jpg" alt="Neutral-toned shirts hanging neatly on a metal clothing rack." loading="lazy">
         <span>Corporate Garment Care</span>
-      </a>
-      </div>
+      </a></div>
     </div>
   </section>
 </main>
@@ -179,6 +243,6 @@
 
 
 <script src="../../js/common.js"></script>
-
+<script src="../../js/service-pages.js"></script>
 </body>
 </html>

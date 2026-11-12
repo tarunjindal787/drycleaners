@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Us | St Marys Village Dry Cleaners</title>
-<meta name="description" content="St Marys Village Dry Cleaners is an independently run garment-care business at The Village Centre, St Marys NSW. Learn about our story and approach to garment care.">
+<meta name="description" content="St Marys Village Dry Cleaners is an independently run garment-care business at The Village Centre, St Marys NSW. Our approach, our neighbourhood, and the care behind every garment.">
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="../css/tokens.css">
 <link rel="stylesheet" href="../css/layout.css">
 <link rel="stylesheet" href="../css/page.css">
+<link rel="stylesheet" href="../css/service-pages.css">
 </head>
 <body data-section="about">
 
@@ -79,29 +80,64 @@
 
 <main id="main">
 
-  <section class="page-hero">
-    <div class="page-hero-bg"><img src="../assets/misc/trust-section.jpg" alt=""></div>
-    <div class="section-inner">
-      <p class="page-hero-crumb"><a href="../">Home</a> / About</p>
+  <section class="cine-hero">
+    <div class="cine-hero-media"><img src="../assets/misc/trust-section.jpg" alt="Garments hanging closely together on a rail, catching warm light."></div>
+    <div class="cine-hero-scrim" aria-hidden="true"></div>
+    <div class="section-inner cine-hero-content">
+      <p class="cine-hero-crumb"><a href="../">Home</a> / About</p>
       <h1>A Genuinely Local Dry Cleaner</h1>
-      <p>Independently run, inside The Village Centre, St Marys — not a chain, not a laundromat.</p>
+      <p>Independently run, inside The Village Centre, St Marys &mdash; not a chain, not a laundromat.</p>
     </div>
   </section>
 
-  <section class="about-section">
+  <section class="pillars-section">
+    <div class="section-inner">
+      <h2 class="section-title">Our Approach to Garment Care</h2>
+      <div class="pillars-row">
+        <div class="pillar reveal" style="--delay:0">
+          <span class="pillar-num">01</span>
+          <h3>Listen First</h3>
+          <p>No two garments are quite the same. We take the time to understand what each piece needs before we begin.</p>
+        </div>
+        <div class="pillar reveal" style="--delay:1">
+          <span class="pillar-num">02</span>
+          <h3>Handle With Care</h3>
+          <p>Cleaned, treated and pressed with hands-on attention &mdash; properly, by hand, where it matters.</p>
+        </div>
+        <div class="pillar reveal" style="--delay:2">
+          <span class="pillar-num">03</span>
+          <h3>Make It Easy</h3>
+          <p>Drive-up access, no appointment needed, and an SMS the moment your garment is ready.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section" style="background:var(--cream);">
     <div class="section-inner about-grid">
       <div class="about-media reveal" style="--delay:0">
         <img src="../assets/hero/hero-steam-press.jpg" alt="A freshly pressed shirt hanging, ready for collection.">
       </div>
       <div class="reveal" style="--delay:1">
-        <h2 class="section-title">Real Care, Close to Home</h2>
-        <p class="section-lede">We're proud to be part of the St Marys community. Here, you're more than another drop-off — we believe in friendly service, familiar faces, and taking genuine pride in the work we do.</p>
-        <p class="section-lede">You'll find us at The Village Centre on Charles Hackett Drive, with drive-up access right outside the main entrance — no sea of parking to cross, no appointment needed. Drop in during opening hours, and we'll take it from there.</p>
-        <p class="section-lede">From everyday shirts and suits to wedding gowns, leather jackets and corporate wardrobes, we offer a broad range of garment-care services under one roof — handled with the same level of attention, every time.</p>
-        <div class="hero-actions" style="margin-top:2rem;">
-          <a href="../contact/" class="btn btn-primary">Visit Our Store</a>
-          <a href="../services/" class="btn btn-outline-dark">Explore Our Services</a>
-        </div>
+        <h2 class="section-title">Local, Through and Through</h2>
+        <p class="section-lede">We're proud to be part of the St Marys community. Here, you're more than another drop-off &mdash; we believe in friendly service, familiar faces, and taking genuine pride in the work we do.</p>
+        <p class="section-lede">You'll find us at The Village Centre on Charles Hackett Drive, with drive-up access right outside the main entrance &mdash; no sea of parking to cross, no appointment needed.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="filmstrip-section">
+    <div class="section-inner">
+      <h2 class="section-title">Craftsmanship, Up Close</h2>
+      <p class="section-lede">A closer look at the hands-on care behind every garment.</p>
+      <div class="filmstrip">
+        <div class="filmstrip-item"><img src="../assets/gallery/gallery-01.jpg" alt="An iron pressing a freshly laundered shirt on the board." loading="lazy"></div>
+        <div class="filmstrip-item"><img src="../assets/gallery/gallery-09.jpg" alt="Alterations work in progress on a sewing machine." loading="lazy"></div>
+        <div class="filmstrip-item"><img src="../assets/gallery/gallery-08.jpg" alt="Detail of a leather jacket's zipper and stitching." loading="lazy"></div>
+        <div class="filmstrip-item"><img src="../assets/gallery/gallery-06.jpg" alt="A bridal gown hanging in soft natural light." loading="lazy"></div>
+      </div>
+      <div class="hero-actions" style="margin-top:2rem; justify-content:flex-start;">
+        <a href="../gallery/" class="btn btn-outline-dark">View Full Gallery</a>
       </div>
     </div>
   </section>
@@ -110,7 +146,10 @@
     <div class="section-inner" style="text-align:center;">
       <h2 class="section-title section-title--on-dark" style="margin:0 auto;">Rated 5.0 by Local Customers</h2>
       <p class="section-lede section-lede--on-dark" style="margin-left:auto;margin-right:auto;">A perfect record on TrueLocal, 8 reviews strong.</p>
-      <a class="btn btn-gold" style="margin-top:1.8rem;" href="https://www.truelocal.com.au/nsw/st-marys/st-marys-village-dry-cleaners-13318972" target="_blank" rel="noopener noreferrer">Read Our Reviews on TrueLocal</a>
+      <div class="hero-actions" style="margin-top:1.8rem;">
+        <a class="btn btn-gold" href="../contact/">Visit Our Store</a>
+        <a class="btn btn-outline-light" href="https://www.truelocal.com.au/nsw/st-marys/st-marys-village-dry-cleaners-13318972" target="_blank" rel="noopener noreferrer">Read Our Reviews</a>
+      </div>
     </div>
   </section>
 </main>
@@ -160,6 +199,6 @@
 
 
 <script src="../js/common.js"></script>
-
+<script src="../js/service-pages.js"></script>
 </body>
 </html>

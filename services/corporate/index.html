@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Corporate Garment Care | St Marys Village Dry Cleaners</title>
-<meta name="description" content="Suits, uniforms, stubborn stains — your work wardrobe, kept sharp. We look after corporate wear for individuals and local businesses alike.">
+<meta name="description" content="Corporate garment care at St Marys Village Dry Cleaners — suits, uniforms and shirts kept sharp for work.">
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="../../css/tokens.css">
 <link rel="stylesheet" href="../../css/layout.css">
 <link rel="stylesheet" href="../../css/page.css">
+<link rel="stylesheet" href="../../css/service-pages.css">
 </head>
 <body data-section="services">
 
@@ -78,33 +79,43 @@
 
 
 <main id="main">
-
-  <section class="page-hero">
-    <div class="page-hero-bg"><img src="../../assets/services/corporate-workwear.jpg" alt=""></div>
-    <div class="section-inner">
-      <p class="page-hero-crumb"><a href="../../">Home</a> / <a href="../../services/">Services</a> / Corporate Garment Care</p>
+<div class="page-corporate">
+  <section class="cine-hero">
+    <div class="cine-hero-media"><img src="../../assets/services/corporate-workwear.jpg" alt=""></div>
+    <div class="cine-hero-scrim" aria-hidden="true"></div>
+    <div class="section-inner cine-hero-content">
+      <p class="cine-hero-crumb"><a href="../../">Home</a> / <a href="../../services/">Services</a> / Corporate Garment Care</p>
       <h1>Corporate Garment Care</h1>
+      <p>Suits, uniforms, stubborn stains — your work wardrobe, kept sharp.</p>
     </div>
   </section>
 
-  <section class="service-detail">
-    <div class="section-inner service-detail-grid">
-      <div class="service-detail-media reveal" style="--delay:0">
-        <img src="../../assets/services/corporate-workwear.jpg" alt="Neutral-toned shirts hanging neatly on a metal clothing rack.">
-      </div>
-      <div class="reveal" style="--delay:1">
-        <h2 class="section-title">Corporate Garment Care</h2>
-        <p class="section-lede">Suits, uniforms, stubborn stains — your work wardrobe, kept sharp. We look after corporate wear for individuals and local businesses alike.</p>
-        <ul class="service-detail-list">
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Business suits and shirts</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Uniforms</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Stain treatment</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Regular garment care for teams</span></li>
-        </ul>
-        <div class="service-detail-cta">
-          <a href="tel:0296733934" class="btn btn-primary">Call Now</a>
-          <a href="../../contact/" class="btn btn-outline-dark">Visit Our Store</a>
+  <section class="corp-categories">
+    <div class="section-inner">
+      <h2 class="section-title">Your Work Wardrobe</h2>
+      <p class="section-lede">We look after corporate wear for individuals and local businesses alike.</p>
+      <div class="corp-switcher">
+        <div class="corp-tabs" role="tablist" aria-label="Corporate wardrobe categories">
+          <button class="corp-tab is-active" role="tab" aria-expanded="true" data-caption="Business suits hanging ready for collection.">
+            <h3>Suits</h3>
+            <p>Business suits cleaned and pressed with a sharp, professional finish.</p>
+          </button>
+          <button class="corp-tab" role="tab" aria-expanded="false" data-caption="Uniforms hanging neatly, ready for work.">
+            <h3>Uniforms</h3>
+            <p>Regular care for individual or team uniforms, kept consistent week to week.</p>
+          </button>
+          <button class="corp-tab" role="tab" aria-expanded="false" data-caption="Business shirts hanging neatly on a rack.">
+            <h3>Shirts</h3>
+            <p>Shirts pressed crisp, with stubborn stains treated before cleaning.</p>
+          </button>
         </div>
+        <div class="corp-media reveal" style="--delay:0">
+          <img src="../../assets/services/corporate-workwear.jpg" id="corpMediaImg" alt="Neutral-toned shirts hanging neatly on a metal clothing rack.">
+        </div>
+      </div>
+      <div class="service-detail-cta">
+        <a href="tel:0296733934" class="btn btn-primary">Call Now</a>
+        <a href="../../contact/" class="btn btn-outline-dark">Visit Our Store</a>
       </div>
     </div>
   </section>
@@ -128,10 +139,10 @@
       <a href="../../services/leather-suede/" class="related-card">
         <img src="../../assets/services/leather-suede.jpg" alt="Close-up of a zipper and stitched seam on a brown leather jacket." loading="lazy">
         <span>Leather & Suede Restoration</span>
-      </a>
-      </div>
+      </a></div>
     </div>
   </section>
+  </div>
 </main>
 
 <!-- ============ FOOTER ============ -->
@@ -179,6 +190,6 @@
 
 
 <script src="../../js/common.js"></script>
-
+<script src="../../js/service-pages.js"></script>
 </body>
 </html>

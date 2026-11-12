@@ -63,6 +63,8 @@ body {
 ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: var(--r-pill); border: 2px solid var(--cream); }
 :focus-visible { outline: 2px solid var(--gold-ink); outline-offset: 3px; border-radius: 2px; }
 
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
 .skip-link {
   position: absolute; left: 1rem; top: -60px; z-index: 300;
   background: var(--forest-deep); color: var(--cream);

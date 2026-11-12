@@ -8,7 +8,13 @@ web
 
 ## Stack
 
-static HTML/CSS/JS (no build step, no framework) — user-confirmed over React/Vite, chosen for a dependency-free single-page marketing site that's easy to host and hand off.
+static HTML/CSS/JS (no build step, no framework) — user-confirmed over React/Vite, chosen for a dependency-free site that's easy to host and hand off. Reconfirmed when a later brief asked for a full React/TypeScript/Three.js/GSAP/Framer Motion migration with client-side routing; the user chose to keep the static foundation and deliver the same multi-page vision as plain directory-based HTML pages (`/about/index.html`, `/services/dry-cleaning/index.html`, etc.) instead.
+
+Multi-page since the "Atelier" redesign: each route is its own `index.html` under a matching directory, sharing `css/tokens.css` + `css/layout.css` (+ `css/page.css` on inner pages, `css/home.css` on the homepage only) and `js/common.js` (+ `js/home.js` on the homepage only). Nav/footer markup is duplicated per page rather than templated — an accepted tradeoff of staying build-step-free at this scale.
+
+Deploys to two hosts with different base paths: GitHub Pages serves this repo under `/drycleaners/` (a project page, not a user page), while the Render deployment serves from the true root. Every internal link and asset path must stay **relative** (`services/`, `../css/tokens.css`), never root-relative (`/services/`, `/css/tokens.css`) — a root-relative path works on Render but silently 404s on GitHub Pages' subpath.
+
+3D/interactive elements use CSS 3D transforms, mouse-driven parallax and hover/tilt effects in vanilla JS — not Three.js or React Three Fiber. There is no 3D model asset (GLB/GLTF) in this project and no pipeline to produce one; "interactive 3D" requests are implemented as CSS-3D/parallax on real photography (see the homepage's garment-showcase hotspot section), not fabricated as literal WebGL 3D.
 
 ## Users
 

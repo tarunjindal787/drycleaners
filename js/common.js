@@ -164,6 +164,88 @@
     }, { passive: true });
   }
 
+  /* ---------- Advanced cursor (desktop-only; native cursor is never hidden) ---------- */
+  if (!reduceMotion && window.matchMedia("(pointer: fine)").matches) {
+    var follower = document.createElement("div");
+    follower.id = "cursorFollow";
+    follower.setAttribute("aria-hidden", "true");
+    document.body.appendChild(follower);
+    var curX = 0, curY = 0, curRaf = null;
+    document.addEventListener("mousemove", function (e) {
+      curX = e.clientX; curY = e.clientY;
+      if (!curRaf) {
+        curRaf = requestAnimationFrame(function () {
+          follower.style.left = curX + "px";
+          follower.style.top = curY + "px";
+          curRaf = null;
+        });
+      }
+    });
+    function bindCursor(selector, label) {
+      document.querySelectorAll(selector).forEach(function (el) {
+        el.addEventListener("mouseenter", function () { follower.textContent = label; follower.classList.add("is-visible"); });
+        el.addEventListener("mouseleave", function () { follower.classList.remove("is-visible"); });
+      });
+    }
+    bindCursor(".gallery-item, .related-card, .service-hub-card, .service-row-media, .corp-media", "View");
+    bindCursor(".garment-viewer", "Explore");
+    bindCursor(".garment-stage", "Drag");
+    bindCursor(".filmstrip-item", "Image");
+  }
+
+  /* ---------- Magnetic buttons (desktop-only, primary CTAs) ---------- */
+  if (!reduceMotion && window.matchMedia("(pointer: fine)").matches) {
+    document.querySelectorAll(".btn-primary, .btn-gold").forEach(function (btn) {
+      btn.classList.add("btn-magnetic");
+      btn.addEventListener("mousemove", function (e) {
+        var rect = btn.getBoundingClientRect();
+        var relX = e.clientX - (rect.left + rect.width / 2);
+        var relY = e.clientY - (rect.top + rect.height / 2);
+        btn.style.transform = "translate(" + (relX * 0.22) + "px, " + (relY * 0.3) + "px)";
+      });
+      btn.addEventListener("mouseleave", function () { btn.style.transform = ""; });
+    });
+  }
+
+  /* ---------- Branded page transition ---------- */
+  (function () {
+    var overlay = document.createElement("div");
+    overlay.id = "pageTransition";
+    document.body.appendChild(overlay);
+    var DURATION = reduceMotion ? 1 : 320;
+
+    function setClip(pct) {
+      overlay.style.clipPath = "circle(" + pct + "% at var(--origin-x, 50%) var(--origin-y, 50%))";
+    }
+    // Arrive: start fully covered (no transition), then reveal.
+    overlay.style.transition = "none";
+    setClip(140);
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        overlay.style.transition = "clip-path " + (reduceMotion ? 1 : 420) + "ms var(--ease)";
+        setClip(0);
+      });
+    });
+
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest("a[href]");
+      if (!a) return;
+      var href = a.getAttribute("href");
+      if (!href || href.charAt(0) === "#" || href.indexOf("tel:") === 0 || href.indexOf("mailto:") === 0 ||
+          href.indexOf("http://") === 0 || href.indexOf("https://") === 0 ||
+          a.target === "_blank" || a.hasAttribute("download") ||
+          e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) {
+        return;
+      }
+      e.preventDefault();
+      overlay.style.setProperty("--origin-x", e.clientX + "px");
+      overlay.style.setProperty("--origin-y", e.clientY + "px");
+      overlay.style.transition = "clip-path " + DURATION + "ms var(--ease)";
+      setClip(140);
+      setTimeout(function () { window.location.href = href; }, DURATION);
+    });
+  })();
+
   /* ---------- Footer year ---------- */
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();

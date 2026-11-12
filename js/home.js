@@ -23,6 +23,22 @@
     });
   }
 
+  /* ---------- Hero: scroll-linked scale (depth effect as the hero scrolls away) ---------- */
+  var heroMedia = document.querySelector(".hero-media");
+  if (!reduceMotion && hero && heroMedia && window.matchMedia("(min-width: 760px)").matches) {
+    var heroScaleTicking = false;
+    function updateHeroScale() {
+      var progress = Math.min(1, Math.max(0, -hero.getBoundingClientRect().top / window.innerHeight));
+      heroMedia.style.transform = "scale(" + (1 + progress * 0.14) + ")";
+      heroMedia.style.opacity = String(1 - progress * 0.35);
+      heroScaleTicking = false;
+    }
+    document.addEventListener("scroll", function () {
+      if (!heroScaleTicking) { requestAnimationFrame(updateHeroScale); heroScaleTicking = true; }
+    }, { passive: true });
+    updateHeroScale();
+  }
+
   /* ---------- Hero video: slow playback, autoplay-failure fallback ---------- */
   var video = document.getElementById("heroVideo");
   if (video) {
@@ -33,6 +49,32 @@
     if (playAttempt && typeof playAttempt.catch === "function") {
       playAttempt.catch(showStaticFallback);
     }
+  }
+
+  /* ---------- Garment explorer: category tabs ---------- */
+  var garmentTabs = document.querySelectorAll(".garment-tab");
+  var garmentPanels = document.querySelectorAll(".garment-panel");
+  function setGarmentPanelState(panel, active) {
+    panel.classList.toggle("is-active", active);
+    panel.setAttribute("aria-hidden", active ? "false" : "true");
+    panel.querySelectorAll(".garment-hotspot").forEach(function (spot) {
+      if (active) spot.removeAttribute("tabindex"); else spot.setAttribute("tabindex", "-1");
+    });
+  }
+  garmentPanels.forEach(function (panel) { setGarmentPanelState(panel, panel.classList.contains("is-active")); });
+  if (garmentTabs.length) {
+    garmentTabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        garmentTabs.forEach(function (t) { t.classList.remove("is-active"); t.setAttribute("aria-selected", "false"); });
+        tab.classList.add("is-active");
+        tab.setAttribute("aria-selected", "true");
+        var targetNote = document.getElementById("garmentNote");
+        if (targetNote) targetNote.classList.remove("is-visible");
+        garmentPanels.forEach(function (panel) {
+          setGarmentPanelState(panel, panel.dataset.panel === tab.dataset.target);
+        });
+      });
+    });
   }
 
   /* ---------- Garment showcase: tilt + hotspots ---------- */
@@ -59,6 +101,21 @@
         var isShown = note.classList.contains("is-visible") && note.textContent === spot.dataset.note;
         if (isShown) hide(); else show();
       });
+    });
+
+    /* Drag left/right to switch garment category - makes the "Drag" cursor label real. */
+    var dragStartX = null;
+    stage.addEventListener("mousedown", function (e) { dragStartX = e.clientX; });
+    stage.addEventListener("mouseup", function (e) {
+      if (dragStartX === null) return;
+      var dx = e.clientX - dragStartX;
+      dragStartX = null;
+      if (Math.abs(dx) < 50) return;
+      var tabs = Array.prototype.slice.call(document.querySelectorAll(".garment-tab"));
+      var activeIdx = tabs.findIndex(function (t) { return t.classList.contains("is-active"); });
+      if (activeIdx === -1) return;
+      var nextIdx = dx < 0 ? (activeIdx + 1) % tabs.length : (activeIdx - 1 + tabs.length) % tabs.length;
+      tabs[nextIdx].click();
     });
   }
 
@@ -107,6 +164,28 @@
       });
     });
   }
+
+  /* ---------- Process section: scroll-driven circular progress ring ---------- */
+  (function () {
+    var processSection = document.getElementById("process");
+    var ringFill = document.getElementById("processRingFill");
+    var ringLabel = document.getElementById("processRingLabel");
+    if (!processSection || !ringFill || !ringLabel) return;
+    var CIRCUMFERENCE = 169.6;
+    var ringTicking = false;
+    function updateRing() {
+      var rect = processSection.getBoundingClientRect();
+      var progress = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+      progress = Math.min(1, Math.max(0, progress));
+      ringFill.style.strokeDashoffset = String(CIRCUMFERENCE * (1 - progress));
+      ringLabel.textContent = Math.round(progress * 100) + "%";
+      ringTicking = false;
+    }
+    document.addEventListener("scroll", function () {
+      if (!ringTicking) { requestAnimationFrame(updateRing); ringTicking = true; }
+    }, { passive: true });
+    updateRing();
+  })();
 
   /* ---------- Fabric motion parallax ---------- */
   if (!reduceMotion) {

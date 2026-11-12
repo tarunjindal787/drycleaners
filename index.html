@@ -97,27 +97,65 @@
     </div>
   </section>
 
-  <!-- ============ GARMENT SHOWCASE ============ -->
+  <!-- ============ GARMENT EXPLORER ============ -->
   <section class="garment-showcase" id="garment">
     <div class="section-inner garment-grid">
       <div class="garment-copy reveal" style="--delay:0">
         <h2 class="section-title">Every Detail, Considered</h2>
-        <p class="section-lede">Run your cursor over the garment to see the care that goes into every finish — from a hand-pressed collar to a reinforced seam.</p>
+        <p class="section-lede">Choose a garment, then run your cursor over it to see the care that goes into every finish.</p>
+        <div class="garment-tabs" role="tablist" aria-label="Garment categories">
+          <button class="garment-tab is-active" role="tab" aria-selected="true" data-target="suit">Suit</button>
+          <button class="garment-tab" role="tab" aria-selected="false" data-target="shirt">Shirt</button>
+          <button class="garment-tab" role="tab" aria-selected="false" data-target="wedding-dress">Wedding Dress</button>
+          <button class="garment-tab" role="tab" aria-selected="false" data-target="leather-jacket">Leather Jacket</button>
+        </div>
       </div>
       <div class="garment-stage reveal" style="--delay:1" id="garmentStage">
-        <img src="assets/hero/hero-steam-press.jpg" alt="A crisp white shirt, freshly pressed and hanging ready for collection." id="garmentImg">
-        <button type="button" class="garment-hotspot" style="--x:34%; --y:28%" data-note="Collar and cuffs hand-pressed for a crisp, lasting edge.">
-          <span class="garment-hotspot-dot" aria-hidden="true"></span>
-          <span class="sr-only">Collar detail</span>
-        </button>
-        <button type="button" class="garment-hotspot" style="--x:66%; --y:52%" data-note="Every seam checked by hand before a garment leaves our care.">
-          <span class="garment-hotspot-dot" aria-hidden="true"></span>
-          <span class="sr-only">Seam detail</span>
-        </button>
-        <button type="button" class="garment-hotspot" style="--x:50%; --y:76%" data-note="Finished and bagged, ready exactly when we say it will be.">
-          <span class="garment-hotspot-dot" aria-hidden="true"></span>
-          <span class="sr-only">Finishing detail</span>
-        </button>
+        <div class="garment-panel is-active" data-panel="suit">
+          <img src="assets/services/dry-cleaning.jpg" alt="Suits hanging in sharp focus on a dry-cleaning rail.">
+          <button type="button" class="garment-hotspot" style="--x:40%; --y:22%" data-note="Lapels pressed flat and sharp, never flattened out of shape.">
+            <span class="garment-hotspot-dot" aria-hidden="true"></span><span class="sr-only">Lapel detail</span>
+          </button>
+          <button type="button" class="garment-hotspot" style="--x:62%; --y:50%" data-note="Linings and seams checked over before the suit is cleaned.">
+            <span class="garment-hotspot-dot" aria-hidden="true"></span><span class="sr-only">Seam detail</span>
+          </button>
+          <button type="button" class="garment-hotspot" style="--x:50%; --y:80%" data-note="Trousers creased and finished to match the jacket.">
+            <span class="garment-hotspot-dot" aria-hidden="true"></span><span class="sr-only">Finishing detail</span>
+          </button>
+        </div>
+        <div class="garment-panel" data-panel="shirt">
+          <img src="assets/hero/hero-steam-press.jpg" alt="A crisp white shirt, freshly pressed and hanging ready for collection.">
+          <button type="button" class="garment-hotspot" style="--x:34%; --y:28%" data-note="Collar and cuffs hand-pressed for a crisp, lasting edge.">
+            <span class="garment-hotspot-dot" aria-hidden="true"></span><span class="sr-only">Collar detail</span>
+          </button>
+          <button type="button" class="garment-hotspot" style="--x:66%; --y:52%" data-note="Every seam checked by hand before a garment leaves our care.">
+            <span class="garment-hotspot-dot" aria-hidden="true"></span><span class="sr-only">Seam detail</span>
+          </button>
+          <button type="button" class="garment-hotspot" style="--x:50%; --y:76%" data-note="Finished and bagged, ready exactly when we say it will be.">
+            <span class="garment-hotspot-dot" aria-hidden="true"></span><span class="sr-only">Finishing detail</span>
+          </button>
+        </div>
+        <div class="garment-panel" data-panel="wedding-dress">
+          <img src="assets/services/bridal-gowns.jpg" alt="A pale wedding dress hanging in soft window light.">
+          <button type="button" class="garment-hotspot" style="--x:45%; --y:20%" data-note="Delicate lace and beading handled by hand, never bulk-processed.">
+            <span class="garment-hotspot-dot" aria-hidden="true"></span><span class="sr-only">Lace detail</span>
+          </button>
+          <button type="button" class="garment-hotspot" style="--x:50%; --y:70%" data-note="Trains and hems checked carefully before and after cleaning.">
+            <span class="garment-hotspot-dot" aria-hidden="true"></span><span class="sr-only">Hem detail</span>
+          </button>
+          <button type="button" class="garment-hotspot" style="--x:70%; --y:40%" data-note="Long-term airtight boxing available to keep a gown protected.">
+            <span class="garment-hotspot-dot" aria-hidden="true"></span><span class="sr-only">Preservation detail</span>
+          </button>
+        </div>
+        <div class="garment-panel" data-panel="leather-jacket">
+          <img src="assets/services/leather-suede.jpg" alt="Close-up of a zipper and stitched seam on a brown leather jacket.">
+          <button type="button" class="garment-hotspot" style="--x:48%; --y:35%" data-note="Zips and hardware checked alongside the leather itself.">
+            <span class="garment-hotspot-dot" aria-hidden="true"></span><span class="sr-only">Hardware detail</span>
+          </button>
+          <button type="button" class="garment-hotspot" style="--x:65%; --y:65%" data-note="Colour and surface condition assessed before any treatment.">
+            <span class="garment-hotspot-dot" aria-hidden="true"></span><span class="sr-only">Surface detail</span>
+          </button>
+        </div>
         <div class="garment-note" id="garmentNote" aria-live="polite"></div>
       </div>
     </div>
@@ -189,7 +227,16 @@
   <!-- ============ PROCESS ============ -->
   <section class="process" id="process">
     <div class="section-inner">
-      <h2 class="section-title">From Drop-Off to Collection</h2>
+      <div class="process-heading">
+        <h2 class="section-title">From Drop-Off to Collection</h2>
+        <div class="process-ring" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="56" height="56">
+            <circle class="process-ring-track" cx="32" cy="32" r="27"/>
+            <circle class="process-ring-fill" id="processRingFill" cx="32" cy="32" r="27"/>
+          </svg>
+          <span class="process-ring-label" id="processRingLabel">0%</span>
+        </div>
+      </div>
 
       <ol class="process-row">
         <li class="process-step reveal" style="--delay:0" tabindex="0">

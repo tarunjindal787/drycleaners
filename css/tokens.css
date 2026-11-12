@@ -65,6 +65,36 @@ body {
 
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
+/* ---------- Advanced cursor (desktop-only; native cursor stays on) ---------- */
+#cursorFollow {
+  position: fixed; top: 0; left: 0; z-index: 500; pointer-events: none;
+  width: 68px; height: 68px; border-radius: 50%; margin: -34px 0 0 -34px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(16,40,32,0.85); color: var(--cream);
+  font-family: var(--font-body); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  opacity: 0; transform: scale(0.6);
+  transition: opacity 0.25s var(--ease), transform 0.25s var(--ease);
+}
+#cursorFollow.is-visible { opacity: 1; transform: scale(1); }
+@media (pointer: coarse), (hover: none) { #cursorFollow { display: none !important; } }
+@media (prefers-reduced-motion: reduce) { #cursorFollow { transition: opacity 0.15s linear; } }
+
+/* ---------- Magnetic buttons (desktop-only via JS gate) ---------- */
+.btn-magnetic { transition: transform 0.25s var(--ease), box-shadow 0.35s var(--ease), background-color 0.35s var(--ease), border-color 0.35s var(--ease), color 0.35s var(--ease); }
+
+/* ---------- Page transition overlay ---------- */
+#pageTransition {
+  position: fixed; inset: 0; z-index: 600; background: var(--forest-deep);
+  clip-path: circle(0% at var(--origin-x, 50%) var(--origin-y, 50%));
+  pointer-events: none;
+}
+#pageTransition.is-covering { transition: clip-path 0.42s var(--ease); clip-path: circle(150% at var(--origin-x, 50%) var(--origin-y, 50%)); }
+#pageTransition.is-revealing { clip-path: circle(150% at var(--origin-x, 50%) var(--origin-y, 50%)); transition: clip-path 0.5s var(--ease) 0.05s; }
+#pageTransition.is-revealing.is-done { clip-path: circle(0% at var(--origin-x, 50%) var(--origin-y, 50%)); }
+@media (prefers-reduced-motion: reduce) {
+  #pageTransition.is-covering, #pageTransition.is-revealing { transition-duration: 0.001ms; }
+}
+
 .skip-link {
   position: absolute; left: 1rem; top: -60px; z-index: 300;
   background: var(--forest-deep); color: var(--cream);
